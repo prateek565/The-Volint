@@ -13,6 +13,7 @@ import { Alerterror } from '../../../components/layout/Alerts';
 import {FcGoogle} from 'react-icons/fc';
 import {GrTwitter, GrFacebook, GrLinkedin, GrGithub} from 'react-icons/gr';
 import LoginGoogle from './googleLogin';
+import LoginFacebook from './facebookLogin';
 // import GitHubLogin from 'github-login';
 
 const style = {
@@ -361,13 +362,13 @@ const Login = () => {
                                     </div>
                                     <div className="login-social-buttons">
                                         <div className="row">
-                                            <div className="row flex gap-10" style={{ display: 'flex', justifyContent: 'center', gap: '20px' }}>
-                                                <div className="col-lg-6 flex pointer" style={{ display: 'flex', justifyContent: 'center', gap: '20px' }}>
-                                                    <div style={{ cursor: 'pointer' }} onClick={() => (
-                                                        // setgoogle(true)
-                                                        // console.log('gogle');
-                                                        <LoginGoogle/>
-                                                    )}>
+                                            <div className="row">
+                                                <div>
+                                                    {/* <LoginGoogle status={'user'}/> */}
+                                                    {/* <LoginFacebook status={'user'}/> */}
+                                                </div>
+                                                <div className="col-lg-6 flex pointer" style={{ display: 'flex', justifyContent: 'center', gap: '20px', margin: 'auto' }}>
+                                                    <div style={{ cursor: 'pointer' }}>
                                                         <FcGoogle size={'2rem'} />
                                                     </div>
                                                     <GrFacebook size={'2rem'} color='#4267B2' />

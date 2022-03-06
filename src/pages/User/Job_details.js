@@ -289,7 +289,7 @@ const Job_details = () => {
                                                         <Box sx={style}>
                                                             {success&&<Alertsuccess text={text}/>}
                                                             {error&&<Alerterror text={text}/>}
-                                                            <h2>{intern?.name}</h2>
+                                                            <h2>{intern?.title}</h2>
                                                             <Typography>{intern.description?.slice(0, 50)}</Typography>
                                                             <div className="col-lg-12">
                                                                 <label className="mt-2 justify-center">

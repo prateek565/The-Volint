@@ -1,13 +1,14 @@
 import { CircularProgress } from '@material-ui/core';
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { allApplicants, acceptApplicant, companyInterns } from '../../services/api';
+import { allApplicants, acceptApplicant, companyInterns, rejectApplicant } from '../../services/api';
 import { Footer } from '../../components/layout/Footer';
 import Header from '../../components/layout/Header';
 import PageHeader from '../../components/layout/PageHeader';
 
 const Applications = () => {
     const [allcandidates, setallcandidates] = useState([]);
+    const [toggle, settoggle] = useState(false)
     const location = useLocation();
     let id = location.pathname;
     id = id.split('/id=')[1];
@@ -19,7 +20,7 @@ const Applications = () => {
         }).catch((e) => {
             console.log({ e });
         })
-    }, [])
+    }, [toggle, ])
     const [allJobs, setAllJobs] = useState([]);
     useEffect(() => {
         Promise.resolve(companyInterns()).then((res) => {
@@ -189,12 +190,18 @@ const Applications = () => {
                                                         ttm-btn-color-dark"
                                     exact to={'/candidate_details'}>view Profile</Link></span>
                             </div>
-                            <button onClick={handleReject} className="btn">Reject Applicant</button>
                             <button onClick={() => {
+                                settoggle(!toggle);
                                 Promise.resolve(acceptApplicant(id, user._id)).then((res) => {
                                     console.log(res);
                                 }).catch((e) => { console.log({ e }); })
-                            }} className="btn">Accept Applicant</button>
+                            }} className="bg-primary p-5 rounded mr-5">Accept Applicant</button>
+                            <button onClick={() => {
+                                settoggle(!toggle);
+                                Promise.resolve(rejectApplicant(id)).then((res) => {
+                                    console.log(res);
+                                }).catch((e) => { console.log({ e }); })
+                            }} className="bg-danger p-5 rounded">Reject Applicant</button>
                         </div>
                     </div>
                 </div>

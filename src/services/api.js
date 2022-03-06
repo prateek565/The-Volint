@@ -9,7 +9,7 @@ export const userLogin=async (data)=>{
     return await axios.post("/auth/signin",{credentials:  data});
 }
 export const googleLogin=async (data)=>{
-    return await axios.post("/auth/signin",{credentials:  data});
+    return await axios.post("/auth/googlesignin",{credentials:  data});
 }
 export const signup=async (data)=>{
     return await axios.post("/auth/signup",data);
@@ -109,8 +109,11 @@ export const getIntern=async (id)=>{
     return await axios.get(`/intern/getintern/${id}`);
 }
 export const acceptApplicant=async (id,userId)=>{
-    console.log(id);
     return await axios.put(`/intern/acceptapplicant/${id}`, {credentials: userId});
+}
+export const rejectApplicant=async (id)=>{
+    console.log(id);
+    return await axios.put(`/intern/rejectapplicant/${id}`);
 }
 
 //****** company ******//
