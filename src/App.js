@@ -48,8 +48,8 @@ import CompanyProfile from './pages/Company/CompanyProfile';
 import Projects from './pages/Company/Projects';
 import ManageRecruitment from './pages/Company/ManageRecruitment';
 
-axios.defaults.baseURL = 'http://localhost:4000';
-// axios.defaults.baseURL = 'https://volunteerproject.herokuapp.com';
+//axios.defaults.baseURL = 'http://localhost:4000';
+axios.defaults.baseURL = 'https://volunteerproject.herokuapp.com';
 axios.defaults.params = {};
 
 
