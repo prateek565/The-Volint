@@ -1,0 +1,29 @@
+/*==========================
+02. Color CSS
+============================*/
+// Background Colors
+.bg {
+
+  &-white {
+    background-color: #e0d1ed;
+  }
+
+  &-offwhite {
+    background-color: #e0d1ed;
+  }
+
+  &-brand {
+    background-color: #e0d1ed;
+  }
+
+  &-blackSoft {
+    background-color: #e0d1ed;
+  }
+}
+
+// Text Colors
+.text {
+  &-brand {
+    color: $brandColor;
+  }
+}

@@ -1,0 +1,84 @@
+//== Typography Variable
+$bodyfont: 'Poppins', sans-serif;
+$bodyfont-Size: 14px;
+$baseFontSize: 15px;
+$headingfont: 'Noto Sans JP', sans-serif;
+
+//== Theme Typo Colors
+$bodyfont-Color: black;
+$headingfont-Color: #120078;
+$border-Color: #120078;
+
+//== Theme Color
+$theme-SkinColor: #020003;
+$theme-DarkColor: #0b0116;
+$theme-GreyColor: rgb(250, 75, 119);
+$theme-WhiteColor: #FFFFFF;
+
+//== Social Media Icons Color
+$facebook: #3B5999;
+$google: #d34836;
+$twitter: #1DA1F2;
+$pinterest: #CB2028;
+$youtube: #CC332D;
+$reddit: #FF4500;
+$linkedin: #0077B5;
+
+
+// Background Colors
+.bg {
+
+    &-theme-SkinColor {
+      background: linear-gradient(90deg, rgb(252, 93, 154) 0%, rgb(255, 226, 132) 50%, rgb(252, 93, 154) 100%);
+    }
+  
+    &-theme-DarkColor {
+      background: linear-gradient(90deg, rgb(252, 93, 154) 0%, rgb(255, 226, 132) 50%, rgb(252, 93, 154) 100%);
+    }
+  
+    &-theme-GreyColor {
+      background-color: $theme-GreyColor;
+    }
+
+    &-theme-WhiteColor {
+      background-color: $theme-WhiteColor;
+    }
+
+  }
+  .heading {
+    &-theme-SkinColor {
+      font-color: white;
+    }
+  
+    &-theme-DarkColor {
+      color: white;
+    }
+  
+    &-theme-GreyColor {
+      background-color: $theme-GreyColor;
+    }
+
+    &-theme-WhiteColor {
+      background-color: $theme-WhiteColor;
+    }
+  }
+  // Text Colors
+  .text {
+
+    &-theme-SkinColor {
+      color: $theme-SkinColor;
+    }
+  
+    &-theme-DarkColor {
+      color: $theme-DarkColor;
+    }
+  
+    &-theme-GreyColor {
+      color: $theme-GreyColor;
+    }
+
+    &-theme-WhiteColor {
+      color: $theme-WhiteColor;
+    }
+
+  }  
