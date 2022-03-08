@@ -12,8 +12,14 @@ $border-Color: #120078;
 //== Theme Color
 $theme-SkinColor: #020003;
 $theme-DarkColor: #0b0116;
-$theme-GreyColor: rgb(250, 75, 119);
+$theme-GreyColor: rgb(116, 250, 75);
+$theme-GreenYellow: #d5fd09;
+$theme-newColor: rgb(236, 215, 255);
+$theme-newPurple: rgb(236, 215, 255);
 $theme-WhiteColor: #FFFFFF;
+$theme-LoginBlue: #7f96fd;
+$theme-SignupColor: rgb(245, 185, 107);
+$theme-BlueColor: rgb(0, 219, 229);
 
 //== Social Media Icons Color
 $facebook: #3B5999;
@@ -29,11 +35,11 @@ $linkedin: #0077B5;
 .bg {
 
     &-theme-SkinColor {
-      background: linear-gradient(90deg, rgb(252, 93, 154) 0%, rgb(255, 226, 132) 50%, rgb(252, 93, 154) 100%);
+      background: linear-gradient(90deg, rgb(146, 55, 189) 0%, rgb(255, 132, 224) 50%,  rgb(146, 55, 189)  100%);
     }
   
     &-theme-DarkColor {
-      background: linear-gradient(90deg, rgb(252, 93, 154) 0%, rgb(255, 226, 132) 50%, rgb(252, 93, 154) 100%);
+      background: linear-gradient(90deg,  rgb(146, 55, 189)  0%, rgb(255, 132, 224) 50%,  rgb(146, 55, 189)  100%);
     }
   
     &-theme-GreyColor {

@@ -83,23 +83,30 @@ class Skills extends Component {
                 />
               </Grid>
             </Grid>
-            <br />
-            <Divider />
-            <br />
         </CardContent>
-        <Grid item md={6} sm={12} xs={12} lg={6}>
-                <TextField
+        <Grid item xs={12} lg={12}>
+          <h3>Perks</h3>
+        </Grid>
+        <CardContent>
+          <div >
+            <Grid container spacing={2} lg={12}>
+              <Grid item md={4} sm={12} xs={12} lg={4}>
+                <textarea
                   margin="dense"
-                  label="Positions open"
                   variant="outlined"
-                  name="position"
+                  name="perks"
+                  placeholder="Perks and Benefits"
+                  cols={100}
+                  rows={3}
                   required
-                  style={{alignItems: 'left', width: '80%'}}
-                  value={values.position}
+                  value={values.perks}
                   onChange={this.props.handleChange}
-                  
                 />
               </Grid>
+            </Grid>
+            <Divider />
+          </div>
+        </CardContent>
         {/* <Container className={classes.margin}>
           <Row>
             <Col lg={4} xs={4} />

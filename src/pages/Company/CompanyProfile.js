@@ -432,7 +432,7 @@ const CompanyProfile = () => {
             {/* row */}
             <div className="row">
               <div className="col-lg-4 widget-area sidebar-left job_list-widget-area">
-                <div className="job_list-widget" style={{ backgroundColor: '#ffc0d0' }}>
+                <div className="job_list-widget" style={{ backgroundColor: 'rgb(236, 215, 255)' }}>
 
                  <aside className="widget job-widget">
                     {/* <h3 className="widget-title"><i className="flaticon flaticon-calendar-1"></i>Date Applied</h3> */}
@@ -528,7 +528,7 @@ const CompanyProfile = () => {
                     
                         <ul>
                          {jobs?.map((job, index) => (
-                        <div className="featured-imagebox featured-imagebox-candidate" style={{ backgroundColor: '#ffc0d0' }}>
+                        <div className="featured-imagebox featured-imagebox-candidate" style={{ backgroundColor: 'rgb(236, 215, 255)' }}>
                          <div className="featured-content">
                            <div className="featured-title">
                              <Link to={`/job_details/${job._id}`} style={{textDecoration: 'none'}}><h3>{job.title}</h3></Link>

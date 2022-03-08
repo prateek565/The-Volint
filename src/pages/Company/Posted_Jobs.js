@@ -31,7 +31,7 @@ const Posted_Jobs = () => {
                     {AllInterns?.map((data, index) => (
                         <Link exact to={`/edit_job/id=${data._id}`}>
                             <div className="col-lg-12">
-                                <div className="featured-imagebox featured-imagebox-candidate" style={{ backgroundColor: '#ffc0d0' }}>
+                                <div className="featured-imagebox featured-imagebox-candidate" style={{ backgroundColor: 'rgb(236, 215, 255)' }}>
                                     <div className="featured-content">
                                         <div className="featured-title">
                                             <h3>{data?.title}</h3>
@@ -55,7 +55,7 @@ const Posted_Jobs = () => {
                     ))}
 
                     <div className="col-lg-12">
-                        <div className="featured-imagebox featured-imagebox-candidate" style={{ backgroundColor: '#ffc0d0' }}>
+                        <div className="featured-imagebox featured-imagebox-candidate" style={{ backgroundColor: 'rgb(236, 215, 255)' }}>
                             {/* <div className="featured-thumbnail">
                            <img src="https://via.placeholder.com/200x200?text=200x200+candidate-04.jpg" />
                              </div> */}

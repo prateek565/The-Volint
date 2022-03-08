@@ -14,6 +14,7 @@ import InstagramIcon from '@material-ui/icons/Instagram';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import { Row, Col } from 'react-bootstrap';
 import { Paper, withStyles, Grid } from '@material-ui/core';
+import DropDown from '../../../components/Manual/dropdown/DropDown';
 
 const styles = theme => ({
   margin: {
@@ -33,11 +34,14 @@ class Profile extends Component {
   render() {
     const { values } = this.props;
     const { classes } = this.props;
+    console.log('====================================');
+    console.log(values);
+    console.log('====================================');
     return (
       <>
-       <Grid item xs={12} lg={12}>
-         <h3>Job Details</h3>
-       </Grid>
+        <Grid item xs={12} lg={12}>
+          <h3>Job Details</h3>
+        </Grid>
         <CardContent>
           <div className={classes.margin}>
             <Grid container spacing={2} alignItems="center" lg={12}>
@@ -58,16 +62,22 @@ class Profile extends Component {
                   margin="dense"
                   label="Project Title"
                   variant="outlined"
-                  style={{width: '80%'}}
+                  style={{ width: '80%' }}
                   name="title"
                   required
                   value={values.title}
                   onChange={this.props.handleChange}
                 />
               </Grid>
-
-              <Grid item md={6} sm={12} xs={12} lg={6}>
-                <TextField
+              <Grid item md={5} sm={10} xs={10} lg={5} style={{marginRight: '92px'}}>
+                <DropDown
+                  array={['Volunteer Work', 'Internship']}
+                  type={'Category'}
+                  name="category"
+                  value={values.category}
+                  handleChange={this.props.handleChange}
+                />
+                {/* <TextField
                   margin="dense"
                   label="Category"
                   variant="outlined"
@@ -76,10 +86,27 @@ class Profile extends Component {
                   style={{ alignItems: 'left', width: '80%' }}
                   value={values.category}
                   onChange={this.props.handleChange}
-
-                />
+                /> */}
               </Grid>
-
+              <Grid item md={5} sm={10} xs={10} lg={5}>
+                <DropDown
+                  array={['Advocacy and Human Rights', 'Children and Youth', 'Agriculture',
+                  'Environment', 'Animals', 'Community', 'Computers and Technology', 'Education and Literacy', 'Others']}
+                  type={'Industry'}
+                  name="industry"
+                  value={values.industry}
+                  handleChange={this.props.handleChange}
+                />
+                </Grid>
+              <Grid item md={5} sm={10} xs={10} lg={5} style={{marginRight: '92px'}}>
+                <DropDown
+                  array={['Part-time', 'Full-time']}
+                  type={'Job type'}
+                  name="type"
+                  value={values.type}
+                  handleChange={this.props.handleChange}
+                />
+                </Grid>
               <Grid item lg={6} xs={12} sm={12} md={6}>
                 <TextField
                   margin="dense"
@@ -89,19 +116,6 @@ class Profile extends Component {
                   required
                   style={{ alignItems: 'left', width: '80%' }}
                   value={values.experience}
-                  onChange={this.props.handleChange}
-                />
-              </Grid>
-
-              <Grid item md={6} sm={12} xs={12} lg={6}>
-                <TextField
-                  margin="dense"
-                  label="Job Type"
-                  variant="outlined"
-                  name="type"
-                  required
-                  style={{ alignItems: 'left', width: '80%' }}
-                  value={values.type}
                   onChange={this.props.handleChange}
                 />
               </Grid>
@@ -140,7 +154,19 @@ class Profile extends Component {
                   onChange={this.props.handleChange}
                 />
               </Grid>
-
+              <Grid item md={6} sm={12} xs={12} lg={6}>
+                <TextField
+                  margin="dense"
+                  label="Positions open"
+                  variant="outlined"
+                  name="position"
+                  required
+                  style={{alignItems: 'left', width: '80%'}}
+                  value={values.position}
+                  onChange={this.props.handleChange}
+                  
+                />
+              </Grid>
             </Grid>
             {/* <Container className={classes.margin}>
               <Row>

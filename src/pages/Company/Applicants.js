@@ -162,7 +162,7 @@ const Applications = () => {
                                 <div className="row">
                                 {allcandidates.map((user, index) => (
             <div className="col-lg-12">
-                <div className="featured-imagebox featured-imagebox-candidate" style={{ backgroundColor: '#ffc0d0' }}>
+                <div className="featured-imagebox featured-imagebox-candidate" style={{ backgroundColor: 'rgb(236, 215, 255)' }}>
                     <div className="featured-thumbnail">
                         <img src="https://via.placeholder.com/200x200?text=200x200+candidate-04.jpg" />
                     </div>

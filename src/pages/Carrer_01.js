@@ -360,7 +360,7 @@ export class Carrer_01 extends Component {
                                 <div className="section-title title-style-center_text">
                                     <div className="title-header">
                                         <h3>Find us <span className="text-theme-SkinColor">here!</span></h3>
-                                        <h2 className="title">Our Head Quarters</h2>
+                                        <h2 className="title">Our Head </h2>
                                     </div>
                                 </div>
                             </div>

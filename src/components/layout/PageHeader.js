@@ -3,7 +3,7 @@ import React from 'react';
 
 const PageHeader = ({title,content,breadcrumb,className}) => {
     return (
-        <div className="page-header-area bg-theme_SkinColor">
+        <div className="page-header-area">
             <div className="page-header-area-inner">
                 <div className="container">
                     <div className="row">

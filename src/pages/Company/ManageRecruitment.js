@@ -81,7 +81,7 @@ const ManageRecruitment = () => {
                     {/* row */}
                     <div className="row">
                         <div className="col-lg-4 widget-area sidebar-left job_list-widget-area">
-                            <div className="job_list-widget" style={{ backgroundColor: '#ffc0d0' }}>
+                            <div className="job_list-widget" style={{ backgroundColor: 'rgb(236, 215, 255)' }}>
                                 <aside className="widget job-widget" onClick={() => ( setStep(0))}>
                                     <h3 className="widget-title">Projects</h3>
                                     <div className="col-lg-12 col-md-12">
@@ -109,7 +109,7 @@ const ManageRecruitment = () => {
                         <div className="col-lg-8 content-area">
                             <div className="row">
                                 <div className="col-md-12">
-                                    <div className="showing-result-block d-sm-flex align-items-center justify-content-between" style={{ backgroundColor: '#ffc0d0' }}>
+                                    <div className="showing-result-block d-sm-flex align-items-center justify-content-between" style={{ backgroundColor: 'rgb(236, 215, 255)' }}>
                                         <span className="showing-result">Showing 1–10 of 50 Project Results :</span>
                                         <form>
                                             <div className="sort-by">Sort By:
@@ -141,7 +141,7 @@ const ManageRecruitment = () => {
                                         {  allApplications &&
                                             allApplications.map((intern, index) => (
                                                 <div className="col-lg-12 col-md-12">
-                                                    <div className="flex featured-imagebox featured-imagebox-job" style={{ backgroundColor: '#ffc0d0' }}>
+                                                    <div className="flex featured-imagebox featured-imagebox-job" style={{ backgroundColor: 'rgb(236, 215, 255)' }}>
                                                         <div className="featured-content">
                                                             <div className="featured-title">
                                                                 <h3><Link to={`/job_details/${intern._id}`}>{intern.name}</Link></h3>
@@ -173,7 +173,7 @@ const ManageRecruitment = () => {
                                         {  allApplications &&
                                             allApplications.map((intern, index) => (
                                                 <div className="col-lg-12 col-md-12">
-                                                    <div className="flex featured-imagebox featured-imagebox-job" style={{ backgroundColor: '#ffc0d0' }}>
+                                                    <div className="flex featured-imagebox featured-imagebox-job" style={{ backgroundColor: 'rgb(236, 215, 255)' }}>
                                                         <div className="featured-content">
                                                             <div className="featured-title">
                                                                 <h3><Link to={`/job_details/${intern._id}`}>{intern.name}</Link></h3>
@@ -205,7 +205,7 @@ const ManageRecruitment = () => {
                                         {  allApplications &&
                                             allApplications.map((intern, index) => (
                                                 <div className="col-lg-12 col-md-12">
-                                                    <div className="flex featured-imagebox featured-imagebox-job" style={{ backgroundColor: '#ffc0d0' }}>
+                                                    <div className="flex featured-imagebox featured-imagebox-job" style={{ backgroundColor: 'rgb(236, 215, 255)' }}>
                                                         <div className="featured-content">
                                                             <div className="featured-title">
                                                                 <h3><Link to={`/job_details/${intern._id}`}>{intern.name}</Link></h3>
@@ -238,7 +238,7 @@ const ManageRecruitment = () => {
                                 {  allApplications &&
                                     allApplications.map((intern, index) => (
                                         <div className="col-lg-12 col-md-12">
-                                            <div className="flex featured-imagebox featured-imagebox-job" style={{ backgroundColor: '#ffc0d0' }}>
+                                            <div className="flex featured-imagebox featured-imagebox-job" style={{ backgroundColor: 'rgb(236, 215, 255)' }}>
                                                 <div className="featured-content">
                                                     <div className="featured-title">
                                                         <h3><Link to={`/job_details/${intern._id}`}>{intern.name}</Link></h3>
@@ -264,7 +264,7 @@ const ManageRecruitment = () => {
                                 {  allApplications &&
                                     allApplications.map((intern, index) => (
                                         <div className="col-lg-12 col-md-12">
-                                            <div className="flex featured-imagebox featured-imagebox-job" style={{ backgroundColor: '#ffc0d0' }}>
+                                            <div className="flex featured-imagebox featured-imagebox-job" style={{ backgroundColor: 'rgb(236, 215, 255)' }}>
                                                 <div className="featured-content">
                                                     <div className="featured-title">
                                                         <h3><Link to={`/job_details/${intern._id}`}>{intern.name}</Link></h3>

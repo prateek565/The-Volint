@@ -17,6 +17,7 @@ const PostJob = () => {
     company:'',
     title:'',
     category:'',
+    industry: '',
     experience:'',
     type:'',
     location:'',
@@ -66,6 +67,7 @@ const PostJob = () => {
     company,
     title,
     category,
+    industry,
     experience,
     type,
     location,
@@ -90,6 +92,7 @@ const PostJob = () => {
     company,
     title,
     category,
+    industry,
     experience,
     type,
     location,
@@ -116,8 +119,6 @@ const PostJob = () => {
             title="Post an Opportunity"
             breadcrumb="post opportunity"
            />
-              
-         
           <div className="App mt-3">
             <div className="container col-lg-10 mx-auto">
               <Profile

@@ -47,6 +47,7 @@ import EditJob from './pages/Company/EditJob.js/EditJob';
 import CompanyProfile from './pages/Company/CompanyProfile';
 import Projects from './pages/Company/Projects';
 import ManageRecruitment from './pages/Company/ManageRecruitment';
+import Jobs_by_filter from './pages/User/Job_by_filter';
 
 axios.defaults.baseURL = 'http://localhost:4000';
 // axios.defaults.baseURL = 'https://volunteerproject.herokuapp.com';
@@ -76,6 +77,7 @@ function App() {
         <Route exact path={`${process.env.PUBLIC_URL + '/Contact_02'}`} component={ Contact_02 } /> */}
         <Route exact path={`/job_list`} component={ Job_list } />
         <Route path={`/job_details`} component={ Job_details } />
+        <Route path={`/jobs_by_filter`} component={ Jobs_by_filter } />
         {/* <Route exact path={`${process.env.PUBLIC_URL + '/Carrer_01'}`} component={ Carrer_01 } />
         <Route exact path={`${process.env.PUBLIC_URL + '/Error_404'}`} component={ Error_404 } />
         <Route exact path={`${process.env.PUBLIC_URL + '/Error_405'}`} component={ Error_405 } />

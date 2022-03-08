@@ -87,9 +87,6 @@ class Qualification extends Component {
                 />
               </Grid>
             </Grid>
-            <br />
-            <Divider />
-            <br />
           </div>
         </CardContent>
         

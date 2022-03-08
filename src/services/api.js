@@ -115,6 +115,15 @@ export const rejectApplicant=async (id)=>{
     console.log(id);
     return await axios.put(`/intern/rejectapplicant/${id}`);
 }
+export const getInternByCategory=async (category)=>{
+    return await axios.get(`/intern/bycategory/${category}`);
+}
+export const getInternByIndustry=async (industry)=>{
+    return await axios.get(`/intern/byindustry/${industry}`);
+}
+export const searchIntern=async (keyword)=>{
+    return await axios.get(`/intern/search/${keyword}`);
+}
 
 //****** company ******//
 export const companyInterns=async ()=>{

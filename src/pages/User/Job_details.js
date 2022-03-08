@@ -152,7 +152,7 @@ const Job_details = () => {
                         {/* row */}
                         <div className="row">
                             <div className="col-lg-4 widget-area sidebar-left job_list-widget-area">
-                                <div className="job_list-widget" style={{ backgroundColor: '#ffc0d0' }}>
+                                <div className="job_list-widget" style={{ backgroundColor: 'rgb(236, 215, 255)' }}>
                                     <aside className="widget job-widget">
                                         <h3 className="widget-title"><i className="ti ti-files"></i>Job Informations</h3>
                                         <ul>
@@ -199,9 +199,9 @@ const Job_details = () => {
                             </div>
                             <div className="col-lg-8 content-area">
                                 <div className="row">
-                                    <div className="col-lg-12 col-md-12" style={{ backgroundColor: '#ffc0d0' }}>
+                                    <div className="col-lg-12 col-md-12" style={{ backgroundColor: 'rgb(236, 215, 255)' }}>
                                         {/* featured-imagebox */}
-                                        <div className="featured-imagebox featured-imagebox-job  m-0" style={{ backgroundColor: '#ffc0d0' }}>
+                                        <div className="featured-imagebox featured-imagebox-job  m-0" style={{ backgroundColor: 'rgb(236, 215, 255)' }}>
                                             <div className="featured-thumbnail">
                                                 <img src="https://via.placeholder.com/210x204?text=210x204+job-01.png" />
                                             </div>
@@ -230,7 +230,7 @@ const Job_details = () => {
                                         </div>{/* featured-imagebox end */}
                                     </div>
                                     <div className="col-lg-12 col-md-12">
-                                        <div className="overview-box" style={{ backgroundColor: '#ffc0d0' }}>
+                                        <div className="overview-box" style={{ backgroundColor: 'rgb(236, 215, 255)' }}>
                                             <div className="title">
                                                 <h5>Job Description :</h5>
                                             </div>
@@ -243,7 +243,7 @@ const Job_details = () => {
                                                 maecenas accumsan lacus vel facilisis. ”</p>}
                                             </div>
                                         </div>
-                                        <div className="overview-box" style={{ backgroundColor: '#ffc0d0' }}>
+                                        <div className="overview-box" style={{ backgroundColor: 'rgb(236, 215, 255)' }}>
                                             <div className="title">
                                                 <h5>Required Knowledge and Abilities :</h5>
                                             </div>
@@ -259,7 +259,7 @@ const Job_details = () => {
                                                 </ul>
                                             </div>
                                         </div>
-                                        <div className="overview-box" style={{ backgroundColor: '#ffc0d0' }}>
+                                        <div className="overview-box" style={{ backgroundColor: 'rgb(236, 215, 255)' }}>
                                             <div className="title">
                                                 <h5>Skills Required</h5>
                                             </div>
