@@ -10,10 +10,11 @@ import { GoogleLogin } from 'react-google-login';
 import { Box, Button, Modal, TextField, Typography } from '@material-ui/core';
 import { useForm } from 'use-form-fields';
 import { Alerterror } from '../../../components/layout/Alerts';
-import {FcGoogle} from 'react-icons/fc';
-import {GrTwitter, GrFacebook, GrLinkedin, GrGithub} from 'react-icons/gr';
+import { FcGoogle } from 'react-icons/fc';
+import { GrTwitter, GrFacebook, GrLinkedin, GrGithub } from 'react-icons/gr';
 import LoginGoogle from './googleLogin';
 import LoginFacebook from './facebookLogin';
+import ReactFacebookLogin from 'react-facebook-login';
 // import GitHubLogin from 'github-login';
 
 const style = {
@@ -161,7 +162,7 @@ const Login = () => {
                     <div className="row">
                         <div className="col-lg-2"></div>
                         <div className="col-lg-8">
-                            <div style={{ backgroundColor: '#7f96fd'}}className="bg-theme-GreyColor ttm-col-bgcolor-yes ttm-bg rounded p-50 p-lg-20">
+                            <div style={{ backgroundColor: 'rgb(245, 185, 107)k' }} className="bg-theme-GreyColor ttm-col-bgcolor-yes ttm-bg rounded p-50 p-lg-20">
                                 <div className="ttm-col-wrapper-bg-layer ttm-bg-layer"></div>
                                 <div className="layer-content">
                                     <div className="text-center mb-20">
@@ -351,23 +352,31 @@ const Login = () => {
                                             </div>
                                         </Tabs>
                                     </div>
-                                    <br/>
+                                    <br />
                                     <div className="login-social-buttons">
-                                    <div className='d-flex justify-content-center'>
-                                        <p>
-                                            Or Login With
-                                        </p>
-                                    </div>
-                                    <hr />
+                                        <div className='d-flex justify-content-center'>
+                                            <p>
+                                                Or Login With
+                                            </p>
+                                        </div>
+                                        <hr />
                                     </div>
                                     <div className="login-social-buttons">
                                         <div className="row">
                                             <div className="row">
                                                 <div>
-                                                    {/* <LoginGoogle status={'user'}/> */}
-                                                    {/* <LoginFacebook status={'user'}/> */}
+                                                    <LoginGoogle status={'user'} />
+                                                    {/* <LoginFacebook status={'user'} /> */}
                                                 </div>
-                                                <div className="col-lg-6 flex pointer" style={{ display: 'flex', justifyContent: 'center', gap: '20px', margin: 'auto' }}>
+                                                <ReactFacebookLogin
+                                                    appId="951777148793990"
+                                                    autoLoad={false}
+                                                    fields="name,email,picture"
+                                                    callback={responseFacebook}
+                                                    cssClass=""
+                                                    icon="fa-facebook"
+                                                />
+                                                {/* <div className="col-lg-6 flex pointer" style={{ display: 'flex', justifyContent: 'center', gap: '20px', margin: 'auto' }}>
                                                     <div style={{ cursor: 'pointer' }}>
                                                         <FcGoogle size={'2rem'} />
                                                     </div>
@@ -375,7 +384,7 @@ const Login = () => {
                                                     <GrGithub size={'2rem'} />
                                                     <GrLinkedin size={'2rem'} color='#0e76a8' />
                                                     <GrTwitter size={'2rem'} color='#00acee' />
-                                                </div>
+                                                </div> */}
                                             </div>
                                         </div>
                                     </div>

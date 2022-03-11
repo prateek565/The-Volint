@@ -102,7 +102,7 @@ export const offerAccept=async (id)=>{
 export const allApplicants=async (id)=>{
     return await axios.get(`/intern/getapplicants/${id}`);
 }
-export const allInterns=async (data)=>{
+export const allInterns=async ()=>{
     return await axios.get("/intern/allinterns");
 }
 export const getIntern=async (id)=>{

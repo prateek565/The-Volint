@@ -69,13 +69,10 @@ export class Footer extends Component {
                                     <ul className="widget_contact_wrapper">
                                         <li style={{color:'white'}}>
                                             <i className=" flaticon-phone-call" ></i>
-                                            <h3>Call Us On:</h3>+92 777 555 0000</li>
-                                        <li style={{color:'white'}}>
-                                            <i className=" flaticon-placeholder"></i>
-                                            <h3>Address:</h3>Suite 20 Golden Street USA</li>
+                                            <h3>Call Us On:</h3><a style={{color: 'white'}} href="tel:+1 (770) 289-0370">+1 (770) 289-0370</a></li>
                                         <li style={{color:'white'}}>
                                             <i className=" flaticon-email"></i>
-                                            <h3>Email:</h3><a style={{color:'white'}} href="mailto:info@example.com">info@example.com</a>
+                                            <h3>Email:</h3><a style={{color:'white'}} href="mailto:agarwal.sudhir@gmail.com">agarwal.sudhir@gmail.com</a>
                                         </li>
                                     </ul>
                                 </div>

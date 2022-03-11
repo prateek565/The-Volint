@@ -1,5 +1,4 @@
 import React from 'react'
-import { googleLogin } from '../../../services/api';
 import { FacebookLogin } from "react-facebook-login"
 import { useHistory } from 'react-router-dom';
 
@@ -39,4 +38,4 @@ const LoginFacebook = ({ status }) => {
     )
 }
 
-export default LoginFacebook
+export default LoginFacebook;

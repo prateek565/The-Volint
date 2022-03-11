@@ -261,12 +261,12 @@ const Header = () => {
                                                       Projects
                                                     </MenuItem>
                                                     </Link>}
-                                                    {status==="company" && <Link exact to= {'/posted_jobs '}>
+                                                    {status==="company" && <a href= {'/posted_jobs '}>
                                                     <MenuItem>
                                                     <ListItemIcon />
                                                       Posted Jobs
                                                     </MenuItem>
-                                                    </Link>}
+                                                    </a>}
                                                     {/*<MenuItem>
                                                       <ListItemIcon>
                                                         <Settings fontSize="small" />

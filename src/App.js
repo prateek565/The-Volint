@@ -5,7 +5,6 @@ import "slick-carousel/slick/slick-theme.css";
 import './css/vendor/flaticon.css';
 import './css/vendor/fontawesome.min.css';
 import './css/vendor/themify-icons.css';
-
 import Home from './pages/Home';
 import Home2 from './pages/Home2';
 import Home3 from './pages/Home3';
@@ -63,10 +62,8 @@ function App() {
         <Route exact path={`/`} component={ Home3 } />
         {/* <Route exact path={`/home2`} component={ Home2 } /> */}
         {/* <Route exact path={`/home3`} component={ Home3 } /> */}
-       
         {/* <Route exact path={`${process.env.PUBLIC_URL + '/Home2'}`} component={ Home2 } /> 
         <Route exact path={`${process.env.PUBLIC_URL + '/Home3'}`} component={ Home3 } />  */}
-
         {/* <Route exact path={`${process.env.PUBLIC_URL + '/About_us'}`} component={ About_us } /> 
         <Route exact path={`${process.env.PUBLIC_URL + '/Services'}`} component={ Services } />
         <Route exact path={`${process.env.PUBLIC_URL + '/Services_details'}`} component={ Services_details } />
