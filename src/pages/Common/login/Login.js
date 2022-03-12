@@ -368,14 +368,14 @@ const Login = () => {
                                                     <LoginGoogle status={'user'} />
                                                     {/* <LoginFacebook status={'user'} /> */}
                                                 </div>
-                                                <ReactFacebookLogin
+                                                {/* <ReactFacebookLogin
                                                     appId="951777148793990"
                                                     autoLoad={false}
                                                     fields="name,email,picture"
                                                     callback={responseFacebook}
                                                     cssClass=""
                                                     icon="fa-facebook"
-                                                />
+                                                /> */}
                                                 {/* <div className="col-lg-6 flex pointer" style={{ display: 'flex', justifyContent: 'center', gap: '20px', margin: 'auto' }}>
                                                     <div style={{ cursor: 'pointer' }}>
                                                         <FcGoogle size={'2rem'} />
