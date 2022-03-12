@@ -142,12 +142,10 @@ const Home3 = () => {
 
 
             {/* services-section */}
-            <section className="ttm-row services-section bg-img1 bg-theme-GreyColor ttm-bg ttm-bgimage-yes clearfix" style={{ backgroundImage: 'url(images/bg-image/row-bgimage-1.png)', backgroundColor: 'orange' }}>
+            {/* <section className="ttm-row services-section bg-img1 bg-theme-GreyColor ttm-bg ttm-bgimage-yes clearfix" style={{ backgroundImage: 'url(images/bg-image/row-bgimage-1.png)', backgroundColor: 'orange' }}>
                 <div className="container">
-                    {/* row */}
                     <div className="row">
                         <div className="col-lg-11">
-                            {/* section title */}
                             <div className="section-title style2 mb-0">
                                 <div className="title-header">
                                     <h3>We Serve <span className="text-theme-SkinColor">Overseas</span></h3>
@@ -157,20 +155,18 @@ const Home3 = () => {
                                     <p>A staffing agency recruits <span className="text-theme-SkinColor">new employees </span>
                                         for the client employers to fulfill their companies' needs. We've head quarters worldwide</p>
                                 </div>
-                            </div>{/* section title end */}
+                            </div>
                         </div>
-                    </div>{/* row end */}
-                    {/* Slider */}
+                    </div>
                     <Slider className="row slick_slider slick-arrows-style1" {...slick_slider} slidesToShow={3} arrows={true}
                         responsive={[{ breakpoint: 1024, settings: { slidesToShow: 2, slidesToScroll: 2 } },
                         { breakpoint: 650, settings: { slidesToShow: 1, slidesToScroll: 1 } }]}>
                         <div className="col-md-12">
-                            {/* featured-imagebox */}
                             <div className="featured-imagebox featured-imagebox-country">
-                                {/* featured-thumbnail */}
+                             
                                 <div className="featured-thumbnail">
                                     <img src={"https://via.placeholder.com/720x600?text=720x600+country-01.jpg"} />
-                                </div>{/* featured-thumbnail end */}
+                                </div>
                                 <div className="featured-content">
                                     <div className="featured-title">
                                         <h3><a href={process.env.PUBLIC_URL + '/'}>United States</a></h3>
@@ -179,15 +175,14 @@ const Home3 = () => {
                                         <p>A millions of decision about who has a right to settle</p>
                                     </div>
                                 </div>
-                            </div>{/* featured-imagebox end */}
+                            </div>
                         </div>
                         <div className="col-md-12">
-                            {/* featured-imagebox */}
                             <div className="featured-imagebox featured-imagebox-country">
-                                {/* featured-thumbnail */}
+                              
                                 <div className="featured-thumbnail">
                                     <img className="img-fluid" src="https://via.placeholder.com/720x600?text=720x600+country-02.jpg" alt="image" />
-                                </div>{/* featured-thumbnail end */}
+                                </div>
                                 <div className="featured-content">
                                     <div className="featured-title">
                                         <h3><a href={process.env.PUBLIC_URL + '/'}>Australia</a></h3>
@@ -196,82 +191,11 @@ const Home3 = () => {
                                         <p>Our head quarters is in Canberra, help throughout process</p>
                                     </div>
                                 </div>
-                            </div>{/* featured-imagebox end */}
-                        </div>
-                        <div className="col-md-12">
-                            {/* featured-imagebox */}
-                            <div className="featured-imagebox featured-imagebox-country">
-                                {/* featured-thumbnail */}
-                                <div className="featured-thumbnail">
-                                    <img className="img-fluid" src="https://via.placeholder.com/720x600?text=720x600+country-03.jpg" alt="image" />
-                                </div>{/* featured-thumbnail end */}
-                                <div className="featured-content">
-                                    <div className="featured-title">
-                                        <h3><a href={process.env.PUBLIC_URL + '/'}>Canada</a></h3>
-                                    </div>
-                                    <div className="featured-desc">
-                                        <p>We will help in every step of the application process</p>
-                                    </div>
-                                </div>
-                            </div>{/* featured-imagebox end */}
-                        </div>
-                        <div className="col-md-12">
-                            {/* featured-imagebox */}
-                            <div className="featured-imagebox featured-imagebox-country">
-                                {/* featured-thumbnail */}
-                                <div className="featured-thumbnail">
-                                    <img className="img-fluid" src="https://via.placeholder.com/720x600?text=720x600+country-04.jpg" alt="image" />
-                                </div>{/* featured-thumbnail end */}
-                                <div className="featured-content">
-                                    <div className="featured-title">
-                                        <h3><a href={process.env.PUBLIC_URL + '/'}>United Kingdom</a></h3>
-                                    </div>
-                                    <div className="featured-desc">
-                                        <p>We will help you with every step process of recruitment </p>
-                                    </div>
-                                </div>
-                            </div>{/* featured-imagebox end */}
-                        </div>
-                        <div className="col-md-12">
-                            {/* featured-imagebox */}
-                            <div className="featured-imagebox featured-imagebox-country">
-                                {/* featured-thumbnail */}
-                                <div className="featured-thumbnail">
-                                    <img className="img-fluid" src="https://via.placeholder.com/720x600?text=720x600+country-01.jpg" alt="image" />
-                                </div>{/* featured-thumbnail end */}
-                                <div className="featured-content">
-                                    <div className="featured-title">
-                                        <h3><a href={process.env.PUBLIC_URL + '/'}>United States</a></h3>
-                                    </div>
-                                    <div className="featured-desc">
-                                        <p>A millions of decision about who has a right to settle</p>
-                                    </div>
-                                </div>
-                            </div>{/* featured-imagebox end */}
-                        </div>
-                        <div className="col-md-12">
-                            {/* featured-imagebox */}
-                            <div className="featured-imagebox featured-imagebox-country">
-                                {/* featured-thumbnail */}
-                                <div className="featured-thumbnail">
-                                    <img className="img-fluid" src="https://via.placeholder.com/720x600?text=720x600+country-03.jpg" alt="image" />
-                                </div>{/* featured-thumbnail end */}
-                                <div className="featured-content">
-                                    <div className="featured-title">
-                                        <h3><a href={process.env.PUBLIC_URL + '/'}>Canada</a></h3>
-                                    </div>
-                                    <div className="featured-desc">
-                                        <p>We will help in every step of the application process.</p>
-                                    </div>
-                                </div>
-                            </div>{/* featured-imagebox end */}
+                            </div>
                         </div>
                     </Slider>
-                    {/* Slider end */}
                 </div>
-            </section>
-            {/* services-section end */}
-
+            </section> */}
             {/* features-section */}
             <section className="ttm-row features-section clearfix">
                 <div className="container">

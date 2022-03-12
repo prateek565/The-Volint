@@ -134,13 +134,13 @@ const Header = () => {
                     <div className="top_bar_icon">
                       <i className="flaticon flaticon-phone-call"></i>
                     </div>
-                    <span><a href="tel:+1 (770) 289-0370">+1 (770) 289-0370</a></span>
+                    <span><a href="tel:+(470) 795-1189">+(470) 795-1189</a></span>
                   </div>
                   <div className="top_bar_contact_item">
                     <div className="top_bar_icon">
                       <i className="flaticon flaticon-email"></i>
                     </div>
-                    <span><a href="mailto:agarwal.sudhir@gmail.com">agarwal.sudhir@gmail.com</a></span>
+                    <span><a href="mailto:thevolint@gmail.com">thevolint@gmail.com</a></span>
                   </div>
                 </div>
                 <div className="ttm-bg ttm-col-bgcolor-yes ttm-right-span bg-theme-GreyColor pl-20 ms-auto">
