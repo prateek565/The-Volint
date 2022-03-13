@@ -136,7 +136,7 @@ const Header = () => {
                     <div className="site-header-menu-inner ttm-stickable-header">
                         <div className="container-fluid">
                             <div className="row">
-                                <div className="col-lg-12">
+                                <div className="col-lg-20">
                                     {/* site-navigation */}
                                     <div className="site-navigation d-flex align-items-center justify-content-between">
                                         {/* site-branding */}
@@ -216,14 +216,6 @@ const Header = () => {
                                                       Add Resume
                                                       </MenuItem>
                                                     </Link>}
-                                                    {status=="company" && <Link exact to= {'/post_job'}>
-                                                    <MenuItem>
-                                                      <ListItemIcon>
-                                                          {/* <Settings fontSize="small" /> */}
-                                                      </ListItemIcon>
-                                                      Post an Opportunity
-                                                      </MenuItem>
-                                                    </Link>}
                                                     {/*status=="company" && <Link exact to= {'/edit_job'}>
                                                     <MenuItem>
                                                       <ListItemIcon>
@@ -254,19 +246,6 @@ const Header = () => {
                                                       Applications
                                                     </MenuItem>
                                                     </Link>*/}
-                                                    {status==="company" && <Link exact to= {'/projects'}>
-                                                    <MenuItem>
-                                                      <ListItemIcon>
-                                                      </ListItemIcon>
-                                                      Projects
-                                                    </MenuItem>
-                                                    </Link>}
-                                                    {status==="company" && <a href= {'/posted_jobs '}>
-                                                    <MenuItem>
-                                                    <ListItemIcon />
-                                                      Posted Jobs
-                                                    </MenuItem>
-                                                    </a>}
                                                     {/*<MenuItem>
                                                       <ListItemIcon>
                                                         <Settings fontSize="small" />

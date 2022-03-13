@@ -5,6 +5,7 @@ import { Footer } from '../../components/layout/Footer';
 import { Link, useLocation, useParams } from 'react-router-dom';
 import { allApplicants, allUsers } from '../../services/api';
 import { CircularProgress } from '@material-ui/core';
+import TemporaryDrawer from '../Common/Message';
 
 const Candidate_list = () => {
 
@@ -154,6 +155,9 @@ const Candidate_list = () => {
                                                     <div className="featured-title">
                                                         <Link to={`/candidate_details/${user._id}`}><h3>{(user) && user.name}</h3></Link>
                                                     </div>
+                                                    <div>
+                                                        description of the candidate
+                                                    </div>
                                                     <div className="featured-bottom">
                                                         <div className="job-skill">
                                                             {(user) && user.skills.map(skill => (
@@ -166,9 +170,10 @@ const Candidate_list = () => {
                                                         <div className="view-block">
                                                             <a className="ttm-btn ttm-btn-size-sm ttm-btn-shape-rounded ttm-btn-style-border 
                                                     ttm-btn-color-dark"
-                                                            href={`/candidate_details/${user._id}`}>view Profile</a>
+                                                            href={`/candidate_details/${user._id}`}>Message Candidate</a>
                                                         </div>
                                                     </div>
+                                                    <TemporaryDrawer name={user.name} key={user._id} id={user._id}/>
                                                 </div>
                                             </div>
                                         </div> : <div><CircularProgress/></div>

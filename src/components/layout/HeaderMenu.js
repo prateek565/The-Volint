@@ -44,6 +44,8 @@ const HeaderMenu = () => {
                         </li> */}
                     {/* <li className="mega-menu-item"> */}
                     {status==="company" && <Link exact to={'/candidate_list'}  className="alert-heading ml-40">Volunteers</Link>}
+                    {status==="company" && <Link exact to={'/post_job'}  className="alert-heading ml-40">Post Job</Link>}
+                    {status==="company" && <a href={'/posted_jobs'}  className="alert-heading ml-40">Posted Jobs</a>}
                     {/* <ul className="mega-submenu">
                                 <li><a href={process.env.PUBLIC_URL + '/candidate_list'}>Candidate List</a></li>
                                 <li><a href={process.env.PUBLIC_URL + '/candidate_details'}>Candidate Details</a></li>

@@ -119,7 +119,7 @@ const PostJob = () => {
             title="Post an Opportunity"
             breadcrumb="post opportunity"
            />
-          <div style={{backgroundColor: '#f8d2ff'}}>
+          <div>
           <div className="App mt-3">
             <div className="container col-lg-10 mx-auto">
               <Profile

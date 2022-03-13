@@ -13,8 +13,8 @@ const LoginGoogle = ({ status }) => {
             console.log(res);
             localStorage.setItem("token", res.data.token);
             localStorage.setItem("status", res.data.status);
-            // history.push('/');
-            // window.location.reload();
+            history.push('/');
+            window.location.reload();
         }).catch((e) => {
             console.log(e.response?.data?.error);
             // setError(true);
