@@ -141,8 +141,8 @@ const Job_details = () => {
 
                 {/* PageHeader */}
                 <PageHeader
-                    title={intern?.name}
-                    breadcrumb="job"
+                    title={intern?.title}
+                    breadcrumb={intern?.industry}
                 />
                 {/* PageHeader end */}
 
@@ -159,7 +159,7 @@ const Job_details = () => {
                                             <li className="d-flex"><b className="mr-5">Job Type:</b>{intern.type ? intern.type : "-"}</li>
                                             <li className="d-flex"><b className="mr-5">Location:</b>{intern.location ? intern.location : "-"}</li>
                                             <li className="d-flex"><b className="mr-5">Offered Salary:</b>{intern.stipend ? intern.stipend : "-"}</li>
-                                            <li className="d-flex"><b className="mr-5">Posted on:</b> {intern.createdAt?.substr(0, 10)}</li>
+                                            <li className="d-flex"><b className="mr-5">Duration:</b> {intern.duration}</li>
                                             <li className="d-flex"><b className="mr-5">Experience:</b>{intern.experience ? intern.experience : "-"}</li>
                                             <li className="d-flex"><b className="mr-5">Category:</b>{intern.category ? intern.category : "-"}</li>
                                             <li className="d-flex"><b className="mr-5">Qualification:</b>{intern.qualification ? intern.qualification : "-"}</li>
@@ -203,13 +203,13 @@ const Job_details = () => {
                                         {/* featured-imagebox */}
                                         <div className="featured-imagebox featured-imagebox-job  m-0" style={{ backgroundColor: 'rgb(236, 215, 255)' }}>
                                             <div className="featured-thumbnail">
-                                                <img src="https://via.placeholder.com/210x204?text=210x204+job-01.png" />
+                                                <img src="https://flyclipart.com/thumb2/company-corporation-factory-icon-with-png-and-vector-format-737376.png" />
                                             </div>
                                             <div className="featured-content">
                                                 <div className="featured-title">
                                                     <h3><Link exact to={`/job_details/${intern._id}`}>{intern?.title}</Link></h3>
                                                 </div>
-                                                <div className="featured-desc">
+                                                <div className="">
                                                     <p>Published on {intern.createdAt?.substr(0, 10)}</p>
                                                 </div>
                                                 {status==="user" && <div className="view-block">
@@ -249,8 +249,8 @@ const Job_details = () => {
                                             </div>
                                             <div className="desc">
                                                 <ul className="ttm-list ttm-list-style-icon ttm-textcolor-darkgrey">
-                                                    {intern.knowledgeNeeded?.length === 0 && <p>No Prerequisites Reuired</p>}{intern.knowledgeNeeded === undefined && <p>No Prerequisites Reuired</p>}
-                                                    {intern.knowledgeNeeded?.map((data) => (
+                                                    {intern?.knowledgeNeeded?.length === 0 && <p>No Prerequisites Reuired</p>}{intern.knowledgeNeeded === undefined && <p>No Prerequisites Reuired</p>}
+                                                    {intern?.knowledgeNeeded?.map((data) => (
                                                         <li>
                                                             <i className="ti ti-check-box"></i>
                                                             <div className="ttm-list-li-content">{data}</div>
@@ -265,8 +265,8 @@ const Job_details = () => {
                                             </div>
                                             <div className="desc">
                                                 <ul className="ttm-list ttm-list-style-icon ttm-textcolor-darkgrey">
-                                                    {(intern.skills?.length === 0 && <p>No Prerequisites Reuired</p>)}
-                                                    {intern.skills?.map((data) => (
+                                                    {(intern?.skills?.length === 0 && <p>No Prerequisites Reuired</p>)}
+                                                    {intern?.skills?.map((data) => (
                                                         <li>
                                                             <i className="ti ti-check-box"></i>
                                                             <div className="ttm-list-li-content">{data}</div>
@@ -275,6 +275,22 @@ const Job_details = () => {
                                                 </ul>
                                             </div>
                                         </div>
+                                        {intern?.perks?.length!==0 && 
+                                        <div className="overview-box" style={{ backgroundColor: 'rgb(236, 215, 255)' }}>
+                                            <div className="title">
+                                                <h5>Perks</h5>
+                                            </div>
+                                            <div className="desc">
+                                                <ul className="ttm-list ttm-list-style-icon ttm-textcolor-darkgrey">
+                                                    {intern?.perks?.map((data) => (
+                                                        <li>
+                                                            <i className="ti ti-check-box"></i>
+                                                            <div className="ttm-list-li-content">{data}</div>
+                                                        </li>
+                                                    ))}
+                                                </ul>
+                                            </div>
+                                        </div>}
                                         <div className="justify-center mt-20 mb-60">
                                             <div className="col-lg-12">
                                                 <label className="mb-0">

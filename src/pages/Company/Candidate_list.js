@@ -125,31 +125,11 @@ const Candidate_list = () => {
                             </div>
                             <div className="col-lg-8 content-area">
                                 <div className="row">
-                                    <div className="col-md-12">
-                                        <div className="showing-result-block d-sm-flex align-items-center justify-content-between" style={{backgroundColor:'#ece3f4'}}>
-                                            <span className="showing-result">Showing 1–10 of 50 Applicant Results :</span>
-                                            <form>
-                                                <div className="sort-by">Sort By:
-                                                    <select defaultValue="">
-                                                        <option value="" disabled>A to Z</option>
-                                                        <option value="popularity">a</option>
-                                                        <option value="rating">b</option>
-                                                        <option value="date">c</option>
-                                                        <option value="price">d</option>
-                                                        <option value="price-desc">e</option>
-                                                    </select>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="row">
-
                                     {allcandidates.map((user) => (
                                         (user) ? <div className="col-lg-12">
                                             <div className="featured-imagebox featured-imagebox-candidate" style={{backgroundColor:'#ece3f4'}}>
                                                 <div className="featured-thumbnail">
-                                                    <img src="https://via.placeholder.com/200x200?text=200x200+candidate-04.jpg" />
+                                                    <img src="https://cdn.icon-icons.com/icons2/1378/PNG/512/avatardefault_92824.png" />
                                                 </div>
                                                 <div className="featured-content">
                                                     <div className="featured-title">
@@ -168,12 +148,9 @@ const Candidate_list = () => {
                                                             <span><i className="fa fa-map-marker-alt"></i>{(user) && user.city}</span>
                                                         </div>
                                                         <div className="view-block">
-                                                            <a className="ttm-btn ttm-btn-size-sm ttm-btn-shape-rounded ttm-btn-style-border 
-                                                    ttm-btn-color-dark"
-                                                            href={`/candidate_details/${user._id}`}>Message Candidate</a>
+                                                            <TemporaryDrawer name={user.name} key={user._id} id={user._id}/>
                                                         </div>
                                                     </div>
-                                                    <TemporaryDrawer name={user.name} key={user._id} id={user._id}/>
                                                 </div>
                                             </div>
                                         </div> : <div><CircularProgress/></div>

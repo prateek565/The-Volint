@@ -11,9 +11,8 @@ const Candidate_details=()=> {
 
     const location = useLocation()
     const [candidate, setcandidate] = useState([]);
-    const id = location.pathname.substring(19,);
-    useEffect(() => {
-        
+    const id = location.pathname.split('candidate_details/')[1];
+    useEffect(() => {  
         Promise.resolve(userInfo(id)).then((res) => {
             console.log(res.data);
             setcandidate(res.data)
@@ -38,7 +37,7 @@ const Candidate_details=()=> {
 
             <div className="site-main">
                 <Header/>
-            
+            {id}
                 {/* PageHeader */} 
                 <PageHeader
                     title="candidate details"
@@ -111,7 +110,7 @@ const Candidate_details=()=> {
                                     <div className="col-md-12">
                                         <div className="candidate-data" style={{backgroundColor:'#ece3f4'}}>
                                             <div className="candidate-img">
-                                                <img src="https://via.placeholder.com/200x200?text=200x200+candidate-01.jpg" />
+                                                <img src="https://cdn.icon-icons.com/icons2/1378/PNG/512/avatardefault_92824.png" />
                                             </div>
                                             <div className="candidate-caption">
                                                 <h5>{candidate?.name}</h5>

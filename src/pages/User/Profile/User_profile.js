@@ -223,6 +223,7 @@ const User_profile = () => {
 
                 <div className="row">
                   <h6 id="projects">Projects</h6>
+                  {projects.length===0&&<div>No Ongoing Projects</div>}
                   {projects?.map((project) => (
                     <div className="col-12">
                       <div className="featured-imagebox featured-imagebox-candidate" style={{ backgroundColor: 'rgb(236, 215, 255)' }}>
@@ -280,6 +281,7 @@ const User_profile = () => {
                   </Link>
                   <Divider className="mt-2" />
                   <h6 id="offers">Offers</h6>
+                  {offers.length===0&&<p>No Offers</p>}
                   {offers?.map((offer) => (
                     <div className="col-12">
                       <div className="featured-imagebox featured-imagebox-candidate" style={{ backgroundColor: 'rgb(236, 215, 255)' }}>

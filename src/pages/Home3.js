@@ -21,9 +21,7 @@ const Home3 = () => {
     const industry = [
         'Advocacy and Human Rights',
         'Children and Youth',
-        'Agriculture',
         'Environment',
-        'Animals',
         'Community',
         'Computers and Technology',
         'Education and Literacy',
@@ -97,7 +95,7 @@ const Home3 = () => {
 
 
             {/* form */}
-            <div className="form-section clearfix">
+            {/* <div className="form-section clearfix">
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-12">
@@ -122,13 +120,16 @@ const Home3 = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
             {/* form end */}
             {/* features-section */}
 
             <div className='site-main'>
                 <section className="ttm-row features-section clearfix">
                     <div className="container">
+                        <div className="section-title title-style-center_text">
+                            <h2 className="title">Jobs By Industry</h2>
+                        </div>
                         <div className="row row-equal-height mb_10">
                             {/* featured-icon-box */}
                             {industry?.map((el) => (
@@ -206,7 +207,7 @@ const Home3 = () => {
                             <div className="section-title title-style-center_text">
                                 <div className="title-header">
                                     <h3>Get <span className="text-theme-SkinColor">Appropriate</span></h3>
-                                    <h2 className="title">Job By Category</h2>
+                                    <h2 className="title">Jobs By Category</h2>
                                 </div>
                             </div>{/* section title end */}
                         </div>

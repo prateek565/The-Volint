@@ -5,6 +5,7 @@ import { allApplicants, acceptApplicant, companyInterns, rejectApplicant } from 
 import { Footer } from '../../components/layout/Footer';
 import Header from '../../components/layout/Header';
 import PageHeader from '../../components/layout/PageHeader';
+import TemporaryDrawer from '../Common/Message';
 
 const Applications = () => {
     const [allcandidates, setallcandidates] = useState([]);
@@ -20,7 +21,7 @@ const Applications = () => {
         }).catch((e) => {
             console.log({ e });
         })
-    }, [toggle, ])
+    }, [toggle,])
     const [allJobs, setAllJobs] = useState([]);
     useEffect(() => {
         Promise.resolve(companyInterns()).then((res) => {
@@ -57,12 +58,12 @@ const Applications = () => {
                         <div className="row">
                             <div className="col-lg-4 widget-area sidebar-left job_list-widget-area">
                                 <div className="job_list-widget bg-theme-SkinColor">
-                                <aside className="widget job-widget ">
-                                    <h3 className="widget-title">More Suggestions</h3>
-                                  <div className="col-lg-12 col-md-12">
-                                    <ul>    
-                                      <li>
-                                      {/* AllJobs &&
+                                    <aside className="widget job-widget ">
+                                        <h3 className="widget-title">More Suggestions</h3>
+                                        <div className="col-lg-12 col-md-12">
+                                            <ul>
+                                                <li>
+                                                    {/* AllJobs &&
                                         AllJobs.map((jobs, index) => (
                                             index<5 && <div className="col-lg-12 col-md-12">
                                                 <div className="featured-title">
@@ -141,124 +142,94 @@ const Applications = () => {
                             </div>
                             <div className="col-lg-8 content-area">
                                 <div className="row">
-                                    <div className="col-md-12 ">
-                                        <div className="showing-result-block d-sm-flex align-items-center justify-content-between bg-theme-SkinColor">
-                                            <span className="showing-result ">Showing 1–10 of 50 Applicant Results :</span>
-                                            <form>
-                                                <div className="sort-by">Sort By:
-                                                    <select defaultValue="">
-                                                        <option value="" disabled>A to Z</option>
-                                                        <option value="popularity">a</option>
-                                                        <option value="rating">b</option>
-                                                        <option value="date">c</option>
-                                                        <option value="price">d</option>
-                                                        <option value="price-desc">e</option>
-                                                    </select>
+                                    {allcandidates.map((user, index) => (
+                                        <div className="col-lg-12">
+                                            <div className="featured-imagebox featured-imagebox-candidate" style={{ backgroundColor: 'rgb(236, 215, 255)' }}>
+                                                <div className="featured-thumbnail">
+                                                    <img src="https://cdn.icon-icons.com/icons2/1378/PNG/512/avatardefault_92824.png" />
                                                 </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="row">
-                                {allcandidates.map((user, index) => (
-            <div className="col-lg-12">
-                <div className="featured-imagebox featured-imagebox-candidate" style={{ backgroundColor: 'rgb(236, 215, 255)' }}>
-                    <div className="featured-thumbnail">
-                        <img src="https://via.placeholder.com/200x200?text=200x200+candidate-04.jpg" />
-                    </div>
-                    <div className="featured-content">
-                        <div className="featured-title">
-                            <h3>{user?.name}</h3>
-                        </div>
-                        <div className="featured-title">
-                            <p>{user?.title}</p>
-                        </div>
-                        <div className="featured-bottom">
-                            <div className="job-skill">
-                                {user?.skills?.map(skill => (
-                                    <span className="skill-tag">{skill}</span>
-                                ))}
-                            </div>
-                            <div className="job-meta">
-                                <span><i className="fa fa-map-marker-alt"></i>{user?.city}</span>
-                            </div>
-                            <div className="view-block">
-                                <Link className="ttm-btn ttm-btn-size-sm ttm-btn-shape-rounded ttm-btn-style-border 
-                                                        ttm-btn-color-dark " style={{ marginRight: '1rem' }}
-                                    exact to={'/candidate_details'}>Contact</Link>
-                                <span><Link className="ttm-btn ttm-btn-size-sm ttm-btn-shape-rounded ttm-btn-style-border 
-                                                        ttm-btn-color-dark"
-                                    exact to={'/candidate_details'}>view Profile</Link></span>
-                            </div>
-                            <button onClick={() => {
-                                settoggle(!toggle);
-                                Promise.resolve(acceptApplicant(id, user._id)).then((res) => {
-                                    console.log(res);
-                                }).catch((e) => { console.log({ e }); })
-                            }} className="bg-primary p-5 rounded mr-5">Accept Applicant</button>
-                            <button onClick={() => {
-                                settoggle(!toggle);
-                                Promise.resolve(rejectApplicant(id)).then((res) => {
-                                    console.log(res);
-                                }).catch((e) => { console.log({ e }); })
-                            }} className="bg-danger p-5 rounded">Reject Applicant</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-                                                        ))}
-                                <div className="col-lg-12">
-                                    <div className="featured-imagebox featured-imagebox-candidate">
-                                        <div className="featured-thumbnail">
-                                            <img src="https://via.placeholder.com/200x200?text=200x200+candidate-04.jpg" />
-                                        </div>
-                                        <div className="featured-content">
-                                            <div className="featured-title">
-                                                <h3>Rafael Briggs</h3>
+                                                <div className="featured-content">
+                                                    <div className="featured-title">
+                                                    <Link to={`/candidate_details/${user._id}`}><h3>{(user) && user.name}</h3></Link>
+                                                    </div>
+                                                    <div className="featured-bottom">
+                                                        <div className="job-skill">
+                                                            {user?.skills?.map(skill => (
+                                                                <span className="skill-tag">{skill}</span>
+                                                            ))}
+                                                        </div>
+                                                        <div className="view-block">
+                                                            <TemporaryDrawer name={user?.name} key={user?._id} id={user?._id}/>
+                                                        </div>
+                                                        <button onClick={() => {
+                                                            settoggle(!toggle);
+                                                            Promise.resolve(acceptApplicant(id, user._id)).then((res) => {
+                                                                console.log(res);
+                                                            }).catch((e) => { console.log({ e }); })
+                                                        }} className="bg-primary p-5 rounded mr-5 text-white">Accept</button>
+                                                        <button onClick={() => {
+                                                            settoggle(!toggle);
+                                                            Promise.resolve(rejectApplicant(id)).then((res) => {
+                                                                console.log(res);
+                                                            }).catch((e) => { console.log({ e }); })
+                                                        }} className="bg-danger p-5 rounded text-white">Reject</button>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div className="featured-bottom">
-                                                <div className="job-skill">
-                                                    <span className="skill-tag">bootstrap</span>
-                                                    <span className="skill-tag">JavaScript</span>
+                                        </div>
+                                    ))}
+                                    <div className="col-lg-12">
+                                        <div className="featured-imagebox featured-imagebox-candidate">
+                                            <div className="featured-thumbnail">
+                                                <img src="https://via.placeholder.com/200x200?text=200x200+candidate-04.jpg" />
+                                            </div>
+                                            <div className="featured-content">
+                                                <div className="featured-title">
+                                                    <h3>Rafael Briggs</h3>
                                                 </div>
-                                                <div className="job-meta">
-                                                    <span><i className="fa fa-map-marker-alt"></i>24 Fifth st, Los Angeles, USA</span>
-                                                    <span><i className="fa fa-hand-holding-usd"></i>$700 - $900/month</span>
-                                                </div>
-                                                <div className="view-block">
-                                                    <Link className="ttm-btn ttm-btn-size-sm ttm-btn-shape-rounded ttm-btn-style-border 
-                                                        ttm-btn-color-dark " style={{marginRight:'1rem'}}
-                                                        exact to={'/candidate_details'}>Contact</Link>
-                                                    <span><Link className="ttm-btn ttm-btn-size-sm ttm-btn-shape-rounded ttm-btn-style-border 
+                                                <div className="featured-bottom">
+                                                    <div className="job-skill">
+                                                        <span className="skill-tag">bootstrap</span>
+                                                        <span className="skill-tag">JavaScript</span>
+                                                    </div>
+                                                    <div className="job-meta">
+                                                        <span><i className="fa fa-map-marker-alt"></i>24 Fifth st, Los Angeles, USA</span>
+                                                        <span><i className="fa fa-hand-holding-usd"></i>$700 - $900/month</span>
+                                                    </div>
+                                                    <div className="view-block">
+                                                        <Link className="ttm-btn ttm-btn-size-sm ttm-btn-shape-rounded ttm-btn-style-border 
+                                                        ttm-btn-color-dark " style={{ marginRight: '1rem' }}
+                                                            exact to={'/candidate_details'}>Contact</Link>
+                                                        <span><Link className="ttm-btn ttm-btn-size-sm ttm-btn-shape-rounded ttm-btn-style-border 
                                                         ttm-btn-color-dark"
-                                                        exact to={'/candidate_details'}>view Profile</Link></span>
-                                                    
-                                                </div>
-                                                {/* <div >
+                                                            exact to={'/candidate_details'}>view Profile</Link></span>
+
+                                                    </div>
+                                                    {/* <div >
                                                     
                                                     
                                                 </div> */}
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div className="col-lg-12">
-                                    <div className="job-pagination-block">
-                                        <Link className="page-nav-link">prev</Link>
-                                        <Link className="page-nav-link current">1</Link>
-                                        <Link className="page-nav-link" href="#">2</Link>
-                                        <Link className="page-nav-link" href="#">3</Link>
-                                        <Link className="page-nav-link" href="#">....</Link>
-                                        <Link className="page-nav-link">next</Link>
+                                    <div className="col-lg-12">
+                                        <div className="job-pagination-block">
+                                            <Link className="page-nav-link">prev</Link>
+                                            <Link className="page-nav-link current">1</Link>
+                                            <Link className="page-nav-link" href="#">2</Link>
+                                            <Link className="page-nav-link" href="#">3</Link>
+                                            <Link className="page-nav-link" href="#">....</Link>
+                                            <Link className="page-nav-link">next</Link>
+                                        </div>
                                     </div>
-                                </div>
-                            </div >
+                                </div >
                             </div >
                         </div >
-                    </div > {/* row end */ }
+                    </div > {/* row end */}
                 </div >
             </div >
-    <Footer />
+            <Footer />
 
         </div >
     )

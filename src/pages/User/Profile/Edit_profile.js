@@ -9,12 +9,14 @@ import CloseIcon from '@mui/icons-material/Close';
 // import { updateProfile } from "../../actions/userActions";
 import { Alerterror, Alertsuccess } from '../../../components/layout/Alerts';
 import { userInfo, acceptOffer, getResume, myProjects, myOffers, editUser, offerAccept } from '../../../services/api';
+import DropDown from '../../../components/Manual/dropdown/DropDown';
+import MultipleDropDown from '../../../components/Manual/dropdown/MultipleDropDown';
 
 
 const Transition = React.forwardRef(function Transition(props, ref) {
     return <Slide direction="up" ref={ref} {...props} />;
 });
-  
+
 const ProfileDetails = (props) => {
 
     const styles = theme => ({
@@ -42,6 +44,133 @@ const ProfileDetails = (props) => {
         })
     }, []);
 
+    const Skills = [
+        'Time management',
+        'Effective communication',
+        'Emotional intelligence',
+        'Conflict management',
+        'Teamwork skills',
+        'Stress management',
+        'Problem - solving',
+        'Productivity & organization',
+        'Critical thinking',
+        'Attention to detail',
+        'Adaptability',
+        'Data analysis',
+        'Web analytics ',
+        'SEO / SEM',
+        'HTML & CSS',
+        'Wordpress',
+        'Email marketing',
+        'Web scraping',
+        'CRO and A / B Testing',
+        'Data visualization',
+        'Search Engine and Keyword Optimization',
+        'Project / campaign management',
+        'Social media and mobile marketing ',
+        'Paid social media advertisements',
+        'B2B Marketing',
+        'The 4 P - s of Marketing',
+        'Consumer Behavior Drivers',
+        'Brand management',
+        'Creativity',
+        'Copywriting',
+        'Storytelling',
+        'Sales',
+        'CMS Tools',
+        'Six Sigma techniques',
+        'The McKinsey 7s Framework',
+        'Porter’s Five Forces',
+        'PESTEL ',
+        'Emotional Intelligence',
+        'Dealing with work-related stress',
+        'Motivation',
+        'Task delegation',
+        'Technological savviness',
+        'People management',
+        'Business Development',
+        'Strategic Management',
+        'Negotiation ',
+        'Planning',
+        'Proposal writing',
+        'Problem-solving',
+        'Innovation',
+        'Charisma',
+        'Customer Relationship Management (CRM)',
+        'Cold-calling',
+        'Negotiation',
+        'Public speaking',
+        'Closing',
+        'Lead generation',
+        'Buyer-Responsive selling',
+        'Buyer engagement',
+        'Product knowledge',
+        'Persuasion',
+        'Effective communication and sociability',
+        'Empathy',
+        'Social media/digital communication',
+        'Teamwork',
+        'Time management',
+        'Dreamweaver',
+        'Infographics',
+        'HTML & CSS',
+        'Photo editing ',
+        'Typography',
+        'Storyboarding',
+        'Targeting and marketing through visual communications',
+        'Logo creation',
+        'Digital printing',
+        'Integration of visual communication in social media platforms',
+        'Creativity',
+        'Attention to detail & aesthetics',
+        'Interactive media design',
+        'Color sense & theory',
+        'Ad design',
+        'Word Excel',
+        'Powerpoint',
+        'Filing and paper management',
+        'Data entry',
+        'Bookkeeping through Excel or TurboTax',
+        'Research and data analysis',
+        'Basic knowledge of user interface communication',
+        'Technical writing',
+        'Cloud networking and file sharing ',
+        'Updated curriculum knowledge',
+        'Research & Data analysis',
+        'Communication',
+        'Educational platforms (software like Elearn)',
+        'Stress management',
+        'Technological & digital literacy',
+        'Patience',
+        'Critical thinking',
+        'Enthusiasm',
+        'Motivation',
+        'HTML/CSS',
+        'CSS preprocessors',
+        'Javascript',
+        'Wordpress',
+        'Graphic User Interfaces (GUI)',
+        'Git/Version control (Github, gitlab)',
+        'Search Engine Optimization (SEO)',
+        'Application Programming Interface (API)',
+        'Adobe Photoshop, InDesign',
+        'Content Management Systems (CMS)',
+        'Testing/Debugging',
+        'Responsive design principles',
+        'Sql',
+        'STATA, SPSS, SAS ',
+        'Data Mapping',
+        'Entity Relationship Diagrams',
+        'Wireframes',
+        'Big Data tools ',
+        'Microsoft Visio',
+        'Agile Business Analysis',
+        'Machine learning ',
+        'System Context Diagrams',
+        'Business Process Modeling',
+        'Technical and non-technical communication',
+
+    ]
     const {
         name,
         title,
@@ -52,7 +181,8 @@ const ProfileDetails = (props) => {
         zipcode,
         city,
         state,
-        imageUrl
+        imageUrl,
+        skills,
     } = user;
 
     const values = {
@@ -66,7 +196,8 @@ const ProfileDetails = (props) => {
         zipcode,
         city,
         state,
-        imageUrl
+        imageUrl,
+        skills
     };
 
     //seperate function to handle image file
@@ -82,7 +213,7 @@ const ProfileDetails = (props) => {
         reader.onload = () => {
             // Make a fileInfo Object
             baseURL = reader.result;
-            setUser({...user, imageUrl: baseURL})
+            setUser({ ...user, imageUrl: baseURL })
         };
     };
 
@@ -98,7 +229,7 @@ const ProfileDetails = (props) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-            console.log(e);
+        console.log(e);
         Promise.resolve((editUser(values))).then((res) => {
             console.log(res);
             setsuccess(true);
@@ -177,6 +308,9 @@ const ProfileDetails = (props) => {
 
                                     />
                                 </Grid>
+                                <Grid item md={5} sm={10} xs={10} lg={5} style={{ marginRight: '92px' }}>
+                                    <MultipleDropDown array={Skills} type='skills' />
+                                </Grid>
                                 <Grid item lg={6} xs={12} sm={12} md={6}>
                                     <TextField
                                         margin="dense"
@@ -188,7 +322,7 @@ const ProfileDetails = (props) => {
                                         onChange={handleChange}
                                     />
                                 </Grid>
-                                <Grid item lg={6} xs={12} sm={12} md={6}>
+                                {/* <Grid item lg={6} xs={12} sm={12} md={6}>
                                     <TextField
                                         margin="dense"
                                         placeholder="Address Line 2"
@@ -198,7 +332,8 @@ const ProfileDetails = (props) => {
                                         value={values.address_line_2}
                                         onChange={handleChange}
                                     />
-                                </Grid>
+                                </Grid> */}
+                                
                                 <Grid item lg={6} xs={12} sm={12} md={6}>
                                     <TextField
                                         margin="dense"

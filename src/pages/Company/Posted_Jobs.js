@@ -29,22 +29,22 @@ const Posted_Jobs = () => {
                 <div className="row m-4">
                     {AllInterns?.map((data, index) => { console.log(data) })}
                     {AllInterns?.map((data, index) => (
-                        <Link exact to={`/edit_job/id=${data._id}`}>
+                        <Link exact to={`/job_details/${data._id}`}>
                             <div className="col-lg-12">
                                 <div className="featured-imagebox featured-imagebox-candidate" style={{ backgroundColor: 'rgb(236, 215, 255)' }}>
                                     <div className="featured-content">
                                         <div className="featured-title">
                                             <h3>{data?.title}</h3>
-                                            <p>{data?.category}</p>
+                                            <p style={{margin: '0px', padding: '0px'}}>{data?.category}</p>
+                                            <p style={{margin: '0px', padding: '0px', color: 'grey'}}>{data?.createdAt.substr(0,10)}</p>
                                         </div>
                                         <div className="featured-bottom">
                                             <div className="job-skill">
-                                                <p>{data?.description?.slice(0, 50)}...</p>
+                                                <p>{data?.description?.slice(0, 180)}...</p>
                                             </div>
 
                                             <div className="view-block">
-                                                <Link className="ttm-btn ttm-btn-size-sm ttm-btn-shape-rounded ttm-btn-style-border 
-                            ttm-btn-color-dark"
+                                                <Link className="ttm-btn ttm-btn-size-sm ttm-btn-shape-rounded ttm-btn-style-border ttm-btn-color-dark"
                                                     to={`/applicants/id=${data._id}`}>View Applications</Link>
                                             </div>
                                         </div>
@@ -53,30 +53,6 @@ const Posted_Jobs = () => {
                             </div>
                         </Link>
                     ))}
-
-                    <div className="col-lg-12">
-                        <div className="featured-imagebox featured-imagebox-candidate" style={{ backgroundColor: 'rgb(236, 215, 255)' }}>
-                            {/* <div className="featured-thumbnail">
-                           <img src="https://via.placeholder.com/200x200?text=200x200+candidate-04.jpg" />
-                             </div> */}
-                            <div className="featured-content">
-                                <div className="featured-title">
-                                    <h3>JOB-2</h3>
-                                </div>
-                                <div className="featured-bottom">
-                                    <div className="job-skill">
-                                        <p>Two lines of job description</p>
-                                    </div>
-
-                                    <div className="view-block">
-                                        <Link className="ttm-btn ttm-btn-size-sm ttm-btn-shape-rounded ttm-btn-style-border 
-                            ttm-btn-color-dark"
-                                            exact to={'/applicants'}>View Applications</Link>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                     {/* {allcandidates.map((user) => (
             <div className="col-lg-12">
                 <div className="featured-imagebox featured-imagebox-candidate" style={{backgroundColor:'#ece3f4'}}>
