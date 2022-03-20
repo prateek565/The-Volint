@@ -5,10 +5,7 @@ import { Footer } from '../../components/layout/Footer';
 import { Link } from 'react-router-dom';
 import { allApplicants, allInterns, myAppliedJobs, offerIntern, userApplied, userOnBoard } from '../../services/api';
 import { CircularProgress, Divider } from '@material-ui/core';
-// import ActionSection from '../../components/layout/ActionSection';
 
-
-// export class Job_list extends Component {
 const Projects = () => {
     const [step, setStep]= useState(null);
     const [AllInterns, setallInterns] = useState([]);

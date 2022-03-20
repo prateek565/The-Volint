@@ -139,20 +139,15 @@ const User_profile = () => {
                   <Rating name="read-only" value={user.rating} readOnly />
                 </div>
                 <div className="col-6 col-lg-7"></div>
-
                 <div className="col-1">
-                  <EditProfile/>
+                  <EditProfile />
                 </div>
               </div>
             </div>
-            {/* row */}
             <div className="row">
               <div className="col-lg-4 widget-area sidebar-left job_list-widget-area">
                 <div className="job_list-widget" style={{ backgroundColor: 'rgb(236, 215, 255)' }}>
-
                   <aside className="widget job-widget">
-                    {/* <h3 className="widget-title"><i className="flaticon flaticon-calendar-1"></i>Date Applied</h3> */}
-                    {/* <form id="list1" className="list-filter"> */}
                     <div className="justify-center pt-1">
                       <ul>
                         <li>{`Name: ${user.name}`}</li>
@@ -161,69 +156,21 @@ const User_profile = () => {
                         <li>{`Address: ${user.address ? user.address : ""}`}</li>
                       </ul>
                     </div>
-                    {/* </form> */}
                   </aside>
                   <aside className="widget job-widget pt-1">
-                    {/* <h3 className="widget-title"><i className="flaticon flaticon-calendar-1"></i>Date Applied</h3> */}
-                    {/* <form id="list1" className="list-filter"> */}
                     <ul className="mt-10">
                       <li><a href="#projects">Projects</a></li>
                       <li><a href="#resume">Resume</a></li>
                       <li><a href="#offers">Offers</a></li>
                     </ul>
-                    {/* </form> */}
                   </aside>
-                  {/* <aside className="widget job-widget">
-                                        <h3 className="widget-title"><i className="flaticon flaticon-gender"></i>Gender</h3>
-                                        <form id="list4" onSubmit={this.formSubmit} className="list-filter">
-                                            <div onChange={this.onChangeValue} >
-                                                <label className="radio">
-                                                    <input type="radio" value="male" defaultChecked name="gender" />male
-                                                </label>
-                                                <label className="radio">
-                                                    <input type="radio" value="female" name="gender" />female 
-                                                </label>
-                                            </div>
-                                        </form>
-                                    </aside> */}
-                </div>
-
-                <div className="featuredbox-number pr-30 pr-lg-0 pb-lg-50 pt-md-20">
-                  {/* featured-icon-box */}
-                  <div className="featured-icon-box icon-align-before-content icon-ver_align-top style4">
-                    <div className="featured-icon">
-                      <div className="ttm-icon ttm-icon_element-fill ttm-icon_element-color-grey ttm-icon_element-size-md ttm-icon_element-style-rounded">
-                        <i className="ttm-num ti-info"></i>
-                      </div>
-                    </div>
-                    <div className="featured-content ">
-                      <div>
-                        <h6 style={{ color: 'black' }}>Create an eye-catching Resume</h6>
-                      </div>
-
-                    </div>
-                  </div>{/* featured-icon-box end */}
-                  {/* featured-icon-box */}
-                  <div className="featured-icon-box icon-align-before-content icon-ver_align-top style4">
-                    <div className="featured-icon">
-                      <div className="ttm-icon ttm-icon_element-fill ttm-icon_element-color-grey ttm-icon_element-size-md ttm-icon_element-style-rounded">
-                        <i className="ttm-num ti-info"></i>
-                      </div>
-                    </div>
-                    <div className="featured-content ttm-bgcolor-grey">
-                      <div className="">
-                        <h6 style={{ color: 'black' }}>Look for your best Project Match</h6>
-                      </div>
-
-                    </div>
-                  </div>
                 </div>
               </div>
               <div className="col-lg-8 content-area">
 
                 <div className="row">
                   <h6 id="projects">Projects</h6>
-                  {projects.length===0&&<div>No Ongoing Projects</div>}
+                  {projects.length === 0 && <div>No Ongoing Projects</div>}
                   {projects?.map((project) => (
                     <div className="col-12">
                       <div className="featured-imagebox featured-imagebox-candidate" style={{ backgroundColor: 'rgb(236, 215, 255)' }}>
@@ -252,8 +199,7 @@ const User_profile = () => {
                                   <span><CircularProgressWithLabel value={20} /></span>
                                 </div>
                                 <div >
-                                  <Link className="ttm-btn ttm-btn-size-sm ttm-btn-shape-rounded ttm-btn-style-border 
-                                                       ttm-btn-color-dark mr-20"
+                                  <Link className="ttm-btn ttm-btn-size-sm ttm-btn-shape-rounded ttm-btn-style-border ttm-btn-color-dark mr-20"
                                     exact to={'/job_details'}>Details</Link>
                                 </div>
                               </div>
@@ -281,11 +227,10 @@ const User_profile = () => {
                   </Link>
                   <Divider className="mt-2" />
                   <h6 id="offers">Offers</h6>
-                  {offers.length===0&&<p>No Offers</p>}
+                  {offers.length === 0 && <p>No Offers</p>}
                   {offers?.map((offer) => (
                     <div className="col-12">
                       <div className="featured-imagebox featured-imagebox-candidate" style={{ backgroundColor: 'rgb(236, 215, 255)' }}>
-
                         <div className="featured-content">
                           <div className="featured-title">
                             <h3>{offer?.title}</h3>
@@ -293,9 +238,6 @@ const User_profile = () => {
                           </div>
                           <div className="featured-bottom">
                             <div className="view-block">
-                              {/* <Link className="ttm-btn ttm-btn-size-sm ttm-btn-shape-rounded ttm-btn-style-border 
-                                        ttm-btn-color-dark"
-                                                        exact to={'/applications'}>View Details</Link> */}
                               <KeyboardArrowDownIcon
                                 id="demo-customized-button"
                                 aria-controls={open ? 'demo-customized-menu' : undefined}
@@ -310,8 +252,7 @@ const User_profile = () => {
                               <div className="mt-10">
                                 <p>{offer?.description}</p>
                                 <div >
-                                  <Link className="ttm-btn ttm-btn-size-sm ttm-btn-shape-rounded ttm-btn-style-border 
-                                                       ttm-btn-color-dark mr-20"
+                                  <Link className="ttm-btn ttm-btn-size-sm ttm-btn-shape-rounded ttm-btn-style-border ttm-btn-color-dark mr-20"
                                     exact to={'/job_details'}>View Details</Link>
                                   <button className="mr-20 p-10 font-weight-bold rounded btn-success" onClick={() => {
                                     Promise.resolve(offerAccept(offer._id)).then((res) => {
@@ -337,26 +278,12 @@ const User_profile = () => {
                       </div>
                     </div>
                   ))}
-
-                  {/*<div className="col-lg-12 mt-3">
-                    <h6>Activity</h6>
-                    <Card>
-                      <p>.</p>
-                      <p>.</p>
-                      <p>.</p>
-                      <p>.</p>
-                      <p>.</p>
-                      <p>.</p>
-                    </Card>
-                        </div> */}
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      {/* row end */}
-
       <Footer />
 
     </div>
