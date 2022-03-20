@@ -6,7 +6,6 @@ import { Footer } from '../../components/layout/Footer';
 import { Link, useLocation } from 'react-router-dom';
 import { getIntern, getResume, jobApply } from '../../services/api';
 import { Box, List, ListItem, ListItemText, Menu, MenuItem, Modal, Typography } from '@material-ui/core';
-import ActionSection from '../../components/layout/ActionSection';
 import {Alerterror, Alertsuccess} from '../../components/layout/Alerts'
 
 const Job_details = () => {
@@ -393,14 +392,13 @@ const Job_details = () => {
                                         </div >
                                     </div >
                                 </div >
-                                <div className="row">
+                                {/* <div className="row">
                                     <div className="col-lg-12">
                                         <h5>Related Jobs :</h5>
                                     </div>
-                                </div>
-                                <Slider className="row slick_slider slick-arrows-style2 mb_15" {...slick_slider} vertical={true} slidesToShow={1} rows={2} arrows={true}>
+                                </div> */}
+                                {/* <Slider className="row slick_slider slick-arrows-style2 mb_15" {...slick_slider} vertical={true} slidesToShow={1} rows={2} arrows={true}>
                                     <div className="col-lg-12 col-md-12">
-                                        {/* featured-imagebox */}
                                         <div className="featured-imagebox featured-imagebox-job bg-theme-GreyColor">
                                             <div className="featured-thumbnail">
                                                 <img src="https://via.placeholder.com/210x204?text=210x204+job-06.png" />
@@ -422,10 +420,9 @@ const Job_details = () => {
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>{/* featured-imagebox end */}
+                                        </div>
                                     </div>
                                     <div className="col-lg-12 col-md-12">
-                                        {/* featured-imagebox */}
                                         <div className="featured-imagebox featured-imagebox-job bg-theme-GreyColor">
                                             <div className="featured-thumbnail">
                                                 <img src="https://via.placeholder.com/210x204?text=210x204+job-02.png" />
@@ -448,10 +445,9 @@ const Job_details = () => {
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>{/* featured-imagebox end */}
+                                        </div>
                                     </div>
                                     <div className="col-lg-12 col-md-12">
-                                        {/* featured-imagebox */}
                                         <div className="featured-imagebox featured-imagebox-job bg-theme-GreyColor">
                                             <div className="featured-thumbnail">
                                                 <img src="https://via.placeholder.com/210x204?text=210x204+job-03.png" />
@@ -473,10 +469,9 @@ const Job_details = () => {
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>{/* featured-imagebox end */}
+                                        </div>
                                     </div>
                                     <div className="col-lg-12 col-md-12">
-                                        {/* featured-imagebox */}
                                         <div className="featured-imagebox featured-imagebox-job bg-theme-GreyColor">
                                             <div className="featured-thumbnail">
                                                 <img src="https://via.placeholder.com/210x204?text=210x204+job-04.png" />
@@ -498,21 +493,13 @@ const Job_details = () => {
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>{/* featured-imagebox end */}
+                                        </div>
                                     </div>
-                                </Slider>{/* row end */}
+                                </Slider> */}
                             </div >
                         </div > {/* row end */}
                     </div >
                 </div >
-
-
-                {/* action-section */}
-
-                <ActionSection />
-                {/* action-section end */}
-
-
                 < Footer />
 
             </div >

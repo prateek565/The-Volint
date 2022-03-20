@@ -5,26 +5,23 @@ import { Footer } from '../../components/layout/Footer';
 import { Link, useLocation } from 'react-router-dom';
 import { allInterns, getInternByCategory, getInternByIndustry } from '../../services/api';
 import { CircularProgress } from '@material-ui/core';
-import ActionSection from '../../components/layout/ActionSection';
 
-
-// export class Job_list extends Component {
 const Job_list = () => {
-        
+
     const [jobs, setjobs] = useState([])
     const location = useLocation();
     const industry = location.pathname.split('ind=')[1];
     const category = location.pathname.split('cat=')[1];
     useEffect(() => {
-        industry&&Promise.resolve(getInternByIndustry(industry)).then((res)=>{
+        industry && Promise.resolve(getInternByIndustry(industry)).then((res) => {
             setjobs(res.data)
-        }).catch((e)=>{
-            console.log({e});
+        }).catch((e) => {
+            console.log({ e });
         })
-        category&&Promise.resolve(getInternByCategory(category)).then((res)=>{
+        category && Promise.resolve(getInternByCategory(category)).then((res) => {
             setjobs(res.data)
-        }).catch((e)=>{
-            console.log({e});
+        }).catch((e) => {
+            console.log({ e });
         })
     }, [])
 
@@ -34,19 +31,12 @@ const Job_list = () => {
 
         <div className="site-main">
             <Header />
-
             <div className="site-main">
-
-                {/* PageHeader */}
                 <PageHeader
                     title="Opportunities"
                     breadcrumb="Opportunities"
                     className="pb-65 pb-lg-0"
                 />
-                {/* PageHeader end */}
-
-
-                {/* form */}
                 <div className="form-section clearfix" >
                     <div className="container">
                         <div className="row">
@@ -72,12 +62,8 @@ const Job_list = () => {
                     </div>
                 </div>
             </div>
-            {/* form end */}
-
-
             <div className="ttm-row sidebar job-sidebar clearfix">
                 <div className="container">
-                    {/* row */}
                     <div className="row">
                         <div className="col-lg-4 widget-area sidebar-left job_list-widget-area">
                             <div className="job_list-widget" style={{ backgroundColor: 'rgb(236, 215, 255)' }}>
@@ -160,20 +146,6 @@ const Job_list = () => {
                                         </div>
                                     </form>
                                 </aside>
-                                {/* <aside className="widget job-widget">
-                                        <h3 className="widget-title"><i className="flaticon flaticon-gender"></i>Gender</h3>
-                                        <form id="list4" onSubmit={this.formSubmit} className="list-filter">
-                                            <div onChange={this.onChangeValue} >
-                                                <label className="radio">
-                                                    <input type="radio" value="male" defaultChecked name="gender" />male
-                                                </label>
-                                                <label className="radio">
-                                                    <input type="radio" value="female" name="gender" />female 
-                                                </label>
-                                            </div>
-                                        </form>
-                                    </aside> */}
-
                             </div>
                             <aside className="widget widget-banner">
                                 <div className="ttm-col-bgcolor-yes bg-theme-DarkColor text-theme-WhitColor col-bg-img-seven ttm-col-bgimage-yes ttm-bg p-40">
@@ -190,28 +162,7 @@ const Job_list = () => {
                                     </div>
                                 </div>
                             </aside>
-                            {/* <aside className="widget widget-download">
-                                    <ul className="download">
-                                        <li><a href="#">Download.pdf</a><i className="ti ti-files"></i></li>
-                                        <li><a href="#">Download.txt</a><i className="ti ti-files"></i></li>
-                                    </ul>
-                                </aside> */}
-                            {/* <aside className="widget widget-banner text-theme-WhiteColor">
-                                    <div className="ttm-col-bgcolor-yes bg-theme-DarkColor text-theme-WhitColor col-bg-img-seven ttm-col-bgimage-yes ttm-bg p-40">
-                                        <div className="ttm-col-wrapper-bg-layer ttm-bg-layer bg-theme-DarkColor" style={{ backgroundImage: 'url(https://via.placeholder.com/875x583?text=875x583+col-bgimage-7.jpg)' }}>
-                                            <div className="ttm-col-wrapper-bg-layer-inner bg-theme-DarkColor"></div>
-                                        </div>
-                                        <div className="layer-content text-center">
-                                            <div className="widget-banner-inner">
-                                                <h3 className="mb-15">Make a Difference with Online Resume!</h3>
-                                                <p className="mb-30">Your Resume in Minutes with Jobs Resume Assistant is Ready!</p>
-                                                <a className="ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-fill ttm-btn-color-skincolor" 
-                                                href={process.env.PUBLIC_URL + '/'}>appoinments!</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </aside> */}
-                            </div>
+                        </div>
                         <div className="col-lg-8 content-area">
                             <div className="row">
                                 <div className="col-md-12">
@@ -233,7 +184,6 @@ const Job_list = () => {
                                 </div>
                             </div>
                             <div className="row">
-                                {/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */}
                                 {
                                     jobs?.map((intern) => (
                                         <div className="col-lg-12 col-md-12">
@@ -260,232 +210,6 @@ const Job_list = () => {
                                         </div>
                                     ))
                                 }
-
-                                {/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */}
-                                {/* <div className="col-lg-12 col-md-12">
-                                   
-                                    <div className="featured-imagebox featured-imagebox-job bg-theme-GreyColor">
-                                        <div className="featured-thumbnail">
-                                            <img src="https://via.placeholder.com/210x204?text=210x204+job-01.png" />
-                                        </div>
-                                        <div className="featured-content">
-                                            <div className="featured-title">
-                                                <h3><Link to='/job_details'>Vacancy For the Charted Account</Link></h3>
-                                            </div>
-                                            <div className="featured-desc">
-                                                <p>Published 2Days Ago.</p>
-                                            </div>
-                                            <div className="featured-bottom">
-                                                <div className="job-meta">
-                                                    <span><i className="fa fa-map-marker-alt"></i>California</span>
-                                                    <span><i className="fa fa-filter"></i>Automotive Jobs</span>
-                                                </div>
-                                                <div className="job-time">
-                                                    <span className="green">full time</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-lg-12 col-md-12">
-                                    
-                                    <div className="featured-imagebox featured-imagebox-job bg-theme-GreyColor">
-                                        <div className="featured-thumbnail">
-                                            <img src="https://via.placeholder.com/210x204?text=210x204+job-02.png" />
-                                            <div className="required-tag">Urgent</div>
-                                        </div>
-                                        <div className="featured-content">
-                                            <div className="featured-title">
-                                                <h3><Link to='/job_details'>Vacancy For the Business Analyst</Link></h3>
-                                            </div>
-                                            <div className="featured-desc">
-                                                <p>Published 2Days Ago.</p>
-                                            </div>
-                                            <div className="featured-bottom">
-                                                <div className="job-meta">
-                                                    <span><i className="fa fa-map-marker-alt"></i>California</span>
-                                                    <span><i className="fa fa-filter"></i>Automotive Jobs</span>
-                                                </div>
-                                                <div className="job-time">
-                                                    <span className="danger-color">part time</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-lg-12 col-md-12">
-                                   
-                                    <div className="featured-imagebox featured-imagebox-job bg-theme-GreyColor">
-                                        <div className="featured-thumbnail">
-                                            <img src="https://via.placeholder.com/210x204?text=210x204+job-03.png" />
-                                        </div>
-                                        <div className="featured-content">
-                                            <div className="featured-title">
-                                                <h3><a href={'/job_details'}><a href={'/job_details'}>Opening For Social Media Manager</a></a></h3>
-                                            </div>
-                                            <div className="featured-desc">
-                                                <p>Published 2Days Ago.</p>
-                                            </div>
-                                            <div className="featured-bottom">
-                                                <div className="job-meta">
-                                                    <span><i className="fa fa-map-marker-alt"></i>California</span>
-                                                    <span><i className="fa fa-filter"></i>Automotive Jobs</span>
-                                                </div>
-                                                <div className="job-time">
-                                                    <span className="deep-orange">full time</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-lg-12 col-md-12">
-                                   
-                                    <div className="featured-imagebox featured-imagebox-job bg-theme-GreyColor">
-                                        <div className="featured-thumbnail">
-                                            <img src="https://via.placeholder.com/210x204?text=210x204+job-04.png" />
-                                        </div>
-                                        <div className="featured-content">
-                                            <div className="featured-title">
-                                                <h3><a href={'/job_details'}><a href={'/job_details'}>Opening For The Content Creator</a></a></h3>
-                                            </div>
-                                            <div className="featured-desc">
-                                                <p>Published 2Days Ago.</p>
-                                            </div>
-                                            <div className="featured-bottom">
-                                                <div className="job-meta">
-                                                    <span><i className="fa fa-map-marker-alt"></i>California</span>
-                                                    <span><i className="fa fa-filter"></i>Automotive Jobs</span>
-                                                </div>
-                                                <div className="job-time">
-                                                    <span className="green">full time</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-lg-12 col-md-12">
-                              
-                                    <div className="featured-imagebox featured-imagebox-job bg-theme-GreyColor">
-                                        <div className="featured-thumbnail">
-                                            <img src="https://via.placeholder.com/210x204?text=210x204+job-05.png" />
-                                        </div>
-                                        <div className="featured-content">
-                                            <div className="featured-title">
-                                                <h3><a href={'/job_details'}>Job Vacancy For the Bank Manager</a></h3>
-                                            </div>
-                                            <div className="featured-desc">
-                                                <p>Published 2Days Ago.</p>
-                                            </div>
-                                            <div className="featured-bottom">
-                                                <div className="job-meta">
-                                                    <span><i className="fa fa-map-marker-alt"></i>California</span>
-                                                    <span><i className="fa fa-filter"></i>Automotive Jobs</span>
-                                                </div>
-                                                <div className="job-time">
-                                                    <span className="danger-color">part time</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-lg-12 col-md-12">
-                        
-                                    <div className="featured-imagebox featured-imagebox-job bg-theme-GreyColor">
-                                        <div className="featured-thumbnail">
-                                            <img src="https://via.placeholder.com/210x204?text=210x204+job-06.png" />
-                                        </div>
-                                        <div className="featured-content">
-                                            <div className="featured-title">
-                                                <h3><a href={'/job_details'}>Vacancy For the Human Resource</a> </h3>
-                                            </div>
-                                            <div className="featured-desc">
-                                                <p>Published 2Days Ago.</p>
-                                            </div>
-                                            <div className="featured-bottom">
-                                                <div className="job-meta">
-                                                    <span><i className="fa fa-map-marker-alt"></i>California</span>
-                                                    <span><i className="fa fa-filter"></i>Automotive Jobs</span>
-                                                </div>
-                                                <div className="job-time">
-                                                    <span className="blue">part time</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-lg-12 col-md-12">
-                                    <div className="featured-imagebox featured-imagebox-job bg-theme-GreyColor">
-                                        <div className="featured-thumbnail">
-                                            <img src="https://via.placeholder.com/210x204?text=210x204+job-02.png" />
-                                            <div className="required-tag">Urgent</div>
-                                        </div>
-                                        <div className="featured-content">
-                                            <div className="featured-title">
-                                                <h3><a href={'/job_details'}>Vacancy For the Business Analyst</a></h3>
-                                            </div>
-                                            <div className="featured-desc">
-                                                <p>Published 2Days Ago.</p>
-                                            </div>
-                                            <div className="featured-bottom">
-                                                <div className="job-meta">
-                                                    <span><i className="fa fa-map-marker-alt"></i>California</span>
-                                                    <span><i className="fa fa-filter"></i>Automotive Jobs</span>
-                                                </div>
-                                                <div className="job-time">
-                                                    <span className="danger-color">part time</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>featured-imagebox end
-                                </div>
-                                <div className="col-lg-12 col-md-12">
-                                    <div className="featured-imagebox featured-imagebox-job bg-theme-GreyColor">
-                                        <div className="featured-thumbnail">
-                                            <img src="https://via.placeholder.com/210x204?text=210x204+job-03.png" />
-                                        </div>
-                                        <div className="featured-content">
-                                            <div className="featured-title">
-                                                <h3><a href={'/job_details'}><a href={'/job_details'}>Opening For Social Media Manager</a></a></h3>
-                                            </div>
-                                            <div className="featured-desc">
-                                                <p>Published 2Days Ago.</p>
-                                            </div>
-                                            <div className="featured-bottom">
-                                                <div className="job-meta">
-                                                    <span><i className="fa fa-map-marker-alt"></i>California</span>
-                                                    <span><i className="fa fa-filter"></i>Automotive Jobs</span>
-                                                </div>
-                                                <div className="job-time">
-                                                    <span className="deep-orange">full time</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-lg-12 col-md-12">
-                                    <div className="featured-imagebox featured-imagebox-job bg-theme-GreyColor">
-                                        <div className="featured-thumbnail">
-                                            <img src="https://via.placeholder.com/210x204?text=210x204+job-04.png" />
-                                        </div>
-                                        <div className="featured-content">
-                                            <div className="featured-title">
-                                                <h3><a href={'/job_details'}><a href={'/job_details'}>Opening For The Content Creator</a></a></h3>
-                                            </div>
-                                            <div className="featured-desc">
-                                                <p>Published 2Days Ago.</p>
-                                            </div>
-                                            <div className="featured-bottom">
-                                                <div className="job-meta">
-                                                    <span><i className="fa fa-map-marker-alt"></i>California</span>
-                                                    <span><i className="fa fa-filter"></i>Automotive Jobs</span>
-                                                </div>
-                                                <div className="job-time">
-                                                    <span className="green">full time</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> */}
                                 <div className="col-lg-12">
                                     <div className="job-pagination-block">
                                         <a className="page-nav-link">prev</a>
@@ -498,18 +222,12 @@ const Job_list = () => {
                                 </div>
                             </div>{/* row end */}
                         </div>
-                </div>{/* row end */}
+                    </div>{/* row end */}
+                </div>
             </div>
+            <Footer />
+
         </div>
-
-            {/* action-section */}
-            <ActionSection />
-            {/* action-section end */}
-
-
-        <Footer />
-
-    </div>
     )
 }
 

@@ -309,7 +309,7 @@ const ProfileDetails = (props) => {
                                     />
                                 </Grid>
                                 <Grid item md={5} sm={10} xs={10} lg={5} style={{ marginRight: '92px' }}>
-                                    <MultipleDropDown array={Skills} type='skills' />
+                                    <MultipleDropDown array={Skills}  type='skills' />
                                 </Grid>
                                 <Grid item lg={6} xs={12} sm={12} md={6}>
                                     <TextField

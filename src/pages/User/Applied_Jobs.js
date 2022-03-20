@@ -5,8 +5,6 @@ import { Footer } from '../../components/layout/Footer';
 import { Link } from 'react-router-dom';
 import { allApplicants, allInterns, deleteAppliedJob, myAppliedJobs } from '../../services/api';
 import { CircularProgress, Divider } from '@material-ui/core';
-import ActionSection from '../../components/layout/ActionSection';
-
 
 // export class Job_list extends Component {
 const Applied_Jobs = () => {
@@ -211,12 +209,6 @@ const Applied_Jobs = () => {
                 </div>{/* row end */}
             </div>
         </div>
-
-            {/* action-section */}
-            <ActionSection />
-            {/* action-section end */}
-
-
         <Footer />
 
     </div>

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import Logo from './Logo'
 
 export class Footer extends Component {
     render() {
@@ -10,9 +11,7 @@ export class Footer extends Component {
                         <div className="row">
                             <div className="col-xs-12 col-sm-12 col-md-12 col-lg-6 widget-area">
                                 <div className="widget widget_text clearfix">
-                                    <div className="footer-logo">
-                                        <img id="footer-logo-img" className="img-fluid auto_size" height="40" width="162" src="images/Picture2.png" alt="footer-logo" />
-                                    </div>
+                                    <Logo/>
                                     <p style={{color:'white'}}>Volunteers is multi award-winning executive search, management recruiter and employer branding organization. 
                                         Our customized recruiting process delivers fast & accurate results</p>
                                     <div className="d-flex align-items-center pt-15 pb-25">
