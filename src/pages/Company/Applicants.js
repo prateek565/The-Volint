@@ -32,14 +32,6 @@ const Applications = () => {
         })
     }, [])
 
-    const handleReject = () => {
-
-    }
-
-    const handleAccept = () => {
-
-    }
-
     return (
         <div className="site-main">
             <Header />
@@ -58,26 +50,6 @@ const Applications = () => {
                         <div className="row">
                             <div className="col-lg-4 widget-area sidebar-left job_list-widget-area">
                                 <div className="job_list-widget bg-theme-SkinColor">
-                                    <aside className="widget job-widget ">
-                                        <h3 className="widget-title">More Suggestions</h3>
-                                        <div className="col-lg-12 col-md-12">
-                                            <ul>
-                                                <li>
-                                                    {/* AllJobs &&
-                                        AllJobs.map((jobs, index) => (
-                                            index<5 && <div className="col-lg-12 col-md-12">
-                                                <div className="featured-title">
-                                                   <Link to={`/job_details/${intern._id}`}><h6>{intern.name}</h6></Link>
-                                                   <p>{intern.jobType}</p>
-                                                </div>
-                                                <Divider style={{ color: 'black'}}/>
-                                            </div>
-                                        ))
-                                        */}
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </aside>
                                     <aside className="widget job-widget">
                                         <h3 className="widget-title"><i className="flaticon flaticon-subfolder-1"></i>Skills</h3>
                                         <form id="list2" className="list-filter">
@@ -119,29 +91,11 @@ const Applications = () => {
                                             </div>
                                         </form>
                                     </aside>
-                                    {/* <aside className="widget job-widget">
-                                        <h3 className="widget-title"><i className="flaticon flaticon-gender"></i>Gender</h3>
-                                        <form id="list4" onSubmit={this.formSubmit} className="list-filter">
-                                            <div onChange={this.onChangeValue} >
-                                                <label className="radio">
-                                                    <input type="radio" value="male" defaultChecked name="gender" />male
-                                                </label>
-                                                <label className="radio">
-                                                    <input type="radio" value="female" name="gender" />female 
-                                                </label>
-                                            </div>
-                                        </form>
-                                    </aside> */}
                                 </div>
-                                {/* <aside className="widget widget-download">
-                                    <ul className="download">
-                                        <li><a href="#">Download.pdf</a><i className="ti ti-files"></i></li>
-                                        <li><a href="#">Download.txt</a><i className="ti ti-files"></i></li>
-                                    </ul>
-                                </aside> */}
                             </div>
                             <div className="col-lg-8 content-area">
                                 <div className="row">
+                                    {allcandidates.length===0&&<h4>No Applicants</h4>}
                                     {allcandidates.map((user, index) => (
                                         <div className="col-lg-12">
                                             <div className="featured-imagebox featured-imagebox-candidate" style={{ backgroundColor: 'rgb(236, 215, 255)' }}>
@@ -150,7 +104,7 @@ const Applications = () => {
                                                 </div>
                                                 <div className="featured-content">
                                                     <div className="featured-title">
-                                                    <Link to={`/candidate_details/${user._id}`}><h3>{(user) && user.name}</h3></Link>
+                                                        <Link to={`/candidate_details/${user._id}`}><h3>{(user) && user.name}</h3></Link>
                                                     </div>
                                                     <div className="featured-bottom">
                                                         <div className="job-skill">
@@ -159,18 +113,17 @@ const Applications = () => {
                                                             ))}
                                                         </div>
                                                         <div className="view-block">
-                                                            <TemporaryDrawer name={user?.name} key={user?._id} id={user?._id}/>
+                                                            <TemporaryDrawer name={user?.name} key={user?._id} id={user?._id} />
                                                         </div>
                                                         <button onClick={() => {
-                                                            settoggle(!toggle);
                                                             Promise.resolve(acceptApplicant(id, user._id)).then((res) => {
-                                                                console.log(res);
+                                                                settoggle(!toggle);
+                                                                console.log(res.data);
                                                             }).catch((e) => { console.log({ e }); })
                                                         }} className="bg-primary p-5 rounded mr-5 text-white">Accept</button>
                                                         <button onClick={() => {
-                                                            settoggle(!toggle);
-                                                            Promise.resolve(rejectApplicant(id)).then((res) => {
-                                                                console.log(res);
+                                                            Promise.resolve(rejectApplicant(id, user._id)).then((res) => {
+                                                                settoggle(!toggle);
                                                             }).catch((e) => { console.log({ e }); })
                                                         }} className="bg-danger p-5 rounded text-white">Reject</button>
                                                     </div>
@@ -178,7 +131,7 @@ const Applications = () => {
                                             </div>
                                         </div>
                                     ))}
-                                    <div className="col-lg-12">
+                                    {/* <div className="col-lg-12">
                                         <div className="featured-imagebox featured-imagebox-candidate">
                                             <div className="featured-thumbnail">
                                                 <img src="https://via.placeholder.com/200x200?text=200x200+candidate-04.jpg" />
@@ -205,24 +158,10 @@ const Applications = () => {
                                                             exact to={'/candidate_details'}>view Profile</Link></span>
 
                                                     </div>
-                                                    {/* <div >
-                                                    
-                                                    
-                                                </div> */}
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div className="col-lg-12">
-                                        <div className="job-pagination-block">
-                                            <Link className="page-nav-link">prev</Link>
-                                            <Link className="page-nav-link current">1</Link>
-                                            <Link className="page-nav-link" href="#">2</Link>
-                                            <Link className="page-nav-link" href="#">3</Link>
-                                            <Link className="page-nav-link" href="#">....</Link>
-                                            <Link className="page-nav-link">next</Link>
-                                        </div>
-                                    </div>
+                                    </div> */}
                                 </div >
                             </div >
                         </div >

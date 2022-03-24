@@ -1,6 +1,6 @@
 import { Card } from '@material-ui/core';
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { allApplicants, companyInterns } from '../../services/api';
 import { Footer } from '../../components/layout/Footer';
 import Header from '../../components/layout/Header';
@@ -9,12 +9,16 @@ import PageHeader from '../../components/layout/PageHeader';
 const Posted_Jobs = () => {
 
     const [AllInterns, setallInterns] = useState([]);
+    const history=useHistory();
     useEffect(() => {
         Promise.resolve(companyInterns()).then((res) => {
             console.log(res.data);
             setallInterns(res.data.intern)
         }).catch((e) => {
-            console.log({ e });
+            console.log({e});
+            if(e.response.data.error==='jwt expired'){
+                history.push('/login');
+            }
         })
     }, []);
 
