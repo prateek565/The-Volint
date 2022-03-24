@@ -21,7 +21,7 @@ const Job_list = () => {
             setallInterns(res.data)
             setloading(false);
         }).catch((e) => {
-            console.log(e);
+            console.log({e});
         });
         // (volunteer) && AllInterns?.filter((intern)=>{
         //     console.log(intern.category);

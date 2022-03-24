@@ -6,14 +6,13 @@ import { Footer } from '../../components/layout/Footer';
 import { Link, useLocation } from 'react-router-dom';
 import { getIntern, getResume, jobApply } from '../../services/api';
 import { Box, List, ListItem, ListItemText, Menu, MenuItem, Modal, Typography } from '@material-ui/core';
-import {Alerterror, Alertsuccess} from '../../components/layout/Alerts'
+import { Alerterror, Alertsuccess } from '../../components/layout/Alerts'
 
 const Job_details = () => {
 
     const [intern, setIntern] = useState([]);
     const [company, setCompany] = useState([]);
     const [question, setquestion] = useState([]);
-    const [resume, setresume] = useState([]);
     const [options, setoptions] = useState([]);
     const l = useLocation();
     const internId = l.pathname.substring(13,);
@@ -26,7 +25,7 @@ const Job_details = () => {
     const [error, setError] = useState(false);
     const [text, setText] = useState("");
     const [success, setsuccess] = useState(false);
-    const status= localStorage.getItem("status"); 
+    const status = localStorage.getItem("status");
     useEffect(() => {
         Promise.resolve(getIntern(internId)).then((res) => {
             setIntern(res.data)
@@ -34,21 +33,22 @@ const Job_details = () => {
         }).catch((e) => {
             console.log({ e });
         })
-        if(status=="user"){
-        Promise.resolve(getResume()).then((res)=>{
-            const p = res.data.map((data)=>{
-                return data.resumeTitle
+        if (status == "user") {
+            Promise.resolve(getResume()).then((res) => {
+                const p = res.data.map((data) => {
+                    return data.resumeTitle
+                })
+                setoptions(p)
+            }).catch((e) => {
+                console.log({ e });
             })
-            setoptions(p)
-        }).catch((e)=>{
-            console.log({e});
-        })
         }
     }, [])
 
     const ApplyHandleClick = () => {
+        const resume = options[selectedIndex];
         console.log(question, resume);
-        Promise.resolve(jobApply({question,resume}, internId)).then((res) => {
+        Promise.resolve(jobApply({ question, resume }, internId)).then((res) => {
             console.log(res.data);
             setsuccess(true);
             setText(res.data)
@@ -83,39 +83,6 @@ const Job_details = () => {
             border: '2px round #000',
             boxShadow: 24,
             p: 4,
-        };
-        // const options = [
-        //     'Resume_1',
-        //     'Resume_2',
-        //     'Resume_3',
-        //     'Resume_4',
-        // ];
-
-        var slick_slider = {
-            dots: false,
-            arrow: false,
-            autoplay: true,
-            infinite: true,
-            speed: 1000,
-            slidesToShow: 4,
-            slidesToScroll: 1,
-            rows: 1,
-
-            responsive: [{
-
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2
-                }
-            },
-            {
-                breakpoint: 575,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            }]
         };
 
         const handleClickListItem = (event) => {
@@ -211,9 +178,9 @@ const Job_details = () => {
                                                 <div className="">
                                                     <p>Published on {intern.createdAt?.substr(0, 10)}</p>
                                                 </div>
-                                                {status==="user" && <div className="view-block">
-                                                <button className=" ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-fill ttm-btn-color-skincolor"
-                                                onClick={handleOpen}>Apply</button>
+                                                {status === "user" && <div className="view-block">
+                                                    <button className=" ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-fill ttm-btn-color-skincolor"
+                                                        onClick={handleOpen}>Apply</button>
                                                 </div>}
                                                 <div className="featured-bottom">
                                                     <div className="job-meta">
@@ -225,7 +192,7 @@ const Job_details = () => {
                                                     </div>
                                                 </div>
                                             </div>
-                                            
+
                                         </div>{/* featured-imagebox end */}
                                     </div>
                                     <div className="col-lg-12 col-md-12">
@@ -239,7 +206,7 @@ const Job_details = () => {
                                                     maecenas accumsan lacus vel facilisis.
                                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                                                     labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra
-                                                maecenas accumsan lacus vel facilisis. ”</p>}
+                                                    maecenas accumsan lacus vel facilisis. ”</p>}
                                             </div>
                                         </div>
                                         <div className="overview-box" style={{ backgroundColor: 'rgb(236, 215, 255)' }}>
@@ -274,26 +241,26 @@ const Job_details = () => {
                                                 </ul>
                                             </div>
                                         </div>
-                                        {intern?.perks?.length!==0 && 
-                                        <div className="overview-box" style={{ backgroundColor: 'rgb(236, 215, 255)' }}>
-                                            <div className="title">
-                                                <h5>Perks</h5>
-                                            </div>
-                                            <div className="desc">
-                                                <ul className="ttm-list ttm-list-style-icon ttm-textcolor-darkgrey">
-                                                    {intern?.perks?.map((data) => (
-                                                        <li>
-                                                            <i className="ti ti-check-box"></i>
-                                                            <div className="ttm-list-li-content">{data}</div>
-                                                        </li>
-                                                    ))}
-                                                </ul>
-                                            </div>
-                                        </div>}
+                                        {intern?.perks?.length !== 0 &&
+                                            <div className="overview-box" style={{ backgroundColor: 'rgb(236, 215, 255)' }}>
+                                                <div className="title">
+                                                    <h5>Perks</h5>
+                                                </div>
+                                                <div className="desc">
+                                                    <ul className="ttm-list ttm-list-style-icon ttm-textcolor-darkgrey">
+                                                        {intern?.perks?.map((data) => (
+                                                            <li>
+                                                                <i className="ti ti-check-box"></i>
+                                                                <div className="ttm-list-li-content">{data}</div>
+                                                            </li>
+                                                        ))}
+                                                    </ul>
+                                                </div>
+                                            </div>}
                                         <div className="justify-center mt-20 mb-60">
                                             <div className="col-lg-12">
                                                 <label className="mb-0">
-                                                {status=="user" && <button className=" w-100 ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-fill ttm-btn-color-skincolor"
+                                                    {status == "user" && <button className=" w-100 ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-fill ttm-btn-color-skincolor"
                                                         onClick={handleOpen}>Apply</button>}
                                                     <Modal
                                                         open={open}
@@ -302,8 +269,8 @@ const Job_details = () => {
                                                         aria-describedby="modal-modal-description"
                                                     >
                                                         <Box sx={style}>
-                                                            {success&&<Alertsuccess text={text}/>}
-                                                            {error&&<Alerterror text={text}/>}
+                                                            {success && <Alertsuccess text={text} />}
+                                                            {error && <Alerterror text={text} />}
                                                             <h2>{intern?.title}</h2>
                                                             <Typography>{intern.description?.slice(0, 50)}</Typography>
                                                             <div className="col-lg-12">
@@ -320,6 +287,8 @@ const Job_details = () => {
                                                                 </label>
                                                             </div>
                                                             <div>
+                                                                {console.log(options)}
+                                                                {console.log(options[selectedIndex])}
                                                                 <List
                                                                     component="nav"
                                                                     aria-label="Device settings"
@@ -337,7 +306,6 @@ const Job_details = () => {
                                                                         <ListItemText
                                                                             primary="Select Resume"
                                                                             secondary={options[selectedIndex]}
-                                                                            onClick={(e)=>{setresume(options[selectedIndex])}}
                                                                         />
                                                                     </ListItem>
                                                                 </List>
@@ -363,28 +331,13 @@ const Job_details = () => {
                                                                     <Link exact to={'/resume'}>
                                                                         <MenuItem
                                                                         >
-                                                                         <i className="fa fa-plus mr-2"></i><span>Add Resume</span>
+                                                                            <i className="fa fa-plus mr-2"></i><span>Add Resume</span>
                                                                         </MenuItem>
                                                                     </Link>
                                                                 </Menu>
                                                             </div>
                                                             <button onClick={ApplyHandleClick} className=" w-100 ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-fill ttm-btn-color-skincolor"
                                                             >Apply</button>
-                                                            {/* <Typography id="modal-modal-title" variant="h6" component="h2">
-
-                                                                  </Menu>
-                                                                </div>
-                                                                <button 
-                                                                type="submit"
-                                                                className=" w-100 ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-fill ttm-btn-color-skincolor" 
-                                                                onClick={handleClose}
-                                                                 >Apply</button>
-                                                       {/* <Typography id="modal-modal-title" variant="h6" component="h2">
-                                                         Text in a modal
-                                                       </Typography>
-                                                       <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                                                           Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-                                                       </Typography> */}
                                                         </Box>
                                                     </Modal>
                                                 </label >
@@ -392,110 +345,6 @@ const Job_details = () => {
                                         </div >
                                     </div >
                                 </div >
-                                {/* <div className="row">
-                                    <div className="col-lg-12">
-                                        <h5>Related Jobs :</h5>
-                                    </div>
-                                </div> */}
-                                {/* <Slider className="row slick_slider slick-arrows-style2 mb_15" {...slick_slider} vertical={true} slidesToShow={1} rows={2} arrows={true}>
-                                    <div className="col-lg-12 col-md-12">
-                                        <div className="featured-imagebox featured-imagebox-job bg-theme-GreyColor">
-                                            <div className="featured-thumbnail">
-                                                <img src="https://via.placeholder.com/210x204?text=210x204+job-06.png" />
-                                            </div>
-                                            <div className="featured-content">
-                                                <div className="featured-title">
-                                                    <h3><Link to='/job_details'>Vacancy For the Human Resource</Link></h3>
-                                                </div>
-                                                <div className="featured-desc">
-                                                    <p>Published 2Days Ago.</p>
-                                                </div>
-                                                <div className="featured-bottom">
-                                                    <div className="job-meta">
-                                                        <span><i className="fa fa-map-marker-alt"></i>California</span>
-                                                        <span><i className="fa fa-filter"></i>Automotive Jobs</span>
-                                                    </div>
-                                                    <div className="job-time">
-                                                        <span className="blue">part time</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col-lg-12 col-md-12">
-                                        <div className="featured-imagebox featured-imagebox-job bg-theme-GreyColor">
-                                            <div className="featured-thumbnail">
-                                                <img src="https://via.placeholder.com/210x204?text=210x204+job-02.png" />
-                                                <div className="required-tag">Urgent</div>
-                                            </div>
-                                            <div className="featured-content">
-                                                <div className="featured-title">
-                                                    <h3><Link to='/job_details'>Vacancy For the Business Analyst</Link></h3>
-                                                </div>
-                                                <div className="featured-desc">
-                                                    <p>Published 2Days Ago.</p>
-                                                </div>
-                                                <div className="featured-bottom">
-                                                    <div className="job-meta">
-                                                        <span><i className="fa fa-map-marker-alt"></i>California</span>
-                                                        <span><i className="fa fa-filter"></i>Automotive Jobs</span>
-                                                    </div>
-                                                    <div className="job-time">
-                                                        <span className="danger-color">part time</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col-lg-12 col-md-12">
-                                        <div className="featured-imagebox featured-imagebox-job bg-theme-GreyColor">
-                                            <div className="featured-thumbnail">
-                                                <img src="https://via.placeholder.com/210x204?text=210x204+job-03.png" />
-                                            </div>
-                                            <div className="featured-content">
-                                                <div className="featured-title">
-                                                    <h3><Link to='/job_details'>Opening For Social Media Manager </Link> </h3>
-                                                </div>
-                                                <div className="featured-desc">
-                                                    <p>Published 2Days Ago.</p>
-                                                </div>
-                                                <div className="featured-bottom">
-                                                    <div className="job-meta">
-                                                        <span><i className="fa fa-map-marker-alt"></i>California</span>
-                                                        <span><i className="fa fa-filter"></i>Automotive Jobs</span>
-                                                    </div>
-                                                    <div className="job-time">
-                                                        <span className="deep-orange">full time</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col-lg-12 col-md-12">
-                                        <div className="featured-imagebox featured-imagebox-job bg-theme-GreyColor">
-                                            <div className="featured-thumbnail">
-                                                <img src="https://via.placeholder.com/210x204?text=210x204+job-04.png" />
-                                            </div>
-                                            <div className="featured-content">
-                                                <div className="featured-title">
-                                                    <h3><Link to='/job_details'><a href={'/job_details'}>Opening For The Content Creator</a></Link> </h3>
-                                                </div>
-                                                <div className="featured-desc">
-                                                    <p>Published 2Days Ago.</p>
-                                                </div>
-                                                <div className="featured-bottom">
-                                                    <div className="job-meta">
-                                                        <span><i className="fa fa-map-marker-alt"></i>California</span>
-                                                        <span><i className="fa fa-filter"></i>Automotive Jobs</span>
-                                                    </div>
-                                                    <div className="job-time">
-                                                        <span className="green">full time</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </Slider> */}
                             </div >
                         </div > {/* row end */}
                     </div >

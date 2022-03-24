@@ -111,9 +111,8 @@ export const getIntern=async (id)=>{
 export const acceptApplicant=async (id,userId)=>{
     return await axios.put(`/intern/acceptapplicant/${id}`, {credentials: userId});
 }
-export const rejectApplicant=async (id)=>{
-    console.log(id);
-    return await axios.put(`/intern/rejectapplicant/${id}`);
+export const rejectApplicant=async (id, userId)=>{
+    return await axios.put(`/intern/rejectapplicant/${id}`, {credentials: userId});
 }
 export const getInternByCategory=async (category)=>{
     return await axios.get(`/intern/bycategory/${category}`);

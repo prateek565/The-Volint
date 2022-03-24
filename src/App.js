@@ -5,25 +5,9 @@ import "slick-carousel/slick/slick-theme.css";
 import './css/vendor/flaticon.css';
 import './css/vendor/fontawesome.min.css';
 import './css/vendor/themify-icons.css';
-import Home from './pages/Home';
-import Home2 from './pages/Home2';
 import Home3 from './pages/Home3';
-import Function from './pages/Function'
-import About_us from './pages/About_us';
-import Services from './components/Manual/Services';
-import Services_details from './pages/Services_details';
-import Blog_classic from './pages/Blog_classic';
-import Blog_grid from './pages/Blog_grid';
-import Blog_details from './pages/Blog_details';
-import Contact_01 from './pages/Contact_01';
-import Contact_02 from './pages/Contact_02';
 import Job_list from './pages/User/Job_list';
 import Job_details from './pages/User/Job_details';
-import Carrer_01 from './pages/Carrer_01';
-import Error_404 from './components/Manual/Error_404';
-import Error_405 from './components/Manual/Error_405';
-import Employers_list from './pages/Employers_list';
-import Employers_details from './pages/Employers_details';
 import Candidate_list from './pages/Company/Candidate_list';
 import Candidate_details from './pages/Company/Candidate_details';
 import Login from './pages/Common/login/Login';
@@ -48,13 +32,14 @@ import Projects from './pages/Company/Projects';
 import ManageRecruitment from './pages/Company/ManageRecruitment';
 import Jobs_by_filter from './pages/User/Job_by_filter';
 
-//axios.defaults.baseURL = 'http://localhost:4000';
-axios.defaults.baseURL = 'https://volunteerproject.herokuapp.com';
+axios.defaults.baseURL = 'http://localhost:4000';
+// axios.defaults.baseURL = 'https://volunteerproject.herokuapp.com';
 axios.defaults.params = {};
 
 
 function App() {
- 
+
+
   return (
     <div className="page">
       <Router history={history}>

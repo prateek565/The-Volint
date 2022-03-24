@@ -15,10 +15,10 @@ import { PostResume } from '../../../services/api';
 import { Alertsuccess } from '../../../components/layout/Alerts';
 
 const Resume = () => {
-  const [success, SetSuccess]= useState(false);
+  const [success, SetSuccess] = useState(false);
   const [state, setState] = useState({
     step: 1,
-    resumeTitle:'',
+    resumeTitle: '',
     // Personal Profile Details...
     name: '',
     email: '',
@@ -56,7 +56,7 @@ const Resume = () => {
     interest2: '',
     interest3: '',
   });
- 
+
 
   const handleChange = (e) => {
     e.preventDefault();
@@ -70,10 +70,10 @@ const Resume = () => {
     console.log("e");
     console.log(values);
     SetSuccess(true);
-    Promise.resolve((PostResume(values))).then((res)=>{
+    Promise.resolve((PostResume(values))).then((res) => {
       console.log(res);
-    }).catch((e)=>{
-      console.log({e});
+    }).catch((e) => {
+      console.log({ e });
     })
   }
   const { step } = state;
@@ -167,63 +167,63 @@ const Resume = () => {
         breadcrumb="resume"
       />
       <Paper>
-      <div className="App mt-3">
-        <div className=" col-lg-10 mx-auto">
-        <div>
-          <ResumeTitle
-            handleChange={handleChange}
-            values={values}
-          />
+        <div className="App mt-3">
+          <div className=" col-lg-10 mx-auto">
+            <div>
+              <ResumeTitle
+                handleChange={handleChange}
+                values={values}
+              />
+            </div>
+          </div>
+          {/* <div className="App mt-3">
+            <div className="col-lg-10 mx-auto">
+              <Profile
+                handleChange={handleChange}
+                values={values}
+              />
+            </div>
+          </div>
+          <div className="App mt-3">
+            <div className="col-lg-10 mx-auto">
+              <Education
+                handleChange={handleChange}
+                values={values}
+              />
+            </div>
+          </div>
+          <div className="App mt-3">
+            <div className="col-lg-10 mx-auto">
+              <Projects
+                handleChange={handleChange}
+                values={values}
+              />
+            </div>
+          </div>
+          <div className="App mt-3">
+            <div className="col-lg-10 mx-auto">
+              <Experience
+                handleChange={handleChange}
+                values={values}
+              />
+            </div>
+          </div>
+          <div className="App mt-3 mb-5">
+            <div className="col-lg-10 mx-auto">
+              <Extras
+                handleChange={handleChange}
+                values={values}
+              />
+            </div>
+          </div> */}
         </div>
-      </div>
-      <div className="App mt-3">
-        <div className="col-lg-10 mx-auto">
-          <Profile
-            handleChange={handleChange}
-            values={values}
-          />
+        <div className="App mt-3 mb-5">
+          <div className="col-lg-10 mx-auto">
+            {success && <Alertsuccess text={"Resume has been added successfully"} />}
+          </div>
         </div>
-      </div>
-      <div className="App mt-3">
-        <div className="col-lg-10 mx-auto">
-          <Education
-            handleChange={handleChange}
-            values={values}
-          />
-        </div>
-      </div>
-      <div className="App mt-3">
-        <div className="col-lg-10 mx-auto">
-          <Projects
-            handleChange={handleChange}
-            values={values}
-          />
-        </div>
-      </div>
-      <div className="App mt-3">
-        <div className="col-lg-10 mx-auto">
-          <Experience
-            handleChange={handleChange}
-            values={values}
-          />
-        </div>
-      </div>
-      <div className="App mt-3 mb-5">
-        <div className="col-lg-10 mx-auto">
-          <Extras
-            handleChange={handleChange}
-            values={values}
-          />
-        </div>
-      </div>
-      </div>
-      <div className="App mt-3 mb-5">
-        <div className="col-lg-10 mx-auto">
-        {success && <Alertsuccess text={"Resume has been added successfully"} />}
-        </div>
-      </div>
       </Paper>
-      
+
       <div className=" justify-center mb-10" style={{ marginLeft: '45%' }}>
         <button
           variant="contained"
