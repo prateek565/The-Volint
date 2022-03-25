@@ -31,10 +31,10 @@ const Header = () => {
                       <div className="header_extra ml-auto d-flex align-items-center">
                         <div className="header_social">
                           <ul className="social-icons">
-                            <li><a href="/" rel="noopener" aria-label="facebook"><i className="ti ti-facebook"></i></a></li>
-                            <li><a href="/" rel="noopener" aria-label="twitter"><i className="ti ti-twitter-alt"></i></a></li>
-                            <li><a href="/" rel="noopener" aria-label="google"><i className="ti ti-google"></i></a></li>
-                            <li><a href="/" rel="noopener" aria-label="linkedin"><i className="ti ti-linkedin"></i></a></li>
+                            <li><a href="https://www.facebook.com/profile.php?id=100079605736075" rel="noopener" aria-label="facebook"><i className="ti ti-facebook"></i></a></li>
+                            <li><a href="https://twitter.com/TheVolint" rel="noopener" aria-label="twitter"><i className="ti ti-twitter-alt"></i></a></li>
+                            <li><a href="https://www.instagram.com/thevolint/" rel="noopener" aria-label="google"><i className="ti ti-instagram"></i></a></li>
+                            <li><a href="https://www.linkedin.com/company/thevolint/" rel="noopener" aria-label="linkedin"><i className="ti ti-linkedin"></i></a></li>
                           </ul>
                         </div>
                       </div>

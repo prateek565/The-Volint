@@ -33,22 +33,22 @@ const Header = () => {
                     <div className="media-block">
                       <ul className="social-icons">
                         <li>
-                          <a className="facebook" href="/" rel="noopener" aria-label="facebook">
+                          <a className="facebook" href="https://www.facebook.com/profile.php?id=100079605736075" rel="noopener" aria-label="facebook">
                             <i className="ti ti-facebook"></i>
                           </a>
                         </li>
                         <li>
-                          <a className="twitter" href="/" rel="noopener" aria-label="twitter">
+                          <a className="twitter" href="https://twitter.com/TheVolint" rel="noopener" aria-label="twitter">
                             <i className="ti ti-twitter-alt"></i>
                           </a>
                         </li>
                         <li>
-                          <a className="google" href="/" rel="noopener" aria-label="google">
-                            <i className="ti ti-google"></i>
+                          <a className="google" href="https://www.instagram.com/thevolint/" rel="noopener" aria-label="google">
+                            <i className="ti ti-instagram"></i>
                           </a>
                         </li>
                         <li>
-                          <a className="linkedin" href="/" rel="noopener" aria-label="linkedin">
+                          <a className="linkedin" href="https://www.linkedin.com/company/thevolint/" rel="noopener" aria-label="linkedin">
                             <i className="ti ti-linkedin"></i>
                           </a>
                         </li>
