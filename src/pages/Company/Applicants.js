@@ -6,6 +6,7 @@ import { Footer } from '../../components/layout/Footer';
 import Header from '../../components/layout/Header';
 import PageHeader from '../../components/layout/PageHeader';
 import TemporaryDrawer from '../Common/Message';
+import ApplicantsTabPanel from '../../components/Manual/TabPanel/ApplicantsTabPanel'
 
 const Applications = () => {
     const [allcandidates, setallcandidates] = useState([]);
@@ -14,14 +15,7 @@ const Applications = () => {
     let id = location.pathname;
     id = id.split('/id=')[1];
     console.log(id);
-    useEffect(() => {
-        Promise.resolve(allApplicants(id)).then((res) => {
-            console.log(res.data);
-            setallcandidates(res.data)
-        }).catch((e) => {
-            console.log({ e });
-        })
-    }, [toggle,])
+
     const [allJobs, setAllJobs] = useState([]);
     useEffect(() => {
         Promise.resolve(companyInterns()).then((res) => {
@@ -95,43 +89,8 @@ const Applications = () => {
                             </div>
                             <div className="col-lg-8 content-area">
                                 <div className="row">
-                                    {allcandidates.length===0&&<h4>No Applicants</h4>}
-                                    {allcandidates.map((user, index) => (
-                                        <div className="col-lg-12">
-                                            <div className="featured-imagebox featured-imagebox-candidate" style={{ backgroundColor: 'rgb(236, 215, 255)' }}>
-                                                <div className="featured-thumbnail">
-                                                    <img src="https://cdn.icon-icons.com/icons2/1378/PNG/512/avatardefault_92824.png" />
-                                                </div>
-                                                <div className="featured-content">
-                                                    <div className="featured-title">
-                                                        <Link to={`/candidate_details/${user._id}`}><h3>{(user) && user.name}</h3></Link>
-                                                    </div>
-                                                    <div className="featured-bottom">
-                                                        <div className="job-skill">
-                                                            {user?.skills?.map(skill => (
-                                                                <span className="skill-tag">{skill}</span>
-                                                            ))}
-                                                        </div>
-                                                        <div className="view-block">
-                                                            <TemporaryDrawer name={user?.name} key={user?._id} id={user?._id} />
-                                                        </div>
-                                                        <button onClick={() => {
-                                                            Promise.resolve(acceptApplicant(id, user._id)).then((res) => {
-                                                                settoggle(!toggle);
-                                                                console.log(res.data);
-                                                            }).catch((e) => { console.log({ e }); })
-                                                        }} className="bg-primary p-5 rounded mr-5 text-white">Accept</button>
-                                                        <button onClick={() => {
-                                                            Promise.resolve(rejectApplicant(id, user._id)).then((res) => {
-                                                                settoggle(!toggle);
-                                                            }).catch((e) => { console.log({ e }); })
-                                                        }} className="bg-danger p-5 rounded text-white">Reject</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    ))}
-                                    {/* <div className="col-lg-12">
+                                    <ApplicantsTabPanel/>
+                                   {/* <div className="col-lg-12">
                                         <div className="featured-imagebox featured-imagebox-candidate">
                                             <div className="featured-thumbnail">
                                                 <img src="https://via.placeholder.com/200x200?text=200x200+candidate-04.jpg" />
