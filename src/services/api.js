@@ -89,6 +89,14 @@ export const myOffers=async ()=>{
         }
     });
 }
+export const getRejectedIn=async ()=>{
+    return await axios.get(`/user/getrejectedin`,
+    {
+        headers:{ 
+            token: localStorage.getItem("token")
+        }
+    });
+}
 export const offerAccept=async (id)=>{
     return await axios.put(`/user/acceptoffer`, {credentials: id}, 
     {

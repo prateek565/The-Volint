@@ -3,7 +3,6 @@ import Header from '../components/layout/Header';
 import PageHeader from "../components/layout/PageHeader";
 import { Footer } from '../components/layout/Footer';
 
-
 export class Employers_list extends Component {
 
     constructor() {

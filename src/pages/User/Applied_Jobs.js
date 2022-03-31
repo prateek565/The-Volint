@@ -5,13 +5,14 @@ import { Footer } from '../../components/layout/Footer';
 import { Link } from 'react-router-dom';
 import { allApplicants, allInterns, deleteAppliedJob, myAppliedJobs } from '../../services/api';
 import { CircularProgress, Divider } from '@material-ui/core';
+import ApplicantsTabPanel from '../../components/Manual/TabPanel/UserAppliedJobs';
 
 // export class Job_list extends Component {
 const Applied_Jobs = () => {
 
     const [AllInterns, setallInterns] = useState([]);
-    const [loading, setloading] = useState(true);
-    const [delet, setDelete] = useState(false);
+    const [loading, setloading] = React.useState(true);
+
     useEffect(() => {
         Promise.resolve(allInterns()).then((res) => {
             // console.log(res.data);
@@ -20,16 +21,8 @@ const Applied_Jobs = () => {
         }).catch((e) => {
             console.log(e);
         })
-    }, [])
-    const [allApplications, setAllApplications] = useState([]);
-    useEffect(() => {
-    Promise.resolve(myAppliedJobs()).then((res) => {
-      console.log(res.data);
-      setAllApplications(res.data.response)
-    }).catch((e) => {
-      console.log({ e });
-    })
-    }, [delet, ]);
+    }, []);
+
     return (
 
         <div className="site-main">
@@ -136,75 +129,7 @@ const Applied_Jobs = () => {
                             </aside>
                             </div>
                         <div className="col-lg-8 content-area">
-                            <div className="row">
-                                <div className="col-md-12">
-                                    <div className="showing-result-block d-sm-flex align-items-center justify-content-between" style={{ backgroundColor: 'rgb(236, 215, 255)' }}>
-                                        <span className="showing-result">Showing 1–10 of 50 Project Results :</span>
-                                        <form>
-                                            <div className="sort-by">Sort By:
-                                                <select defaultValue="">
-                                                    <option value="" disabled>A to Z</option>
-                                                    <option value="popularity">a</option>
-                                                    <option value="rating">b</option>
-                                                    <option value="date">c</option>
-                                                    <option value="price">d</option>
-                                                    <option value="price-desc">e</option>
-                                                </select>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="row">
-                                {
-                                    (loading) && <CircularProgress />
-                                }
-                                {  allApplications &&
-                                    allApplications.map((intern, index) => (
-                                        <div className="col-lg-12 col-md-12">
-                                            <div className="flex featured-imagebox featured-imagebox-job" style={{ backgroundColor: 'rgb(236, 215, 255)' }}>
-                                                <div className="featured-content">
-                                                    <div className="featured-title">
-                                                        <h3><Link to={`/job_details/${intern._id}`}>{intern.title}</Link></h3>
-                                                        <p>At {intern.company}</p>
-                                                    </div>
-                                                        <p>Duration: {intern.duration}</p>
-                                                    <div className="featured-desc">
-                                                        <p>{intern.description ? intern.description : 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. when an unknown printer took a galley of type and scrambled it to make a type specimen book.'} </p>
-                                                    </div>
-                                                    <div className="featured-bottom">
-                                                        <div className="job-meta">
-                                                            <span><i className="fa fa-map-marker-alt"></i>{intern.location}</span>
-                                                        </div>
-                                                        {intern?.type && <div className="job-time">
-                                                            <span className="green">{intern.type}</span>
-                                                        </div>}
-                                                    </div>
-                                                </div>
-                                                <button type="button" className='mt-20 mr-20 p-10 font-weight-bold rounded btn-danger' onClick={()=>{
-                                                    Promise.resolve(deleteAppliedJob(intern._id)).then((res)=>{
-                                                        console.log(res);
-                                                        setDelete(!delet);
-                                                    }).catch((e)=>{
-                                                        console.log(e);
-                                                    })
-                                                }}>Delete</button>
-                                            </div>
-                                        </div>
-                                    ))
-                                }
-                                
-                                <div className="col-lg-12">
-                                    <div className="job-pagination-block">
-                                        <Link className="page-nav-link">prev</Link>
-                                        <Link className="page-nav-link current">1</Link>
-                                        <Link className="page-nav-link" href="#">2</Link>
-                                        <Link className="page-nav-link" href="#">3</Link>
-                                        <Link className="page-nav-link" href="#">....</Link>
-                                        <Link className="page-nav-link">next</Link>
-                                    </div>
-                                </div>
-                            </div>{/* row end */}
+                            <ApplicantsTabPanel/>
                         </div>
                 </div>{/* row end */}
             </div>
