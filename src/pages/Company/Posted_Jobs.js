@@ -10,13 +10,14 @@ const Posted_Jobs = () => {
 
     const [AllInterns, setallInterns] = useState([]);
     const history=useHistory();
+
     useEffect(() => {
         Promise.resolve(companyInterns()).then((res) => {
             console.log(res.data);
             setallInterns(res.data.intern)
         }).catch((e) => {
             console.log({e});
-            if(e.response.data.error==='jwt expired'){
+            if(e.response?.data?.error==='jwt expired'){
                 history.push('/login');
             }
         })

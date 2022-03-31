@@ -25,8 +25,6 @@ const Job_list = () => {
         })
     }, [])
 
-
-
     return (
 
         <div className="site-main">
