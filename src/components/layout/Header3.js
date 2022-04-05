@@ -8,7 +8,7 @@ import Logo from './Logo'
 const Header = () => {
   return (
     <header id="masthead" className="header ttm-header-style-03">
-      <div className="top_bar bg-theme-GreyColor clearfix">
+      {/* <div className="top_bar bg-theme-GreyColor clearfix">
         <div className="container">
           <div className="row">
             <div className="col-xl-12">
@@ -60,7 +60,7 @@ const Header = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       <div id="site-header-menu" className="site-header-menu border-top">
         <div className="site-header-menu-inner ttm-stickable-header">
           <div className="container">
@@ -83,7 +83,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <div className="serach_bar bg-theme-SkinColor pt-20">
+      {/* <div className="serach_bar bg-theme-SkinColor pt-20">
         <div className="container">
           <form id="b_search_Form" className="b_search_Form wrap-form d-block" method="post" action="#" data-mailchimp="true">
             <div className="row row-equal-height ttm-boxes-spacing-20px">
@@ -116,7 +116,7 @@ const Header = () => {
             </div>
           </form>
         </div>
-      </div>
+      </div> */}
     </header>
 
   )

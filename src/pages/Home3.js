@@ -8,16 +8,10 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import CountUp from 'react-countup';
 import { allInterns, getInternByCategory } from '../services/api';
 import Industry from './Common/Home/industry';
-import { Link } from 'react-router-dom';
 
 
 const Home3 = () => {
 
-    //     this.state = {
-    //       photoIndex: 0,
-    //       isOpen: false,
-    //     };
-    //   }
     const industry = [
         'Advocacy and Human Rights',
         'Children and Youth',
@@ -38,16 +32,17 @@ const Home3 = () => {
             console.log({ e });
         })
         Promise.resolve(getInternByCategory('Volunteer Work')).then((res) => {
+            console.log(res);
             setvolunteerWork(res.data)
         }).catch((e) => {
             console.log({ e });
         })
         Promise.resolve(getInternByCategory('Internship')).then((res) => {
+            console.log(res.data);
             setinternshipWork(res.data)
         }).catch((e) => {
             console.log({ e });
         })
-
     }, [])
 
     var slick_slider = {
@@ -125,12 +120,12 @@ const Home3 = () => {
             {/* features-section */}
 
             <div className='site-main'>
-                <section className="ttm-row features-section clearfix">
-                    <div className="container">
-                        <div className="section-title title-style-center_text">
-                            <h2 className="title">Jobs By Industry</h2>
+                <section>
+                    <div className='container'>
+                        <div style={{ display: 'flex', justifyContent: 'center', margin: '30px 0px' }}>
+                            <h4>Opportunities by Industry</h4>
                         </div>
-                        <div className="row row-equal-height mb_10">
+                        <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-evenly'}}>
                             {/* featured-icon-box */}
                             {industry?.map((el) => (
                                 <Industry industry={el} />
@@ -198,77 +193,22 @@ const Home3 = () => {
                 </div>
             </section> */}
             {/* features-section */}
-            <section className="ttm-row features-section clearfix">
-                <div className="container">
-                    {/* row */}
-                    <div className="row">
-                        <div className="col-lg-12">
-                            {/* section title */}
-                            <div className="section-title title-style-center_text">
-                                <div className="title-header">
-                                    <h3>Get <span className="text-theme-SkinColor">Appropriate</span></h3>
-                                    <h2 className="title">Jobs By Category</h2>
-                                </div>
-                            </div>{/* section title end */}
+            <section className="">
+                {/* row */}
+                <div className='container'>
+                    <div style={{ display: 'flex', justifyContent: 'center', margin:'20px 0px' }}>
+                        <h4>Opportunities by category</h4>
+                    </div>
+                    <div style={{ display: 'flex', justifyContent: 'space-evenly', }} className='mb-20'>
+                        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                            <img src='https://i.pinimg.com/736x/ad/a9/4f/ada94fd3c04698705ff337362e79a058.jpg' alt='image' style={{ height: '3rem', width: '3rem' }} />
+                            <a href={'jobs_by_filter/cat=Volunteer Work'} style={{ width: '10rem' }}>Volunteer Work<span style={{ color: 'black', fontSize: 'medium' }}> ({volunteerWork?.length})</span></a>
                         </div>
-                    </div>{/* row end */}
-                    {/* row */}
-                    <div className="row row-equal-height mb_10" style={{ display: 'flex', justifyContent: 'space-evenly', }}>
-                        <div className="col-lg-3 col-md-6 col-sm-6">
-                            {/* featured-icon-box */}
-                            <div className="featured-icon-box icon-align-top-content style1" style={{ backgroundColor: 'rgb(116, 250, 75)' }}>
-                                <div className="ttm-box-view-overlay">
-                                    {/* finance-hover */}
-                                    <div className="ttm-col-bgimage-yes ttm-bg h-100">
-                                        <div className="ttm-col-wrapper-bg-layer ttm-bg-layer" style={{ backgroundImage: 'url(https://via.placeholder.com/600x600?text=600x600+finance-hover.png)' }}></div>
-                                        <div className="layer-content"></div>
-                                    </div>{/* finance-hover end */}
-                                </div>
-                                <div className="featured-icon" >
-                                    <div className="ttm-icon ttm-icon_element-fill ttm-icon_element-style-round ttm-icon_element-color-grey ttm-icon_element-size-lg" style={{ backgroundColor: 'rgb(223, 158, 247)' }}>
-                                        <img className="img-fluid" src="images/cat-icon1.png" />
-                                    </div>
-                                </div>
-                                <div className="featured-content">
-                                    <div className="featured-title">
-                                        <h3>Volunteer Work</h3>
-                                    </div>
-                                    <div className="featured-desc">
-                                        <p>{volunteerWork?.length} Jobs</p>
-                                    </div>
-                                    <a className="ttm-btn btn-inline ttm-btn-size-md ttm-btn-color-dark"
-                                        href={'jobs_by_filter/cat=Volunteer Work'}>Apply Jobs!</a>
-                                </div>
-                            </div>{/* featured-icon-box end */}
+                        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                            <img src='https://i.pinimg.com/736x/ad/a9/4f/ada94fd3c04698705ff337362e79a058.jpg' alt='image' style={{ height: '3rem', width: '3rem' }} />
+                            <a href={`/jobs_by_filter/cat=Internship`} style={{ width: '10rem' }}>Internship Work<span style={{ color: 'black', fontSize: 'medium' }}> ({internshipWork?.length})</span></a>
                         </div>
-                        <div className="col-lg-3 col-md-6 col-sm-6">
-                            {/* featured-icon-box */}
-                            <div className="featured-icon-box icon-align-top-content style1" style={{ backgroundColor: 'rgb(116, 250, 75)' }}>
-                                <div className="ttm-box-view-overlay">
-                                    {/* insurance-hover */}
-                                    <div className="ttm-col-bgimage-yes ttm-bg h-100">
-                                        <div className="ttm-col-wrapper-bg-layer ttm-bg-layer" style={{ backgroundImage: 'url(https://via.placeholder.com/600x600?text=600x600+insurance-hover.png)' }}></div>
-                                        <div className="layer-content"></div>
-                                    </div>{/* insurance-hover end */}
-                                </div>
-                                <div className="featured-icon">
-                                    <div className="ttm-icon ttm-icon_element-fill ttm-icon_element-style-round ttm-icon_element-color-grey ttm-icon_element-size-lg" style={{ backgroundColor: 'rgb(223, 158, 247)' }}>
-                                        <img className="img-fluid" src="images/cat-icon8.png" />
-                                    </div>
-                                </div>
-                                <div className="featured-content">
-                                    <div className="featured-title">
-                                        <h3>Internship Work</h3>
-                                    </div>
-                                    <div className="featured-desc">
-                                        <p>{internshipWork?.length} Jobs</p>
-                                    </div>
-                                    <a className="ttm-btn btn-inline ttm-btn-size-md ttm-btn-color-dark"
-                                        href={`/jobs_by_filter/cat=Internship`}>Apply Jobs!</a>
-                                </div>
-                            </div>{/* featured-icon-box end */}
-                        </div>
-                    </div>{/* row end */}
+                    </div>
                 </div>
             </section>
             {/* features-section end */}
