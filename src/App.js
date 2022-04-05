@@ -31,6 +31,8 @@ import CompanyProfile from './pages/Company/CompanyProfile';
 import Projects from './pages/Company/Projects';
 import ManageRecruitment from './pages/Company/ManageRecruitment';
 import Jobs_by_filter from './pages/User/Job_by_filter';
+import Home from './pages/Home';
+import Home2 from './pages/Home2';
 
 // axios.defaults.baseURL = 'http://localhost:4000';
 axios.defaults.baseURL = 'https://volunteerproject.herokuapp.com';
@@ -45,8 +47,7 @@ function App() {
       <Router history={history}>
        <Switch> 
         <Route exact path={`/`} component={ Home3 } />
-        {/* <Route exact path={`/home2`} component={ Home2 } /> */}
-        {/* <Route exact path={`/home3`} component={ Home3 } /> */}
+        <Route exact path={`/home3`} component={ Home } />
         {/* <Route exact path={`${process.env.PUBLIC_URL + '/Home2'}`} component={ Home2 } /> 
         <Route exact path={`${process.env.PUBLIC_URL + '/Home3'}`} component={ Home3 } />  */}
         {/* <Route exact path={`${process.env.PUBLIC_URL + '/About_us'}`} component={ About_us } /> 
