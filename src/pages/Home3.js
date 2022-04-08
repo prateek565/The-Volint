@@ -13,12 +13,12 @@ import Industry from './Common/Home/industry';
 const Home3 = () => {
 
     const industry = [
-        'Advocacy and Human Rights',
-        'Children and Youth',
-        'Environment',
-        'Community',
-        'Computers and Technology',
-        'Education and Literacy',
+        'Development and IT',
+        'Design and Creative',
+        'Sales and Marketing',
+        'Writing and Transalation',
+        'Finance and Accounting',
+        'Admin and Customer Support',
         'Others'
     ]
     const [volunteerWork, setvolunteerWork] = useState()
@@ -224,7 +224,7 @@ const Home3 = () => {
                             <div className="section-title style2">
                                 <div className="title-header">
                                     <h3>Find The <span className="text-theme-SkinColor">Best One!</span></h3>
-                                    <h2 className="title">Recent Job Listing</h2>
+                                    <h2 className="title">Recent Opportunities Listing</h2>
                                 </div>
                                 <div className="title-desc">
                                     <p>We have several jobs in active right now. Check out <span className="text-theme-SkinColor">recent jobs </span>
