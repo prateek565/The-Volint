@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import Slider from 'react-slick';
+
+
+
 export class Banner extends Component {
     state = {
         show: false,
@@ -52,54 +55,7 @@ export class Banner extends Component {
 
             <Slider className="slick_slider banner_slider banner_slider_3" {...slick_slider} slidesToShow={1} autoplay={false} fade="true" >
                 <div className="slide" style={{ background: 'gray' }}>
-                    
                     <div className="slide_img" style={{ backgroundImage: `linear-gradient(180deg, rgba(255, 255, 255, 0) -50%, rgba(0, 0, 0, 0.55))` }}>
-                    {/* <p  data-animation="animate__fadeInDown" className="mb-30 mb-md-0">
-                                    <form id="b_search_Form" className="b_search_Form wrap-form d-block" method="post" action="#" data-mailchimp="true">
-                                      <div className="row row-equal-height">
-                                        <div className="col-lg-3">
-                                          <label>
-                                              <i className="ti ti-search"></i>
-                                              <input type="text" id="filter" placeholder="Job Title or Keywords"/>
-                                          </label>
-                                        </div>
-                                        <div className="col-lg-3">
-                                          <label>
-                                              <i className="ti ti-location-pin"></i>
-                                              <select name="locations" aria-hidden="true" placeholder="Locations">
-                                                  <option value="">Locations</option>
-                                                  <option value="Loc1">Locations1</option>
-                                                  <option value="Loc2">Locations2</option>
-                                                  <option value="Loc3">Locations3</option>
-                                                  <option value="Loc4">Locations4</option>
-                                                  <option value="Loc5">Locations5</option>
-                                                  <option value="Loc6">Locations6</option>
-                                              </select>
-                                          </label>
-                                        </div>
-                                        <div className="col-lg-3">
-                                            <label>
-                                              <i className="ti ti-list"></i>
-                                              <select name="categories" aria-hidden="true" placeholder="Categories">
-                                                  <option value="">Categories</option>
-                                                  <option value="Ed1">Categories1</option>
-                                                  <option value="Ed2">Categories2</option>
-                                                  <option value="Ed3">Categories3</option>
-                                                  <option value="Ed4">Categories4</option>
-                                                  <option value="Ed5">Categories5</option>
-                                                  <option value="Ed6">Categories6</option>
-                                              </select>
-                                            </label>
-                                        </div>
-                                        <div className="col-lg-3">
-                                          <label>
-                                              <button className="submit ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-fill 
-                                              ttm-btn-color-skincolor" type="submit">Find Work/Project</button>
-                                          </label>
-                                        </div>
-                                      </div>
-                                    </form>
-                                </p> */}
                     </div>
                     <div className="slide__content pb-50 pb-xl-0">
                         <div className="container">

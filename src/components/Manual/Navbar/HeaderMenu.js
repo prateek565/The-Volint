@@ -12,8 +12,9 @@ const HeaderMenu = () => {
                     {status === "user" && <Link className="alert-heading ml-40" exact to={'/job_list'}  >Opportunities</Link>}
                     {status === "user" && <Link className="alert-heading ml-40" exact to={'/applied_jobs'}  >Applications</Link>}
                     {status === "user" && <Link className="alert-heading ml-40" exact to={'/edit_resume'}  >My Resumes</Link>}
-                    {<Link className="alert-heading ml-40" exact to={'/projects'}  >Projects</Link>}
+                    {status === "user" && <Link className="alert-heading ml-40" exact to={'/user/projects'}  >Projects</Link>}
                     {status === "company" && <Link exact to={'/candidate_list'} className="alert-heading ml-40">Volunteers</Link>}
+                    {/* {status === "company" && <Link exact to={'/company/projects'} className="alert-heading ml-40">Projects</Link>} */}
                     {status === "company" && <Link exact to={'/post_job'} className="alert-heading ml-40">Post Job</Link>}
                     {status === "company" && <a href={'/posted_jobs'} className="alert-heading ml-40">Posted Jobs</a>}
                 </nav>

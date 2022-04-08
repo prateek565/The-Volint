@@ -1,11 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import ProfileDropDown from '../Manual/Navbar/ProfileDropDown';
 import HeaderMenu from '../Manual/Navbar/HeaderMenu';
 import Mobile_menu from './Mobile_menu';
 import Logo from './Logo'
+import DropDown from '../Manual/dropdown/DropDown';
+import { Grid } from '@material-ui/core';
 
 const Header = () => {
+  const [category, setcategory] = useState('Volunteer Work');
+
+  const handleChange=(e)=>{
+    e.preventDefault();
+    setcategory(e.target.value)
+  }
   return (
     <header id="masthead" className="header ttm-header-style-03">
       {/* <div className="top_bar bg-theme-GreyColor clearfix">
@@ -85,32 +93,25 @@ const Header = () => {
       </div>
       {/* <div className="serach_bar bg-theme-SkinColor pt-20">
         <div className="container">
-          <form id="b_search_Form" className="b_search_Form wrap-form d-block" method="post" action="#" data-mailchimp="true">
-            <div className="row row-equal-height ttm-boxes-spacing-20px">
-              <div className="col-md">
-                <label>
-                  <Link to={'/job_list/'}>
-                    <input type="text" id="keywords" placeholder="Keywords (e.g. Job Title)" />
-                  </Link>
-                </label>
+          <form id="b_search_Form" className="b_search_Form wrap-form d-block" method="get" action={`/jobs_by_filter/cat=${category}`}>
+            <div className="row row-equal-height ttm-boxes-spacing-20px" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+              <div className="col-lg-3">
+                <Grid item md={5} sm={10} xs={10} lg={12} style={{ marginRight: '92px' }}>
+                  <DropDown
+                    array={['Volunteer Work', 'Internship']}
+                    type={'Category'}
+                    // name="category"
+                    value={category}
+                    handleChange={handleChange}
+                  />
+                </Grid>
               </div>
-              <div className="col-md">
+              {console.log(category)}
+              <div className="col-lg-3">
                 <label>
-                  <Link to={'/job_list/'}>
-                    <input type="text" id="locations" placeholder="Locations (e.g. City, Counter)" />
-                  </Link>
-                </label>
-              </div>
-              <div className="col-md" onClick={() => {
-                window.scrollTo({ top: 1100, behavior: "smooth" });
-              }}>
-                <label>
-                  <input type="text" id="industry" placeholder="Industry (e.g. Design, Art)" />
-                </label>
-              </div>
-              <div className="col-lg-2">
-                <label>
-                  <button className="submit ttm-btn ttm-btn-size-sm ttm-btn-shape-rounded ttm-btn-style-fill ttm-btn-color-grey" type="submit">Search</button>
+                  <a href={`/jobs_by_filter/cat=${category}`}>
+                    <button className="ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-fill ttm-btn-color-skincolor" type="submit">Search Opportunities</button>
+                  </a>
                 </label>
               </div>
             </div>

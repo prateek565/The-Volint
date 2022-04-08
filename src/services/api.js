@@ -48,6 +48,9 @@ export const userInfo=async ()=>{
         }
     });
 }
+export const userInfoById=async (id)=>{
+    return await axios.get(`/user/getuserbyid/${id}`);
+}
 export const acceptOffer=async (id)=>{
     return await axios.put(`/user/acceptoffer/${id}`, 
     {

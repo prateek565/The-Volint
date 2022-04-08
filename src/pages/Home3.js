@@ -202,7 +202,7 @@ const Home3 = () => {
                     <div style={{ display: 'flex', justifyContent: 'space-evenly', }} className='mb-20'>
                         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                             <img src='https://i.pinimg.com/736x/ad/a9/4f/ada94fd3c04698705ff337362e79a058.jpg' alt='image' style={{ height: '3rem', width: '3rem' }} />
-                            <a href={'jobs_by_filter/cat=Volunteer Work'} style={{ width: '10rem' }}>Volunteer Work<span style={{ color: 'black', fontSize: 'medium' }}> ({volunteerWork?.length})</span></a>
+                            <a href={'/jobs_by_filter/cat=Volunteer Work'} style={{ width: '10rem' }}>Volunteer Work<span style={{ color: 'black', fontSize: 'medium' }}> ({volunteerWork?.length})</span></a>
                         </div>
                         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                             <img src='https://i.pinimg.com/736x/ad/a9/4f/ada94fd3c04698705ff337362e79a058.jpg' alt='image' style={{ height: '3rem', width: '3rem' }} />
