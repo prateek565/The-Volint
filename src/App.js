@@ -33,10 +33,10 @@ import ManageRecruitment from './pages/Company/ManageRecruitment';
 import Jobs_by_filter from './pages/User/Job_by_filter';
 import Home from './pages/Home';
 import Home2 from './pages/Home2';
-import UserProjects from './pages/User/UserProjects';
+import UserProjects from './pages/User/Projects/UserProjects';
 
-// axios.defaults.baseURL = 'http://localhost:4000';
-axios.defaults.baseURL = 'https://volunteerproject.herokuapp.com';
+axios.defaults.baseURL = 'http://localhost:4000';
+// axios.defaults.baseURL = 'https://volunteerproject.herokuapp.com';
 axios.defaults.params = {};
 
 

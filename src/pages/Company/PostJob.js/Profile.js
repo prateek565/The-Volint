@@ -87,8 +87,14 @@ class Profile extends Component {
               </Grid>
               <Grid item md={5} sm={10} xs={10} lg={5}>
                 <DropDown
-                  array={['Advocacy and Human Rights', 'Children and Youth', 'Agriculture',
-                  'Environment', 'Animals', 'Community', 'Computers and Technology', 'Education and Literacy', 'Others']}
+                  array={[
+                  'Development and IT',
+                  'Design and Creative',
+                  'Sales and Marketing',
+                  'Writing and Transalation',
+                  'Finance and Accounting',
+                  'Admin and Customer Support',
+                  'Others']}
                   type={'Industry'}
                   name="industry"
                   value={values.industry}

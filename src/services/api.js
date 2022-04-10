@@ -108,6 +108,14 @@ export const offerAccept=async (id)=>{
         }
     });
 }
+export const saveHours=async (internId,hour,date)=>{
+    return await axios.put(`/user/savehours/${internId}`, {date,hour}, 
+    {
+        headers:{ 
+            token: localStorage.getItem("token")
+        }
+    });
+}
 
 //******* interns *******//
 export const allApplicants=async (id)=>{
