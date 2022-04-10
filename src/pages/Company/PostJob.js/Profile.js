@@ -93,7 +93,7 @@ class Profile extends Component {
                   'Sales and Marketing',
                   'Writing and Transalation',
                   'Finance and Accounting',
-                  'Admin and Customer Support',
+                  'Admin and Customer Support',    
                   'Others']}
                   type={'Industry'}
                   name="industry"
