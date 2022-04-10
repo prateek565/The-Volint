@@ -64,7 +64,7 @@ const Job_list = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-4 widget-area sidebar-left job_list-widget-area">
-                            <div className="job_list-widget" style={{ backgroundColor: 'rgb(236, 215, 255)' }}>
+                            {/* <div className="job_list-widget" style={{ backgroundColor: 'rgb(236, 215, 255)' }}>
                                 <aside className="widget job-widget">
                                     <h3 className="widget-title"><i className="flaticon flaticon-calendar-1"></i>Date Posted</h3>
                                     <form id="list1" className="list-filter">
@@ -144,7 +144,7 @@ const Job_list = () => {
                                         </div>
                                     </form>
                                 </aside>
-                            </div>
+                            </div> */}
                             <aside className="widget widget-banner">
                                 <div className="ttm-col-bgcolor-yes bg-theme-DarkColor text-theme-WhitColor col-bg-img-seven ttm-col-bgimage-yes ttm-bg p-40">
                                     <div className="ttm-col-wrapper-bg-layer ttm-bg-layer bg-theme-DarkColor" style={{ backgroundImage: '' }}>
@@ -162,25 +162,6 @@ const Job_list = () => {
                             </aside>
                         </div>
                         <div className="col-lg-8 content-area">
-                            <div className="row">
-                                <div className="col-md-12">
-                                    <div className="showing-result-block d-sm-flex align-items-center justify-content-between" style={{ backgroundColor: 'rgb(236, 215, 255)' }}>
-                                        <span className="showing-result">Showing 1–10 of 50 Project Results :</span>
-                                        <form>
-                                            <div className="sort-by">Sort By:
-                                                <select defaultValue="">
-                                                    <option value="" disabled>A to Z</option>
-                                                    <option value="popularity">a</option>
-                                                    <option value="rating">b</option>
-                                                    <option value="date">c</option>
-                                                    <option value="price">d</option>
-                                                    <option value="price-desc">e</option>
-                                                </select>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
                             <div className="row">
                                 {
                                     jobs?.map((intern) => (
@@ -208,16 +189,6 @@ const Job_list = () => {
                                         </div>
                                     ))
                                 }
-                                <div className="col-lg-12">
-                                    <div className="job-pagination-block">
-                                        <a className="page-nav-link">prev</a>
-                                        <a className="page-nav-link current">1</a>
-                                        <a className="page-nav-link" href="#">2</a>
-                                        <a className="page-nav-link" href="#">3</a>
-                                        <a className="page-nav-link" href="#">....</a>
-                                        <a className="page-nav-link">next</a>
-                                    </div>
-                                </div>
                             </div>{/* row end */}
                         </div>
                     </div>{/* row end */}

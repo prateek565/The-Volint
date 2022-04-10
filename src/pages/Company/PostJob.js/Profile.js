@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
 import { TextField, Button, Container } from '@material-ui/core';
 import { Card, CardHeader, CardContent } from '@material-ui/core';
-import NavigateNextIcon from '@material-ui/icons/NavigateNext';
-import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
-import EmailIcon from '@material-ui/icons/Email';
-import PhoneIcon from '@material-ui/icons/Phone';
-import LanguageIcon from '@material-ui/icons/Language';
-import GitHubIcon from '@material-ui/icons/GitHub';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import TwitterIcon from '@material-ui/icons/Twitter';
-import FacebookIcon from '@material-ui/icons/Facebook';
-import InstagramIcon from '@material-ui/icons/Instagram';
-import InputAdornment from '@material-ui/core/InputAdornment';
-import { Row, Col } from 'react-bootstrap';
+// import NavigateNextIcon from '@material-ui/icons/NavigateNext';
+// import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
+// import EmailIcon from '@material-ui/icons/Email';
+// import PhoneIcon from '@material-ui/icons/Phone';
+// import LanguageIcon from '@material-ui/icons/Language';
+// import GitHubIcon from '@material-ui/icons/GitHub';
+// import LinkedInIcon from '@material-ui/icons/LinkedIn';
+// import TwitterIcon from '@material-ui/icons/Twitter';
+// import FacebookIcon from '@material-ui/icons/Facebook';
+// import InstagramIcon from '@material-ui/icons/Instagram';
+// import InputAdornment from '@material-ui/core/InputAdornment';
+// import { Row, Col } from 'react-bootstrap';
 import { Paper, withStyles, Grid } from '@material-ui/core';
 import DropDown from '../../../components/Manual/dropdown/DropDown';
 
@@ -34,9 +34,6 @@ class Profile extends Component {
   render() {
     const { values } = this.props;
     const { classes } = this.props;
-    console.log('====================================');
-    console.log(values);
-    console.log('====================================');
     return (
       <>
         <Grid item xs={12} lg={12}>
@@ -63,7 +60,7 @@ class Profile extends Component {
                   label="Project Title"
                   variant="outlined"
                   style={{ width: '80%' }}
-                  name="title"
+                  name="title" 
                   required
                   value={values.title}
                   onChange={this.props.handleChange}
@@ -90,8 +87,14 @@ class Profile extends Component {
               </Grid>
               <Grid item md={5} sm={10} xs={10} lg={5}>
                 <DropDown
-                  array={['Advocacy and Human Rights', 'Children and Youth', 'Agriculture',
-                  'Environment', 'Animals', 'Community', 'Computers and Technology', 'Education and Literacy', 'Others']}
+                  array={[
+                  'Development and IT',
+                  'Design and Creative',
+                  'Sales and Marketing',
+                  'Writing and Transalation',
+                  'Finance and Accounting',
+                  'Admin and Customer Support',
+                  'Others']}
                   type={'Industry'}
                   name="industry"
                   value={values.industry}

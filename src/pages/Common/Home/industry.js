@@ -15,8 +15,8 @@ const Industry = ({ industry }) => {
 
     return (
         <div style={{display: 'flex', flexDirection: 'column', alignItems:'center'}}>
-            <img src='https://i.pinimg.com/736x/ad/a9/4f/ada94fd3c04698705ff337362e79a058.jpg' alt='image' style={{ height: '3rem', width: '3rem' }} />
-            <p style={{width:'8rem'}}>{industry} <span style={{ color: 'black', fontSize: 'medium' }}> ({jobs?.length})</span></p>
+            <img src='https://i.pinimg.com/736x/ad/a9/4f/ada94fd3c04698705ff337362e79a058.jpg' alt='image' style={{ height: '3rem', width: '3rem'}} />
+            <p style={{width:'10rem'}}>{industry} <span style={{ color: 'black', fontSize: 'medium' }}> ({jobs?.length})</span></p>
         </div>
     )
 }

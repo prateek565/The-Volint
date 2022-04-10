@@ -557,9 +557,9 @@ const CompanyProfile = () => {
                                    <Link className="ttm-btn ttm-btn-size-sm ttm-btn-shape-rounded ttm-btn-style-border 
                                                           ttm-btn-color-dark mr-20"
                                      exact to={`/edit_job/${job._id}`}>Edit Project</Link>
-                                     <Link className="ttm-btn ttm-btn-size-sm ttm-btn-shape-rounded ttm-btn-style-border 
+                                     {/* <Link className="ttm-btn ttm-btn-size-sm ttm-btn-shape-rounded ttm-btn-style-border 
                                                           ttm-btn-color-dark mr-20"
-                                     exact to={`/projects`}>View Details</Link>
+                                     exact to={`/company/projects`}>View Details</Link> */}
                                  </div>
                                </div>
                              }

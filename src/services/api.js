@@ -48,6 +48,9 @@ export const userInfo=async ()=>{
         }
     });
 }
+export const userInfoById=async (id)=>{
+    return await axios.get(`/user/getuserbyid/${id}`);
+}
 export const acceptOffer=async (id)=>{
     return await axios.put(`/user/acceptoffer/${id}`, 
     {
@@ -99,6 +102,14 @@ export const getRejectedIn=async ()=>{
 }
 export const offerAccept=async (id)=>{
     return await axios.put(`/user/acceptoffer`, {credentials: id}, 
+    {
+        headers:{ 
+            token: localStorage.getItem("token")
+        }
+    });
+}
+export const saveHours=async (internId,hour,date)=>{
+    return await axios.put(`/user/savehours/${internId}`, {date,hour}, 
     {
         headers:{ 
             token: localStorage.getItem("token")

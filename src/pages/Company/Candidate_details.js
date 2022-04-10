@@ -4,7 +4,7 @@ import PageHeader from "../../components/layout/PageHeader";
 import { Footer } from '../../components/layout/Footer';
 import ProgressBar from 'react-animated-progress-bar';
 import { useLocation } from 'react-router-dom';
-import { offerIntern, userInfo } from '../../services/api';
+import { offerIntern, userInfoById } from '../../services/api';
 
 
 const Candidate_details=()=> {
@@ -12,8 +12,11 @@ const Candidate_details=()=> {
     const location = useLocation()
     const [candidate, setcandidate] = useState([]);
     const id = location.pathname.split('candidate_details/')[1];
+    console.log('====================================');
+    console.log(id);
+    console.log('====================================');
     useEffect(() => {  
-        Promise.resolve(userInfo(id)).then((res) => {
+        Promise.resolve(userInfoById(id)).then((res) => {
             console.log(res.data);
             setcandidate(res.data)
         }).catch((e) => {
@@ -37,7 +40,6 @@ const Candidate_details=()=> {
 
             <div className="site-main">
                 <Header/>
-            {id}
                 {/* PageHeader */} 
                 <PageHeader
                     title="candidate details"

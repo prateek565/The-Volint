@@ -132,25 +132,6 @@ const Projects = () => {
                             </div>
                         <div className="col-lg-8 content-area">
                             <div className="row">
-                                <div className="col-md-12">
-                                    <div className="showing-result-block d-sm-flex align-items-center justify-content-between" style={{ backgroundColor: 'rgb(236, 215, 255)' }}>
-                                        <span className="showing-result">Showing 1–10 of 50 Project Results :</span>
-                                        <form>
-                                            <div className="sort-by">Sort By:
-                                                <select defaultValue="">
-                                                    <option value="" disabled>A to Z</option>
-                                                    <option value="popularity">a</option>
-                                                    <option value="rating">b</option>
-                                                    <option value="date">c</option>
-                                                    <option value="price">d</option>
-                                                    <option value="price-desc">e</option>
-                                                </select>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="row">
                                 {
                                     (loading) && <CircularProgress />
                                 }
@@ -190,17 +171,6 @@ const Projects = () => {
                                     </div>
                                 ))
                                 } 
-                                
-                                <div className="col-lg-12">
-                                    <div className="job-pagination-block">
-                                        <Link className="page-nav-link">prev</Link>
-                                        <Link className="page-nav-link current">1</Link>
-                                        <Link className="page-nav-link" href="#">2</Link>
-                                        <Link className="page-nav-link" href="#">3</Link>
-                                        <Link className="page-nav-link" href="#">....</Link>
-                                        <Link className="page-nav-link">next</Link>
-                                    </div>
-                                </div>
                             </div>{/* row end */}
                         </div>
                 </div>{/* row end */}
