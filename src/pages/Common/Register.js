@@ -74,7 +74,7 @@ const Register = () => {
                     localStorage.setItem("token",res.data.token);
                     localStorage.setItem("status",res.data.status);
                     setTimeout(() => {
-                        history.push("/");
+                        history.push("/profile");
                         window.location.reload();
                     }, 2000);
                    
@@ -142,7 +142,7 @@ const Register = () => {
                 setSuccess(true);
                 setText("SignUp Successfull")
                 setTimeout(() => {
-                    history.push("/");
+                    history.push("/company_profile");
                     window.location.reload();
                 }, 2000);
             }).catch((e) => {
@@ -208,7 +208,7 @@ const Register = () => {
                                                                         <i className="ti ti-user"></i>
                                                                         <input value={username} onkeydown={handleEnter} onChange={(e)=>{
                                                                             setusername(e.target.value)
-                                                                        }} name="requiredField" required ref={({ required: true })} type="text" id="txtname" placeholder="Username" />
+                                                                        }} name="requiredField" required ref={({ required: true })} type="text" id="txtname" placeholder="Full Name" />
                                                                     </label>
                                                                 </div>
                                                                 <div className="col-lg-6">
@@ -286,7 +286,7 @@ const Register = () => {
                                                                         <i className="ti ti-user"></i>
                                                                         <input value={companyname} onkeydown={handleEnter} onChange={(e)=>{
                                                                             setcompanyname(e.target.value)
-                                                                        }}  type="text"  placeholder="Username" />
+                                                                        }}  type="text"  placeholder="Full Name" />
                                                                     </label>
                                                                 </div>
                                                                 <div className="col-lg-6 col-md-6">
