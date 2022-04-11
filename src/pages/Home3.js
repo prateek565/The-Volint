@@ -13,13 +13,34 @@ import Industry from './Common/Home/industry';
 const Home3 = () => {
 
     const industry = [
-        'Development and IT',
-        'Design and Creative',
-        'Sales and Marketing',
-        'Writing and Transalation',
-        'Finance and Accounting',
-        'Admin and Customer Support',
-        'Others'
+        {
+            name: 'Development and IT',
+            image:'https://c8.alamy.com/comp/MNCBXR/career-growth-career-development-career-advancement-in-the-design-of-information-related-to-professional-growth-3d-illustration-MNCBXR.jpg'
+        },
+        {
+            name: 'Design and Creative',
+            image:'https://thumbs.dreamstime.com/b/creative-colourful-abstract-design-vector-42880424.jpg'
+        },
+        {
+            name: 'Sales and Marketing',
+            image:'https://connectioncafe.com/wp-content/uploads/2019/08/sales-marketing.jpg'
+        },
+        {
+            name: 'Writing and Transalation',
+            image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOoqgwKqBzMDuPl1H1X6K4oYhxn8R66AQ98w&usqp=CAU'
+        },
+        {
+            name: 'Finance and Accounting',
+            image:'https://www.ramco.com/hubfs/finance-accounting.jpg'
+        },
+        {
+            name: 'Admin and Customer Support',
+            image:'https://previews.123rf.com/images/faysalfarhan/faysalfarhan1605/faysalfarhan160501768/56403025-customer-service-customer-care-icon-cyan-blue-glossy-round-button.jpg'
+        },
+        {
+            name: 'Others',
+            image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhZh3kLupDuCdaWmWCy_h6VYAcJKDYYXmljpxE2xrp9MbI7ww0Bgeor6ZiUGkv_6GhOnw&usqp=CAU'
+        },
     ]
     const [volunteerWork, setvolunteerWork] = useState()
     const [internshipWork, setinternshipWork] = useState()
@@ -201,11 +222,11 @@ const Home3 = () => {
                     </div>
                     <div style={{ display: 'flex', justifyContent: 'space-evenly', }} className='mb-20'>
                         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                            <img src='https://i.pinimg.com/736x/ad/a9/4f/ada94fd3c04698705ff337362e79a058.jpg' alt='image' style={{ height: '3rem', width: '3rem' }} />
+                            <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjHkH6tWKgs9QpdCCrEq1VceSUXi7Qi0bi5g&usqp=CAU' alt='image' style={{ height: '3rem', width: '3rem' }} />
                             <a href={'/jobs_by_filter/cat=Volunteer Work'} style={{ width: '10rem' }}>Volunteer Work<span style={{ color: 'black', fontSize: 'medium' }}> ({volunteerWork?.length})</span></a>
                         </div>
                         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                            <img src='https://i.pinimg.com/736x/ad/a9/4f/ada94fd3c04698705ff337362e79a058.jpg' alt='image' style={{ height: '3rem', width: '3rem' }} />
+                            <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQK8M92gA0KnFI37zC74yq5R38q-J6Wc8epWw&usqp=CAU' alt='image' style={{ height: '3rem', width: '3rem'}} className='rounded-circle'/>
                             <a href={`/jobs_by_filter/cat=Internship`} style={{ width: '10rem' }}>Internship Work<span style={{ color: 'black', fontSize: 'medium' }}> ({internshipWork?.length})</span></a>
                         </div>
                     </div>

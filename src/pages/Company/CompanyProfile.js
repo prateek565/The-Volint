@@ -17,6 +17,7 @@ import PhoneIcon from '@material-ui/icons/Phone';
 import LanguageIcon from '@material-ui/icons/Language';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import { FaHandPointUp } from 'react-icons/fa';
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
@@ -60,7 +61,6 @@ const ProfileDetails = (props) => {
     description,
     city,
   } = companyEdit;
-  console.log(company.title);
   const values = {
 
     // Profile-Information
@@ -90,20 +90,19 @@ const ProfileDetails = (props) => {
     e.preventDefault();
     
     const val = e.target.value;
-    console.log(val);
+    console.log(e.target.name, val);
     setCompany({
       [e.target.name]: val
     });
   };
   
-  
+  console.log(values);
   const [success, setsuccess]= useState(false);
   const [text, setText]= useState("");
   const [error, seterror]= useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    let file= 
     console.log(e);
     Promise.resolve((editCompany(values, id))).then((res)=>{
       console.log(res);
@@ -373,15 +372,15 @@ const CompanyProfile = () => {
       console.log({ e });
     })
   }, [])
-  const [offers, setOffers] = useState([])
-  useEffect(() => {
-    Promise.resolve((myOffers())).then((res) => {
-      console.log(res.data);
-      setOffers(res.data)
-    }).catch((e) => {
-      console.log({ e });
-    })
-  }, [])
+  // const [offers, setOffers] = useState([])
+  // useEffect(() => {
+  //   Promise.resolve((myOffers())).then((res) => {
+  //     console.log(res.data);
+  //     setOffers(res.data)
+  //   }).catch((e) => {
+  //     console.log({ e });
+  //   })
+  // }, [])
 
   const [accepted, setAccepted]= useState(false)
   const acceptOffer = () => {
@@ -512,9 +511,7 @@ const CompanyProfile = () => {
                       <h6>Description</h6>
                   </div>
                   <div className="desc">
-                      {company?.description? <p>{company?.description}</p> : <p>Dolor sed viverra ipsum nunc. In ornare quam viverra orci. Id diam maecenas ultricies mi eget mauris
-                          pharetra et ultrices. Non diam phasellus vestibulum lorem sed risus ultricies. Lacinia at quis 
-                          risus sed vulputate odio ut enim blandit. Suspendisse ultrices gravida dictum fusce ut.</p>}
+                      {company?.description? <p>{company?.description}</p> : <p className='text-danger'>Add Description <FaHandPointUp className='mb-5' size={'1.2rem'}/></p>}
                   </div>
                  </div>
                 </div>

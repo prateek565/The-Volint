@@ -14,9 +14,9 @@ const Industry = ({ industry }) => {
 
 
     return (
-        <div style={{display: 'flex', flexDirection: 'column', alignItems:'center'}}>
-            <img src='https://i.pinimg.com/736x/ad/a9/4f/ada94fd3c04698705ff337362e79a058.jpg' alt='image' style={{ height: '3rem', width: '3rem'}} />
-            <p style={{width:'10rem'}}>{industry} <span style={{ color: 'black', fontSize: 'medium' }}> ({jobs?.length})</span></p>
+        <div style={{display: 'flex', flexDirection: 'column', alignItems:'center', textAlign:'center'}}>
+            <img className='rounded-circle border border-dark' src={industry.image} alt='image' style={{ height: '3rem', width: '4rem'}} />
+            <p style={{width:'10rem'}}>{industry.name} <span style={{ color: 'black', fontSize: 'medium' }}> ({jobs?.length})</span></p>
         </div>
     )
 }
