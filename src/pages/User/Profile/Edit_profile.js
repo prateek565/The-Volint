@@ -295,19 +295,19 @@ const ProfileDetails = (props) => {
                                         onChange={handleChange}
                                     />
                                 </Grid>
-
                                 <Grid item lg={6} xs={12} sm={12} md={6}>
                                     <TextField
                                         margin="dense"
                                         placeholder="Phone Number"
                                         variant="outlined"
                                         name="phone"
+                                        type='tel'
                                         style={{ alignItems: 'left', width: '80%' }}
                                         value={values.phone}
                                         onChange={handleChange}
-
                                     />
                                 </Grid>
+                                <input placeholder='phone' type='tel'/>
                                 <Grid item md={5} sm={10} xs={10} lg={5} style={{ marginRight: '92px' }}>
                                     <MultipleDropDown array={Skills}  type='skills' />
                                 </Grid>

@@ -130,7 +130,7 @@ const Job_details = () => {
                                             <li className="d-flex"><b className="mr-5">Category:</b>{intern.category ? intern.category : "-"}</li>
                                             <li className="d-flex"><b className="mr-5">Qualification:</b>{intern.qualification ? intern.qualification : "-"}</li>
                                             <li className="d-flex"><b className="mr-5">position:</b>{intern.position ? intern.position : "-"}</li>
-                                            <li className="d-flex"><b className="mr-5">no. of candidates hired:</b>{intern.userOnBoarded?.length}</li>
+                                            <li className="d-flex"><b className="mr-5">no. of candidates hired:</b>{intern.usersOnBoarded?.length}</li>
                                         </ul>
                                     </aside>
                                     {/*<aside className="widget form-widget">

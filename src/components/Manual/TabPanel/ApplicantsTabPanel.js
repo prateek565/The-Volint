@@ -5,8 +5,9 @@ import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import { Link, useLocation } from 'react-router-dom';
-import { acceptApplicant, AcceptedApplicants, allApplicants, getIntern, rejectApplicant, RejectedApplicants } from '../../../services/api';
+import { acceptApplicant, AcceptedApplicants, allApplicants, getIntern, rejectApplicant, RejectedApplicants, userOnBoard } from '../../../services/api';
 import TemporaryDrawer from '../../../pages/Common/Message';
+import UsersOnBoarded from './ApplicantsTabPanel/userOnBoardrd';
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -46,6 +47,7 @@ export default function ApplicantsTabPanelTabPanel() {
     const [value, setValue] = React.useState(0);
     const [allcandidates, setallcandidates] = React.useState([]);
     const [accepted, setaccepted] = React.useState([]);
+    const [onBoarded, setonBoarded] = React.useState([])
     const [rejected, setrejected] = React.useState([]);
     const [toggle, settoggle] = React.useState(false)
 
@@ -62,6 +64,12 @@ export default function ApplicantsTabPanelTabPanel() {
         })
         Promise.resolve(getIntern(id)).then((res) => {
             console.log(res.data);
+        }).catch((e) => {
+            console.log({ e });
+        })
+        Promise.resolve(userOnBoard(id)).then((res) => {
+            console.log(res.data);
+            setonBoarded(res.data)
         }).catch((e) => {
             console.log({ e });
         })
@@ -87,9 +95,10 @@ export default function ApplicantsTabPanelTabPanel() {
         <Box sx={{ width: '100%' }}>
             <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
                 <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-                    <Tab label="All Applicants" {...a11yProps(0)} />
-                    <Tab label="Accepted" {...a11yProps(1)} />
-                    <Tab label="Rejected" {...a11yProps(2)} />
+                    <Tab label={`All Applicants (${allcandidates.length})`} {...a11yProps(0)} />
+                    <Tab label={`On Boarded (${onBoarded.length})`} {...a11yProps(1)} />
+                    <Tab label={`Accepted (${accepted.length})`} {...a11yProps(2)} />
+                    <Tab label={`Rejected (${rejected.length})`} {...a11yProps(3)} />
                 </Tabs>
             </Box>
             <TabPanel value={value} index={0}>
@@ -131,6 +140,16 @@ export default function ApplicantsTabPanelTabPanel() {
                 ))}
             </TabPanel>
             <TabPanel value={value} index={1}>
+                {onBoarded.length === 0 && <h4>No On Boarded Applicants</h4>}
+                {
+                    onBoarded.map((user, index) => (
+                        <div className="col-lg-12">
+                            <UsersOnBoarded user={user} />
+                        </div>
+                    ))
+                }
+            </TabPanel>
+            <TabPanel value={value} index={2}>
                 {accepted.length === 0 && <h4>No Accepted Applicants</h4>}
                 {accepted.map((user, index) => (
                     <div className="col-lg-12">
@@ -162,7 +181,7 @@ export default function ApplicantsTabPanelTabPanel() {
                     </div>
                 ))}
             </TabPanel>
-            <TabPanel value={value} index={2}>
+            <TabPanel value={value} index={3}>
                 {rejected.length === 0 && <h4>No Rejected Applicants</h4>}
                 {rejected.map((user, index) => (
                     <div className="col-lg-12">
@@ -195,6 +214,6 @@ export default function ApplicantsTabPanelTabPanel() {
                     </div>
                 ))}
             </TabPanel>
-        </Box>
+        </Box >
     );
 }
