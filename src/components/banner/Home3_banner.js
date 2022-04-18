@@ -65,10 +65,12 @@ export class Banner extends Component {
                                         <h2 className="animated animate__fadeInDown">A new <span className="text-theme-SkinColor fw-normal"> Experience </span></h2>
                                         <h2 className="animated animate__fadeInDown"> of Volunteering </h2>
                                         <div className="mt-20 mb-30 mb-md-15">
-                                            <p className="animated animate__fadeInDown d-none d-md-block">
+                                            <p className="animated animate__fadeInDown d-md-block">
                                                 A platform to match volunteers with the opportunities.
                                             </p>
                                         </div>
+                                        <br/><br/><br/><br/>
+                                        <h4 style={{color: '#7510b0'}} className="animated animate__fadeInDown ">For every 1 hour of Volunteering, The Volint will donate 100 unit of grains to the needy people !</h4>
                                     </div>
                                 </div>
                                 <div className="col-lg-6">
