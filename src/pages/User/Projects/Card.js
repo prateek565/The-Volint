@@ -59,6 +59,9 @@ const Card = ({ intern }) => {
                 <div className="featured-title">
                     <h3><Link to={`/job_details/${intern._id}`}>{intern.title ? intern.title : "_"}</Link></h3>
                 </div>
+                <div style={{ position: 'absolute' , right:'10px'}}>
+                    <a href="../images/Volint_Cert.pdf" download>Download</a>
+                </div>
                 <div className="featured-desc">
                     <p>{intern.duration}</p>
                     <p>Started from: </p>
