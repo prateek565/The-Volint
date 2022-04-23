@@ -49,6 +49,7 @@ const User_profile = () => {
     const id = location.pathname.substring(19,);
     Promise.resolve(userInfo(id)).then((res) => {
       console.log(res.data);
+      console.log(res.data.phone);
       setUser(res.data);
       setloading(false);
     }).catch((e) => {
