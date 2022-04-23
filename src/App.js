@@ -11,7 +11,7 @@ import Job_details from './pages/User/Job_details';
 import Candidate_list from './pages/Company/Candidate_list';
 import Candidate_details from './pages/Company/Candidate_details';
 import Login from './pages/Common/login/Login';
-import Register from './pages/Common/Register';
+import Register from './pages/Common/Register/Register';
 import axios from 'axios';
 import Resume from './pages/User/Resume/Resume';
 import ScrollToTop from './components/layout/Gotop';
@@ -34,13 +34,13 @@ import Jobs_by_filter from './pages/User/Job_by_filter';
 import Home from './pages/Home';
 import Home2 from './pages/Home2';
 import UserProjects from './pages/User/Projects/UserProjects';
+import EmailVerification from './pages/Common/Register/emailVerification';
 
 // axios.defaults.baseURL = 'http://localhost:4000';
 axios.defaults.baseURL = 'https://volunteerproject.herokuapp.com';
 axios.defaults.params = {};
 
 function App() {
-
 
   return (
     <div className="page">
@@ -70,6 +70,7 @@ function App() {
         <Route path={`/candidate_details`} component={ Candidate_details } />
         <Route exact path={ `/login`} component={ Login } />
         <Route exact path={`/signup`} component={ Register } />
+        <Route exact path={`/verify`} component={ EmailVerification } />
         <Route exact path={`/resume`} component={ Resume } />
         <Route exact path={`/company_interns`} component={ Company_interns } />
         <Route exact path={'/applied'} component={Applied_Jobs} />

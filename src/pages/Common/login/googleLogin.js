@@ -11,7 +11,7 @@ const LoginGoogle = ({ status }) => {
         console.log(response);
         Promise.resolve(googleLogin({ email: response.profileObj.email, password: response.profileObj.googleId, status: status, name: response.profileObj.name, profile: response.profileObj.imageUrl })).then(res => {
             console.log(res);
-            localStorage.setItem("token", res.data.token);
+            localStorage.setItem("volintToken", res.data.token);
             localStorage.setItem("status", res.data.status);
             history.push('/');
             window.location.reload();

@@ -22,7 +22,7 @@ export class Header extends Component {
         scrollTop >= 250 ? header.classList.add('is-Sticky') : header.classList.remove('is-Sticky');
     };
 
-    token = localStorage.getItem("token")
+    token = localStorage.getItem("volintToken")
     // token= "user";
     render() {        
         return (

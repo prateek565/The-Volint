@@ -82,7 +82,7 @@ const Login = () => {
             setCandidateOn(true);
             Promise.resolve(login({ email: useremail, password: userpass, status: "user", aMonth: aMonth })).then(res => {
                 console.log(res);
-                localStorage.setItem("token", res.data.token);
+                localStorage.setItem("volintToken", res.data.token);
                 localStorage.setItem("status", res.data.status);
                 history.push('/');
                 // window.location.reload();
@@ -102,7 +102,7 @@ const Login = () => {
         e.preventDefault();
         Promise.resolve(login({ email: companyemail, password: companypass, status: "company", aMonth: aMonth })).then(res => {
             console.log(res);
-            localStorage.setItem("token", res.data.token)
+            localStorage.setItem("volintToken", res.data.token)
             localStorage.setItem("status", res.data.status);
             history.push('/');
             // window.location.reload();
@@ -117,7 +117,7 @@ const Login = () => {
         console.log(response);
         // Promise.resolve(login({ email: 'k@gmail.com', password: 'kanishka', status: "user", aMonth: aMonth })).then(res => {
         //     console.log(res);
-        //     localStorage.setItem("token", res.data.token)
+        //     localStorage.setItem("volintToken", res.data.token)
         //     localStorage.setItem("status", res.data.status);
         //     history.push('/');
         //     // window.location.reload();
@@ -131,7 +131,7 @@ const Login = () => {
         console.log(response);
         Promise.resolve(googleLogin({ email: response.email, password: response.googleId, status: "user", name: response.name })).then(res => {
             console.log(res);
-            localStorage.setItem("token", res.data.token)
+            localStorage.setItem("volintToken", res.data.token)
             localStorage.setItem("status", res.data.status);
             localStorage.setItem("profile", response.profileObj.imageUrl)
             history.push('/');

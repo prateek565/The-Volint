@@ -20,7 +20,7 @@ export const allUsers = async () => {
     return await axios.get(`/user/allusers`,
         {
             headers: {
-                token: localStorage.getItem("token")
+                token: localStorage.getItem("volintToken")
             }
         });
 }
@@ -28,7 +28,7 @@ export const myAppliedJobs = async () => {
     return await axios.get(`/user/getappliedjobs`,
         {
             headers: {
-                token: localStorage.getItem("token")
+                token: localStorage.getItem("volintToken")
             }
         });
 }
@@ -36,7 +36,7 @@ export const deleteAppliedJob = async (internId) => {
     return await axios.delete(`/user/deleteappliedjob/${internId}`,
         {
             headers: {
-                token: localStorage.getItem("token")
+                token: localStorage.getItem("volintToken")
             }
         });
 }
@@ -44,7 +44,7 @@ export const userInfo = async () => {
     return await axios.get(`/user/getuser`,
         {
             headers: {
-                token: localStorage.getItem("token")
+                token: localStorage.getItem("volintToken")
             }
         });
 }
@@ -55,7 +55,7 @@ export const acceptOffer = async (id) => {
     return await axios.put(`/user/acceptoffer/${id}`,
         {
             headers: {
-                token: localStorage.getItem("token")
+                token: localStorage.getItem("volintToken")
             }
         });
 }
@@ -64,7 +64,7 @@ export const editUser = async (data) => {
     return await axios.put(`/user/edituser`, { credentials: data },
         {
             headers: {
-                token: localStorage.getItem("token")
+                token: localStorage.getItem("volintToken")
             }
         });
 }
@@ -72,7 +72,7 @@ export const jobApply = async (data, internId) => {
     return await axios.post(`/user/jobapply/${internId}`, { credentials: data },
         {
             headers: {
-                token: localStorage.getItem("token")
+                token: localStorage.getItem("volintToken")
             }
         });
 }
@@ -80,7 +80,7 @@ export const myProjects = async () => {
     return await axios.get(`/user/getprojects`,
         {
             headers: {
-                token: localStorage.getItem("token")
+                token: localStorage.getItem("volintToken")
             }
         });
 }
@@ -88,7 +88,7 @@ export const myOffers = async () => {
     return await axios.get(`/user/getoffers`,
         {
             headers: {
-                token: localStorage.getItem("token")
+                token: localStorage.getItem("volintToken")
             }
         });
 }
@@ -96,7 +96,7 @@ export const getRejectedIn = async () => {
     return await axios.get(`/user/getrejectedin`,
         {
             headers: {
-                token: localStorage.getItem("token")
+                token: localStorage.getItem("volintToken")
             }
         });
 }
@@ -104,7 +104,7 @@ export const offerAccept = async (id) => {
     return await axios.put(`/user/acceptoffer`, { credentials: id },
         {
             headers: {
-                token: localStorage.getItem("token")
+                token: localStorage.getItem("volintToken")
             }
         });
 }
@@ -146,7 +146,7 @@ export const companyInterns = async () => {
     return await axios.get(`/company/getinterns`,
         {
             headers: {
-                token: localStorage.getItem("token")
+                token: localStorage.getItem("volintToken")
             }
         });
 }
@@ -154,7 +154,7 @@ export const postJob = async (data) => {
     return await axios.post(`/company/postjob`, { credentials: data },
         {
             headers: {
-                token: localStorage.getItem("token")
+                token: localStorage.getItem("volintToken")
             }
         });
 }
@@ -162,7 +162,7 @@ export const editJob = async (id, data) => {
     return await axios.put(`/company/editjob/${id}`, { credentials: data },
         {
             headers: {
-                token: localStorage.getItem("token")
+                token: localStorage.getItem("volintToken")
             }
         });
 }
@@ -170,7 +170,7 @@ export const getJob = async (id) => {
     return await axios.get(`/intern/getintern/${id}`,
         {
             headers: {
-                token: localStorage.getItem("token")
+                token: localStorage.getItem("volintToken")
             }
         });
 }
@@ -179,7 +179,7 @@ export const companyInfo = async () => {
     return await axios.get(`/company/getcompany`,
         {
             headers: {
-                token: localStorage.getItem("token")
+                token: localStorage.getItem("volintToken")
             }
         });
 }
@@ -187,15 +187,16 @@ export const offerIntern = async (id) => {
     return await axios.put(`intern/acceptapplicant/${id}`,
         {
             headers: {
-                token: localStorage.getItem("token")
+                token: localStorage.getItem("volintToken")
             }
         });
 }
 export const editCompany = async (data, id) => {
+    console.log(data);
     return await axios.put(`/company/editcompany/${id}`, { credentials: data },
         {
             headers: {
-                token: localStorage.getItem("token")
+                token: localStorage.getItem("volintToken")
             }
         });
 }
@@ -203,7 +204,7 @@ export const userApplied = async (id) => {
     return await axios.get(`/intern/userapplied/${id}`,
         {
             headers: {
-                token: localStorage.getItem("token")
+                token: localStorage.getItem("volintToken")
             }
         });
 }
@@ -211,7 +212,7 @@ export const userAccepted = async (id) => {
     return await axios.get(`/intern/useraccepted/${id}`,
         {
             headers: {
-                token: localStorage.getItem("token")
+                token: localStorage.getItem("volintToken")
             }
         });
 }
@@ -219,7 +220,7 @@ export const userOnBoard = async (id) => {
     return await axios.get(`/intern/usersonboarded/${id}`,
         {
             headers: {
-                token: localStorage.getItem("token")
+                token: localStorage.getItem("volintToken")
             }
         });
 }
@@ -230,7 +231,7 @@ export const PostResume = async (data) => {
     return await axios.post(`/resume/postresume`, { credentials: data },
         {
             headers: {
-                token: localStorage.getItem("token")
+                token: localStorage.getItem("volintToken")
             }
         });
 }
@@ -238,7 +239,7 @@ export const getResume = async () => {
     return await axios.get(`/resume/getresume`,
         {
             headers: {
-                token: localStorage.getItem("token")
+                token: localStorage.getItem("volintToken")
             }
         });
 }
@@ -246,7 +247,7 @@ export const editResume = async (data) => {
     return await axios.put(`/resume/editresume`, { credentials: data },
         {
             headers: {
-                token: localStorage.getItem("token")
+                token: localStorage.getItem("volintToken")
             }
         });
 }
@@ -257,7 +258,7 @@ export const saveHours = async (internId, value, date) => {
     return await axios.put(`/request/savehours/${internId}`, {value, date },
         {
             headers: {
-                token: localStorage.getItem("token")
+                token: localStorage.getItem("volintToken")
             }
         });
 }

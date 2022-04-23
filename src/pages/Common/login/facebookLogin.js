@@ -9,7 +9,7 @@ const LoginFacebook = ({ status }) => {
         console.log(response);
         // Promise.resolve(googleLogin({ email: response.profileObj.email, password: response.profileObj.googleId, status: status, name: response.profileObj.name })).then(res => {
         //     console.log(res);
-        //     localStorage.setItem("token", res.data.token)
+        //     localStorage.setItem("volintToken", res.data.token)
         //     localStorage.setItem("status", res.data.status);
         //     localStorage.setItem("profile", response.profileObj.imageUrl)
         //     history.push('/');

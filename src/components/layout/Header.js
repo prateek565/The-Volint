@@ -5,7 +5,7 @@ import Logo from './Logo'
 import ProfileDropDown from '../Manual/Navbar/ProfileDropDown';
 
 const Header = () => {
-  const token = localStorage.getItem("token");
+  const token = localStorage.getItem("volintToken");
   return (
 
     <header id="masthead" className="header ttm-header-style-01">

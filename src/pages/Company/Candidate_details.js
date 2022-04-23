@@ -5,20 +5,24 @@ import { Footer } from '../../components/layout/Footer';
 import ProgressBar from 'react-animated-progress-bar';
 import { useLocation } from 'react-router-dom';
 import { offerIntern, userInfoById } from '../../services/api';
+import SimpleBackDrop from '../../components/Manual/BackDrop/SimpleBackdrop';
 
 
 const Candidate_details=()=> {
 
     const location = useLocation()
     const [candidate, setcandidate] = useState([]);
+    const [loading, setloading] = useState(false);
     const id = location.pathname.split('candidate_details/')[1];
     console.log('====================================');
     console.log(id);
     console.log('====================================');
     useEffect(() => {  
+        setloading(true)
         Promise.resolve(userInfoById(id)).then((res) => {
             console.log(res.data);
             setcandidate(res.data)
+            setloading(false)
         }).catch((e) => {
             console.log({e});
         })
@@ -47,7 +51,7 @@ const Candidate_details=()=> {
                 />
                 {/* PageHeader end */}
 
-
+                {loading&&<SimpleBackDrop/>}
                 <div className="ttm-row sidebar job-sidebar clearfix">
                     <div className="container">
                         {/* row */}

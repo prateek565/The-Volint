@@ -33,78 +33,48 @@ const styles = theme => ({
 
 const ProfileDetails = (props) => {
   const [company, setCompany] = useState([]);
-  const l = useLocation();
-  const id = l.pathname.substring(19,);
+  const [values, setvalues]= useState({
+    name: '',
+    description: '',
+    email: '',
+    title: '',
+    phone: '',
+  });
+
   useEffect(() => {
-    
-    Promise.resolve(companyInfo(id)).then((res) => {
+    Promise.resolve(companyInfo()).then((res) => {
       console.log(res.data);
       setCompany(res.data);
+      setvalues({name: res.data.name,description: res.data.description,email: res.data.email,title: res.data.title,phone: res.data.phone});
     }).catch((e) => {
       console.log({ e });
     })
   }, [])
-  const [companyEdit, setCompanyEdit] = useState({
-    name: company.name,
-    email: company.email,
-    phone: company.phone,
-    title: company.title,
-    description: company.description,
-    city: company.city,
-  });
-  
-  const {
-    name,
-    title,
-    email,
-    phone,
-    description,
-    city,
-  } = companyEdit;
-  const values = {
 
-    // Profile-Information
-    name: company.name,
-    email: company.email,
-    phone: company.phone,
-    title: company.title,
-    description: company.description,
-    // Education Information
-
-
-    // Project Information...
-
-
-    // Experience Information
-
-
-    // Extra Information
-
-  };
   const handleFile = (e) => {
     console.log(e.target.files, "$$$");
     console.log(e.target.files[0], "&&&");
   }
   
   const handleChange = (e) => {
-    e.preventDefault();
-    
+    e.preventDefault(); 
     const val = e.target.value;
-    console.log(e.target.name, val);
-    setCompany({
-      [e.target.name]: val
-    });
+    const keys = e.target.name
+    // console.log(e.target.name, val);
+    setCompany([{[e.target.name]: val, ...company}]);
+    setvalues({p: val, ...values})
   };
   
-  console.log(values);
   const [success, setsuccess]= useState(false);
   const [text, setText]= useState("");
   const [error, seterror]= useState(false);
 
+  console.log('====================================');
+  console.log(values);
+  console.log('====================================');
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(e);
-    Promise.resolve((editCompany(values, id))).then((res)=>{
+    Promise.resolve((editCompany(company, company?._id))).then((res)=>{
       console.log(res);
       setsuccess(true);
       setText('Your profile has been edited successfully');
@@ -152,9 +122,9 @@ const ProfileDetails = (props) => {
                     margin="dense"
                     variant="outlined"
                     name="name"
-                    placeholder="Company Name"
+                    placeholder="Owner Name"
                     style={{ width: '80%' }}
-                    value={values.name}
+                    value={company?.name}
                     onChange={handleChange}
                   />
                 </Grid>
@@ -165,7 +135,7 @@ const ProfileDetails = (props) => {
                     variant="outlined"
                     style={{ width: '80%' }}
                     name="title"
-                    value={values.title}
+                    value={company?.title}
                     onChange={handleChange}
                   />
                 </Grid>
@@ -177,7 +147,7 @@ const ProfileDetails = (props) => {
                     variant="outlined"
                     name="phone"
                     style={{ alignItems: 'left', width: '80%' }}
-                    value={values.phone}
+                    value={company?.phone}
                     onChange={handleChange}
                     
                   />
@@ -190,7 +160,7 @@ const ProfileDetails = (props) => {
                     name="description"
                     rows={3}
                     cols={70}
-                    value={values.description}
+                    value={company?.description}
                     onChange={handleChange}
                     
                   />

@@ -6,18 +6,23 @@ import { Link, useLocation, useParams } from 'react-router-dom';
 import { allApplicants, allUsers } from '../../services/api';
 import { CircularProgress } from '@material-ui/core';
 import TemporaryDrawer from '../Common/Message';
+import SimpleBackDrop from '../../components/Manual/BackDrop/SimpleBackdrop';
 
 const Candidate_list = () => {
 
     const [allcandidates, setallcandidates] = useState([]);
+    const [loading, setloading] = useState(false);
     const location = useLocation();
     useEffect(() => {
+        setloading(true)
         const id = location.pathname.substring(16,)
         Promise.resolve(allUsers(id)).then((res) => {
             console.log(res.data);
             setallcandidates(res.data)
+            setloading(false)
         }).catch((e) => {
             console.log(e);
+            setloading(false)
         })
     }, [])
 
@@ -31,7 +36,7 @@ const Candidate_list = () => {
                 breadcrumb="volunteers"
             />
             {/* PageHeader end */}
-
+            {loading&&<SimpleBackDrop/>}
             <div className="site-main">
                 <div className="ttm-row sidebar job-sidebar clearfix" >
                     <div className="container">
@@ -39,7 +44,7 @@ const Candidate_list = () => {
                         <div className="row">
                             <div className="col-lg-4 widget-area sidebar-left job_list-widget-area">
                                 <div className="job_list-widget" style={{backgroundColor:'#ece3f4'}}>
-                                    <aside className="widget job-widget">
+                                    {/* <aside className="widget job-widget">
                                         <h3 className="widget-title"><i className="flaticon flaticon-calendar-1"></i>Date Applied</h3>
                                         <form id="list1" className="list-filter">
                                             <div>
@@ -60,7 +65,7 @@ const Candidate_list = () => {
                                                 </label>
                                             </div>
                                         </form>
-                                    </aside>
+                                    </aside> */}
                                     <aside className="widget job-widget">
                                         <h3 className="widget-title"><i className="flaticon flaticon-subfolder-1"></i>Skills</h3>
                                         <form id="list2" className="list-filter">
@@ -83,7 +88,7 @@ const Candidate_list = () => {
                                             </div>
                                         </form>
                                     </aside>
-                                    <aside className="widget job-widget">
+                                    {/* <aside className="widget job-widget">
                                         <h3 className="widget-title"><i className="flaticon flaticon-expert"></i>Experince</h3>
                                         <form id="list3" className="list-filter">
                                             <div>
@@ -101,7 +106,7 @@ const Candidate_list = () => {
                                                 </label>
                                             </div>
                                         </form>
-                                    </aside>
+                                    </aside> */}
                                     {/* <aside className="widget job-widget">
                                         <h3 className="widget-title"><i className="flaticon flaticon-gender"></i>Gender</h3>
                                         <form id="list4" onSubmit={this.formSubmit} className="list-filter">
@@ -155,44 +160,6 @@ const Candidate_list = () => {
                                             </div>
                                         </div> : <div><CircularProgress/></div>
                                     ))}
-                                    
-                                    <div className="col-lg-12">
-                                        <div className="featured-imagebox featured-imagebox-candidate" style={{backgroundColor:'#ece3f4'}}>
-                                            <div className="featured-thumbnail">
-                                                <img src="https://via.placeholder.com/200x200?text=200x200+candidate-04.jpg" />
-                                            </div>
-                                            <div className="featured-content">
-                                                <div className="featured-title">
-                                                    <h3>Rafael Briggs</h3>
-                                                </div>
-                                                <div className="featured-bottom">
-                                                    <div className="job-skill">
-                                                        <span className="skill-tag">bootstrap</span>
-                                                        <span className="skill-tag">JavaScript</span>
-                                                    </div>
-                                                    <div className="job-meta">
-                                                        <span><i className="fa fa-map-marker-alt"></i>24 Fifth st, Los Angeles, USA</span>
-                                                        <span><i className="fa fa-hand-holding-usd"></i>$700 - $900/month</span>
-                                                    </div>
-                                                    <div className="view-block">
-                                                        <a className="ttm-btn ttm-btn-size-sm ttm-btn-shape-rounded ttm-btn-style-border 
-                                                        ttm-btn-color-dark"
-                                                            href={process.env.PUBLIC_URL + '/candidate_details'}>view Profile</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col-lg-12">
-                                        <div className="job-pagination-block">
-                                            <Link className="page-nav-link">prev</Link>
-                                            <Link className="page-nav-link current">1</Link>
-                                            <Link className="page-nav-link" href="#">2</Link>
-                                            <Link className="page-nav-link" href="#">3</Link>
-                                            <Link className="page-nav-link" href="#">....</Link>
-                                            <Link className="page-nav-link">next</Link>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
