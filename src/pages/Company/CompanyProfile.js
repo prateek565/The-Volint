@@ -12,11 +12,6 @@ import { useDispatch, useSelector } from "react-redux";
 // import { updateProfile } from "../../actions/userActions";
 import { Alerterror, Alertsuccess } from '../../components/layout/Alerts';
 import { companyInfo, myAppliedJobs, companyInterns, myProjects, myOffers, editCompany, editComapny } from '../../services/api';
-import EmailIcon from '@material-ui/icons/Email';
-import PhoneIcon from '@material-ui/icons/Phone';
-import LanguageIcon from '@material-ui/icons/Language';
-import GitHubIcon from '@material-ui/icons/GitHub';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import { FaHandPointUp } from 'react-icons/fa';
 
 const Transition = React.forwardRef(function Transition(props, ref) {
@@ -33,7 +28,7 @@ const styles = theme => ({
 
 const ProfileDetails = (props) => {
   const [company, setCompany] = useState([]);
-  const [values, setvalues]= useState({
+  const [values, setvalues] = useState({
     name: '',
     description: '',
     email: '',
@@ -45,7 +40,7 @@ const ProfileDetails = (props) => {
     Promise.resolve(companyInfo()).then((res) => {
       console.log(res.data);
       setCompany(res.data);
-      setvalues({name: res.data.name,description: res.data.description,email: res.data.email,title: res.data.title,phone: res.data.phone});
+      setvalues({ name: res.data.name, description: res.data.description, email: res.data.email, title: res.data.title, phone: res.data.phone });
     }).catch((e) => {
       console.log({ e });
     })
@@ -55,26 +50,26 @@ const ProfileDetails = (props) => {
     console.log(e.target.files, "$$$");
     console.log(e.target.files[0], "&&&");
   }
-  
+
   const handleChange = (e) => {
-    e.preventDefault(); 
+    e.preventDefault();
     const val = e.target.value;
     const keys = e.target.name
     // console.log(e.target.name, val);
-    setCompany([{[e.target.name]: val, ...company}]);
-    setvalues({p: val, ...values})
+    setCompany([{ [e.target.name]: val, ...company }]);
+    setvalues({ p: val, ...values })
   };
-  
-  const [success, setsuccess]= useState(false);
-  const [text, setText]= useState("");
-  const [error, seterror]= useState(false);
+
+  const [success, setsuccess] = useState(false);
+  const [text, setText] = useState("");
+  const [error, seterror] = useState(false);
 
   console.log('====================================');
   console.log(values);
   console.log('====================================');
   const handleSubmit = (e) => {
     e.preventDefault();
-    Promise.resolve((editCompany(company, company?._id))).then((res)=>{
+    Promise.resolve((editCompany(company, company?._id))).then((res) => {
       console.log(res);
       setsuccess(true);
       setText('Your profile has been edited successfully');
@@ -83,17 +78,17 @@ const ProfileDetails = (props) => {
         setText('');
         window.location.reload();
       }, 3000);
-    }).catch((e)=>{
+    }).catch((e) => {
       seterror(true);
       setText('Your profile cannot be updated');
       setTimeout(() => {
         seterror(false);
         setText('');
       }, 3000);
-      console.log({e});
+      console.log({ e });
     })
   }
-  const [chosen, setChosen]= useState(false);
+  const [chosen, setChosen] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
   const classes = styles();
   // const handleSubmit = (e) => {
@@ -108,8 +103,8 @@ const ProfileDetails = (props) => {
   return (
     <>
       <Paper className="mt-120" >
-       {success && <Alertsuccess text={text} />}
-       {error && <Alerterror text={text} />}
+        {success && <Alertsuccess text={text} />}
+        {error && <Alerterror text={text} />}
         <Grid item xs={12} lg={12}>
           <h3>Edit Profile</h3>
         </Grid>
@@ -149,7 +144,7 @@ const ProfileDetails = (props) => {
                     style={{ alignItems: 'left', width: '80%' }}
                     value={company?.phone}
                     onChange={handleChange}
-                    
+
                   />
                 </Grid>
                 <Grid item lg={12} xs={12} sm={12} md={12}>
@@ -162,34 +157,36 @@ const ProfileDetails = (props) => {
                     cols={70}
                     value={company?.description}
                     onChange={handleChange}
-                    
+
                   />
                 </Grid>
-                
+
               </Grid>
               <Grid container spacing={2} alignItems="center" item md={6} sm={12} xs={12} lg={6}>
                 <Grid item md={6} sm={12} xs={12} lg={6}>
-                {selectedImage && (
-                  <div>
-                  <img alt="not found" width={"250px"} src={URL.createObjectURL(selectedImage)} />
-                  {console.log(URL.createObjectURL(selectedImage))}
+                  {selectedImage && (
+                    <div>
+                      <img alt="not found" width={"250px"} src={URL.createObjectURL(selectedImage)} />
+                      {console.log(URL.createObjectURL(selectedImage))}
+                      <br />
+                      <button onClick={() => {
+                        setChosen(false);
+                        setSelectedImage(null);
+                      }}>Remove</button>
+                    </div>
+                  )}
                   <br />
-                  <button onClick={()=>{setChosen(false);
-                     setSelectedImage(null);}}>Remove</button>
-                  </div>
-                )}
-                <br />
-               
-                <br /> 
-                {!chosen && <input
-                  type="file"
-                  name="myImage"
-                  onChange={(event) => {
-                    setChosen(true);
-                    console.log(event.target.files[0]);
-                    setSelectedImage(event.target.files[0]);
-                  }}
-                />}
+
+                  <br />
+                  {!chosen && <input
+                    type="file"
+                    name="myImage"
+                    onChange={(event) => {
+                      setChosen(true);
+                      console.log(event.target.files[0]);
+                      setSelectedImage(event.target.files[0]);
+                    }}
+                  />}
                 </Grid>
                 {/*<Grid>
               <div className="mt-10">
@@ -323,15 +320,15 @@ const CompanyProfile = () => {
   const handleClose = () => {
     setAnchorEl(null);
   };
-  
+
   const [jobs, setJobs] = useState([])
   useEffect(() => {
     Promise.resolve(companyInterns()).then((res) => {
       console.log(res.data.intern);
       setJobs(res.data.intern);
-  }).catch((e) => {
+    }).catch((e) => {
       console.log({ e });
-  })
+    })
   }, []);
   const [projects, setprojects] = useState([])
   useEffect(() => {
@@ -352,11 +349,11 @@ const CompanyProfile = () => {
   //   })
   // }, [])
 
-  const [accepted, setAccepted]= useState(false)
+  const [accepted, setAccepted] = useState(false)
   const acceptOffer = () => {
-       setAccepted(true);
+    setAccepted(true);
   }
-        
+
   return (
     <div className="site-main">
       <Header />
@@ -403,7 +400,7 @@ const CompanyProfile = () => {
               <div className="col-lg-4 widget-area sidebar-left job_list-widget-area">
                 <div className="job_list-widget" style={{ backgroundColor: 'rgb(236, 215, 255)' }}>
 
-                 <aside className="widget job-widget">
+                  <aside className="widget job-widget">
                     {/* <h3 className="widget-title"><i className="flaticon flaticon-calendar-1"></i>Date Applied</h3> */}
                     {/* <form id="list1" className="list-filter"> */}
                     <div className="justify-center pt-1">
@@ -417,16 +414,16 @@ const CompanyProfile = () => {
                     </div>
                     {/* </form> */}
                   </aside>
-                 <aside className="widget job-widget pt-1">
-                  {/* <h3 className="widget-title"><i className="flaticon flaticon-calendar-1"></i>Date Applied</h3> */}
-                  {/* <form id="list1" className="list-filter"> */}
-                      <ul className="mt-10">
-                        <li><a href= "#projects">Projects</a></li>
-                        <li><a href="#posted">Posted Jobs</a></li>
-                        <li><a href= "#offers">Offers</a></li>
-                      </ul>
-                  {/* </form> */}
-                 </aside>
+                  <aside className="widget job-widget pt-1">
+                    {/* <h3 className="widget-title"><i className="flaticon flaticon-calendar-1"></i>Date Applied</h3> */}
+                    {/* <form id="list1" className="list-filter"> */}
+                    <ul className="mt-10">
+                      <li><a href="#projects">Projects</a></li>
+                      <li><a href="#posted">Posted Jobs</a></li>
+                      <li><a href="#offers">Offers</a></li>
+                    </ul>
+                    {/* </form> */}
+                  </aside>
                   {/* <aside className="widget job-widget">
                                         <h3 className="widget-title"><i className="flaticon flaticon-gender"></i>Gender</h3>
                                         <form id="list4" onSubmit={this.formSubmit} className="list-filter">
@@ -441,102 +438,71 @@ const CompanyProfile = () => {
                                         </form>
                                     </aside> */}
                 </div>
-              
-                <div className="featuredbox-number pr-30 pr-lg-0 pb-lg-50 pt-md-20">
-                  {/* featured-icon-box */}
-                  <div className="featured-icon-box icon-align-before-content icon-ver_align-top style4">
-                    <div className="featured-icon">
-                      <div className="ttm-icon ttm-icon_element-fill ttm-icon_element-color-grey ttm-icon_element-size-md ttm-icon_element-style-rounded">
-                        <i className="ttm-num ti-info"></i>
-                      </div>
-                    </div>
-                    <div className="featured-content ">
-                      <div>
-                        <h6 style={{ color: 'black' }}>Post details of your project</h6>
-                      </div>
-
-                    </div>
-                  </div>{/* featured-icon-box end */}
-                  {/* featured-icon-box */}
-                  <div className="featured-icon-box icon-align-before-content icon-ver_align-top style4">
-                    <div className="featured-icon">
-                      <div className="ttm-icon ttm-icon_element-fill ttm-icon_element-color-grey ttm-icon_element-size-md ttm-icon_element-style-rounded">
-                        <i className="ttm-num ti-info"></i>
-                      </div>
-                    </div>
-                    <div className="featured-content ttm-bgcolor-grey">
-                      <div className="">
-                        <h6 style={{ color: 'black' }}>Look for your best candidate match</h6>
-                      </div>
-
-                    </div>
-                  </div>
-                 </div>
-                </div>
-              <div className="col-lg-8 content-area">
-              <div className="row">
-                <div className="col-12">
-                 <div className="overview-box" style={{backgroundColor:'#ece3f4'}}>
-                  <div className="title">
-                      <h6>Description</h6>
-                  </div>
-                  <div className="desc">
-                      {company?.description? <p>{company?.description}</p> : <p className='text-danger'>Add Description <FaHandPointUp className='mb-5' size={'1.2rem'}/></p>}
-                  </div>
-                 </div>
-                </div>
               </div>
-              <Divider />
+              <div className="col-lg-8 content-area">
+                <div className="row">
+                  <div className="col-12">
+                    <div className="overview-box" style={{ backgroundColor: '#ece3f4' }}>
+                      <div className="title">
+                        <h6>Description</h6>
+                      </div>
+                      <div className="desc">
+                        {company?.description ? <p>{company?.description}</p> : <p className='text-danger' style={{ textDecoration: 'underline' }}>Edit Profile to add Description <FaHandPointUp className='mb-5' size={'1.2rem'} /></p>}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <Divider />
                 <div className="row mt-10">
-                  
+
                   <Divider className="mt-2" />
                   <div className="col-lg-12 mt-3">
                     <h6 id="posted">Posted Jobs</h6>
-                    
-                        <ul>
-                         {jobs?.map((job, index) => (
+
+                    <ul>
+                      {jobs?.map((job, index) => (
                         <div className="featured-imagebox featured-imagebox-candidate" style={{ backgroundColor: 'rgb(236, 215, 255)' }}>
-                         <div className="featured-content">
-                           <div className="featured-title">
-                             <Link to={`/job_details/${job._id}`} style={{textDecoration: 'none'}}><h3>{job.title}</h3></Link>
-                             <p>{job.category}</p>
-                             <p className="mt-2" style={{ color: 'grey' }}>{(job.updatedAt).slice(0,10)}</p>
-                           </div>
-                           <div className="featured-bottom">
-                             <div className="view-block">
-                               {/* <Link className="ttm-btn ttm-btn-size-sm ttm-btn-shape-rounded ttm-btn-style-border 
+                          <div className="featured-content">
+                            <div className="featured-title">
+                              <Link to={`/job_details/${job._id}`} style={{ textDecoration: 'none' }}><h3>{job.title}</h3></Link>
+                              <p>{job.category}</p>
+                              <p className="mt-2" style={{ color: 'grey' }}>{(job.updatedAt).slice(0, 10)}</p>
+                            </div>
+                            <div className="featured-bottom">
+                              <div className="view-block">
+                                {/* <Link className="ttm-btn ttm-btn-size-sm ttm-btn-shape-rounded ttm-btn-style-border 
                                            ttm-btn-color-dark"
                                                            exact to={'/applicants'}>View Details</Link> */}
-                               <KeyboardArrowDownIcon
-                                 id="demo-customized-button"
-                                 aria-controls={open ? 'demo-customized-menu' : undefined}
-                                 aria-haspopup="true"
-                                 aria-expanded={open ? 'true' : undefined}
-                                 variant="contained"
-                                 disableElevation
-                                 onClick={open ? handleClose : handleClick}
-                               ></KeyboardArrowDownIcon>
-                             </div>
-                             {open &&
-                               <div className="mt-10">
-                                 <p>{job.description.slice(0,100)}</p>
-                                 <div >
-                                   <Link className="ttm-btn ttm-btn-size-sm ttm-btn-shape-rounded ttm-btn-style-border 
+                                <KeyboardArrowDownIcon
+                                  id="demo-customized-button"
+                                  aria-controls={open ? 'demo-customized-menu' : undefined}
+                                  aria-haspopup="true"
+                                  aria-expanded={open ? 'true' : undefined}
+                                  variant="contained"
+                                  disableElevation
+                                  onClick={open ? handleClose : handleClick}
+                                ></KeyboardArrowDownIcon>
+                              </div>
+                              {open &&
+                                <div className="mt-10">
+                                  <p>{job.description.slice(0, 100)}</p>
+                                  <div >
+                                    <Link className="ttm-btn ttm-btn-size-sm ttm-btn-shape-rounded ttm-btn-style-border 
                                                           ttm-btn-color-dark mr-20"
-                                     exact to={`/edit_job/${job._id}`}>Edit Project</Link>
-                                     {/* <Link className="ttm-btn ttm-btn-size-sm ttm-btn-shape-rounded ttm-btn-style-border 
+                                      exact to={`/edit_job/${job._id}`}>Edit Project</Link>
+                                    {/* <Link className="ttm-btn ttm-btn-size-sm ttm-btn-shape-rounded ttm-btn-style-border 
                                                           ttm-btn-color-dark mr-20"
                                      exact to={`/company/projects`}>View Details</Link> */}
-                                 </div>
-                               </div>
-                             }
-                           </div>
-                         </div>
-                       </div>))}
-                        </ul>
-                      </div>
+                                  </div>
+                                </div>
+                              }
+                            </div>
+                          </div>
+                        </div>))}
+                    </ul>
+                  </div>
                   <div className="col-12">
-                    
+
                   </div>
                   {/*<div className="col-lg-12 mt-3">
                     <h6>Activity</h6>
@@ -549,14 +515,14 @@ const CompanyProfile = () => {
                       <p>.</p>
                     </Card>
                         </div> */}
-                      </div>
-                  </div>
-               </div>
-             </div>
-           </div>
+                </div>
+              </div>
+            </div>
           </div>
-          {/* row end */}
-        
+        </div>
+      </div>
+      {/* row end */}
+
       <Footer />
 
     </div>

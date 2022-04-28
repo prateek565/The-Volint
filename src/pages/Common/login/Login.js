@@ -33,7 +33,7 @@ const Login = () => {
     const [open, setOpen] = useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
-    const [aMonth, setAMonth] = useState(false);
+    const [aMonth, setAMonth] = useState(true);
     const [user, setUser] = useState(true);
     const [employer, setEmployer] = useState(true);
 
@@ -49,16 +49,10 @@ const Login = () => {
     const [error, setError] = useState(false);
     const [text, setText] = useState("");
 
-    const [google, setgoogle] = useState(false);
-    const [facebook, setfacebook] = useState(false)
-    const [twitter, settwitter] = useState(false)
-    const [github, setgithub] = useState(false)
-    const [linkedIn, setlinkedIn] = useState(false)
-
     const history = useHistory();
 
     const rememberPass = () => {
-        setAMonth(true);
+        setAMonth(!aMonth);
     }
     const [fields, handleFieldChange] = useState({
         email: "",
@@ -104,7 +98,7 @@ const Login = () => {
             console.log(res);
             localStorage.setItem("volintToken", res.data.token)
             localStorage.setItem("status", res.data.status);
-            history.push('/');
+            history.push('/post_job');
             // window.location.reload();
         }).catch((e) => {
             console.log(e.response?.data?.error);
@@ -174,13 +168,13 @@ const Login = () => {
                                                 <Tab className="tab" >
                                                     <a>
                                                         <i className="flaticon flaticon-research"></i>
-                                                        <span>Candidate</span><h5>Login as a Candidate</h5>
+                                                        <span>Candidate</span><h5>I am a Candidate</h5>
                                                     </a>
                                                 </Tab>
                                                 <Tab className="tab">
                                                     <a>
                                                         <i className="flaticon flaticon-job-search"></i>
-                                                        <span>Employer</span><h5>Login as an Employer</h5>
+                                                        <span>Organization</span><h5>I am an Organization</h5>
                                                     </a>
                                                 </Tab>
                                             </TabList>
@@ -253,8 +247,8 @@ const Login = () => {
                                                                                 </div>
                                                                             </Box>
                                                                         </Modal>
-                                                                        <input className="w-auto mr-10" id="cookies-consent" name="cookies-consent" type="checkbox" value="yes" onClick={rememberPass} />
-                                                                        <span>Remember Me for a month</span>
+                                                                        <input className="w-auto mr-10" id="cookies-consent" name="cookies-consent" type="checkbox" value="yes" checked onClick={rememberPass} />
+                                                                        <span>Remember Me</span>
                                                                         <p className="mt-3">Don't have account? <Link to='/signup' className="text-theme-SkinColor" style={{ fontWeight: 'bold' }}>Sign Up here</Link></p>
                                                                     </div>
                                                                 </label>
@@ -334,8 +328,8 @@ const Login = () => {
                                                                                 </div>
                                                                             </Box>
                                                                         </Modal>
-                                                                        <input className="w-auto mr-10" id="cookies-consent" name="cookies-consent" type="checkbox" value="yes" />
-                                                                        <span>Remember me for a month</span>
+                                                                        <input className="w-auto mr-10" id="cookies-consent" name="cookies-consent" type="checkbox" value="yes" checked onClick={rememberPass}/>
+                                                                        <span>Remember Me</span>
                                                                         <p className="mt-3">Don't have account? <Link to='/signup' className="text-theme-SkinColor " style={{ fontWeight: 'bold' }}>Sign Up here</Link></p>
                                                                     </div>
                                                                 </label>

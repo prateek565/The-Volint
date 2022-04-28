@@ -60,31 +60,34 @@ const Register = () => {
             }
             else{
                 history.push("/verify");
-                // Promise.resolve(signup(
-                //     { 
-                //         name : username, 
-                //         email: useremail , 
-                //         password: userpass , 
-                //         status: "user",
-                //         phone: userphone
-                //     })).then(res => {
-                //     console.log(res);
-                //     setError(false);
-                //     setSuccess(true);
-                //     setText("SignUp Successfull")
-                //     localStorage.setItem("volintToken",res.data.token);
-                //     localStorage.setItem("status",res.data.status);
-                //     setTimeout(() => {
-                //         history.push("/profile");
-                //         window.location.reload();
-                //     }, 2000);
-                   
-                // }).catch((e) => {
-                //     console.log(e.response.data.error);
-                //     setError(true);
-                //     setText(e.response.data.error);
-                //     console.log(text);
-                // })
+                localStorage.setItem("volintMail", useremail);
+                const value = localStorage.setItem("volintValue", false);
+                value&&Promise.resolve(signup(
+                    { 
+                        name : username, 
+                        email: useremail , 
+                        password: userpass , 
+                        status: "user",
+                        phone: userphone
+                    })).then(res => {
+                    console.log(res);
+                    setError(false);
+                    setSuccess(true);
+                    setText("SignUp Successfull")
+                    localStorage.setItem("volintToken",res.data.token);
+                    localStorage.setItem("status",res.data.status);
+                    setTimeout(() => {
+                        history.push("/profile");
+                        window.location.reload();
+                    }, 2000);
+                    
+                }).catch((e) => {
+                    console.log(e.response.data.error);
+                    setError(true);
+                    setText(e.response.data.error);
+                    console.log(text);
+                    history.push("/profile");
+                })
             }
             setTimeout(() => {
                 setError(false);
@@ -142,7 +145,7 @@ const Register = () => {
                 setSuccess(true);
                 setText("SignUp Successfull")
                 setTimeout(() => {
-                    history.push("/company_profile");
+                    history.push("/post_job");
                     window.location.reload();
                 }, 2000);
             }).catch((e) => {
@@ -187,13 +190,13 @@ const Register = () => {
                                                     <Tab className="tab">
                                                         <a>
                                                         <i className="flaticon flaticon-research"></i>
-                                                            <span>Candidate</span><h5>Signup as Candidate</h5>
+                                                            <span>Candidate</span><h5>I am a Candidate</h5>
                                                         </a>
                                                     </Tab>
                                                     <Tab className="tab">
                                                         <a>
                                                         <i className="flaticon flaticon-job-search"></i>
-                                                            <span>Employer</span><h5>Signup as Organization</h5>
+                                                            <span>Organization</span><h5>I am an Organization</h5>
                                                         </a>
                                                     </Tab>
                                                 </TabList> 

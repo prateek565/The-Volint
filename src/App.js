@@ -36,8 +36,8 @@ import Home2 from './pages/Home2';
 import UserProjects from './pages/User/Projects/UserProjects';
 import EmailVerification from './pages/Common/Register/emailVerification';
 
-// axios.defaults.baseURL = 'http://localhost:4000';
-axios.defaults.baseURL = 'https://volunteerproject.herokuapp.com';
+axios.defaults.baseURL = 'http://localhost:4000';
+// axios.defaults.baseURL = 'https://volunteerproject.herokuapp.com';
 axios.defaults.params = {};
 
 function App() {

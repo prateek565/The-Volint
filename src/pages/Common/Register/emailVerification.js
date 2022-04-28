@@ -1,9 +1,9 @@
-import React, { Component, useState } from 'react';
+import React, { Component, useEffect, useState } from 'react';
 import Header from '../../../components/layout/Header';
 import PageHeader from "../../../components/layout/PageHeader";
 import { Footer } from '../../../components/layout/Footer';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import { googleLogin, login } from '../../../services/api';
+import { getCode, googleLogin, login } from '../../../services/api';
 import { Link, useHistory } from 'react-router-dom';
 import FacebookLogin from 'react-facebook-login';
 import { GoogleLogin } from 'react-google-login';
@@ -113,34 +113,23 @@ const EmailVerification = () => {
         })
 
     }
-    const responseFacebook = (response) => {
-        console.log(response);
-        // Promise.resolve(login({ email: 'k@gmail.com', password: 'kanishka', status: "user", aMonth: aMonth })).then(res => {
-        //     console.log(res);
-        //     localStorage.setItem("volintToken", res.data.token)
-        //     localStorage.setItem("status", res.data.status);
-        //     history.push('/');
-        //     // window.location.reload();
-        // }).catch((e) => {
-        //     console.log(e.response?.data?.error);
-        //     setError(true);
-        //     setText(e.response?.data?.error);
-        // })
-    }
-    const responseGoogle = (response) => {
-        console.log(response);
-        Promise.resolve(googleLogin({ email: response.email, password: response.googleId, status: "user", name: response.name })).then(res => {
-            console.log(res);
-            localStorage.setItem("volintToken", res.data.token)
-            localStorage.setItem("status", res.data.status);
-            localStorage.setItem("profile", response.profileObj.imageUrl)
-            history.push('/');
-            // window.location.reload();
+
+    const [code, setcode] = useState()
+
+    useEffect(() => {
+        Promise.resolve(getCode(mail)).then((res) => {
+            console.log(res.data.code);
+            setcode(res.data.code)
         }).catch((e) => {
-            console.log(e.response?.data?.error);
-            setError(true);
-            setText(e.response?.data?.error);
+            console.log({ e });
         })
+    }, [])
+
+    const mail = localStorage.getItem('volintMail');
+    const Verify = () => {
+        if(userpass===code){
+            localStorage.setItem('volintValue', true);
+        }
     }
 
     return (
@@ -167,12 +156,12 @@ const EmailVerification = () => {
                                                             <i className="ti ti-lock"></i>
                                                             <input value={userpass} onChange={(e) => {
                                                                 setuserpass(e.target.value)
-                                                            }} type="password" id="password" placeholder="Password" />
+                                                            }} type="password" id="password" placeholder="Verification Code" />
                                                         </label>
                                                     </div>
                                                     <div className="col-lg-6 mx-auto">
                                                         <label className="mb-0">
-                                                            <button className="submit w-100 ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-fill ttm-btn-color-skincolor" type="submit" onClick={CandidateLogin}>Verify</button>
+                                                            <button className="submit w-100 ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-fill ttm-btn-color-skincolor" type="submit" onClick={Verify}>Verify</button>
                                                         </label>
                                                     </div>
                                                 </div>

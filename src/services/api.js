@@ -15,6 +15,10 @@ export const signup = async (data) => {
     return await axios.post("/auth/signup", data);
 }
 
+export const getCode = async (mail) => {
+    return await axios.get("/auth/verify", {mail});
+}
+
 //****** user ******//
 export const allUsers = async () => {
     return await axios.get(`/user/allusers`,

@@ -12,8 +12,7 @@ export class Footer extends Component {
                             <div className="col-xs-12 col-sm-12 col-md-12 col-lg-6 widget-area">
                                 <div className="widget widget_text clearfix">
                                     <Logo/>
-                                    <p style={{color:'white'}}>Volunteers is multi award-winning executive search, management recruiter and employer branding organization. 
-                                        Our customized recruiting process delivers fast & accurate results</p>
+                                    <br/><br/><br/>
                                     <div className="d-flex align-items-center pt-15 pb-25">
                                         <h6 className="fw-normal">Social Share: </h6>
                                         <div className="social-icons">

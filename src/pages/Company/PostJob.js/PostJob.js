@@ -1,4 +1,4 @@
-import React, {Component, useState} from 'react';
+import React, {Component, useEffect, useState} from 'react';
 import { Footer } from '../../../components/layout/Footer';
 import Header from '../../../components/layout/Header';
 import PageHeader from '../../../components/layout/PageHeader';
@@ -7,7 +7,7 @@ import Description from './Description';
 import Qualification from './Qualification';
 import Skills from './Skills';
 import { Alertsuccess } from '../../../components/layout/Alerts';
-import { postJob } from '../../../services/api';
+import { companyInfo, postJob } from '../../../services/api';
 
 const PostJob = () => {
   const [success, setSuccess]= useState(false);
@@ -37,7 +37,14 @@ const PostJob = () => {
      position:'',
   });
 
+  const [companyName, setcompanyName] = useState()
+  useEffect(() => {
+    Promise.resolve(companyInfo()).then((res)=>{
+      setcompanyName(res.data.title)
+    })
+  }, [])
   
+
   const handleChange = (e) => {
     e.preventDefault();
     const val = e.target.value;
@@ -125,6 +132,7 @@ const PostJob = () => {
               <Profile
                 handleChange={handleChange}
                 values={values}
+                companyName={companyName}
               />
             </div>
           </div>
