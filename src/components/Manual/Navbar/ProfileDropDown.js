@@ -13,7 +13,7 @@ export default function ProfileDropDown() {
   const open = Boolean(anchorEl);
   const history = useHistory();
   let status = localStorage.getItem("status");
-  const token = localStorage.getItem("token");
+  const token = localStorage.getItem("volintToken");
 
   useEffect(() => {
     Promise.resolve(userInfo()).then((res) => {
@@ -200,7 +200,7 @@ export default function ProfileDropDown() {
                                                     </Link>*/}
             <MenuItem
               onClick={() => {
-                localStorage.removeItem("token");
+                localStorage.removeItem("volintToken");
                 localStorage.removeItem("status");
                 history.push('/');
                 window.location.reload();
@@ -213,7 +213,7 @@ export default function ProfileDropDown() {
             </MenuItem>
           </StyledMenu>
           {/* <i className="ti ti-lock fa-sm text-theme-DarkColor"></i><Link exact to={'/'} onClick={()=>{
-                                                        localStorage.removeItem("token");
+                                                        localStorage.removeItem("volintToken");
                                                         localStorage.removeItem("status");
                                                         window.location.reload();
                                                     }}>Sign Out </Link> */}

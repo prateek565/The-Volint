@@ -5,18 +5,19 @@ import { Footer } from '../../components/layout/Footer';
 import { Link } from 'react-router-dom';
 import { allInterns, searchIntern } from '../../services/api';
 import { CircularProgress } from '@material-ui/core';
-
+import Simplebackdrop from '../../components/Manual/BackDrop/SimpleBackdrop'
 // export class Job_list extends Component {
 const Job_list = () => {
 
     let [AllInterns, setallInterns] = useState([]);
     let [SearchInterns, setSearchInterns] = useState();
-    const [loading, setloading] = useState(true);
+    const [loading, setloading] = useState(false);
     const [search, setsearch] = useState('')
     const [volunteer, setvolunteer] = useState(false)
     const [intern, setintern] = useState(false)
 
     useEffect(() => {
+        setloading(true)
         Promise.resolve(allInterns()).then((res) => {
             setallInterns(res.data)
             setloading(false);
@@ -33,10 +34,12 @@ const Job_list = () => {
     }, [])
 
     const handleSearch=(e)=>{
+        setloading(true)
         setsearch(e.target.value)
         Promise.resolve(searchIntern(search)).then((res)=>{
             console.log(res.data);
             setSearchInterns(res.data);
+            setloading(false)
         }).catch((e)=>{
             console.log({e});
         });
@@ -53,7 +56,7 @@ const Job_list = () => {
 
         <div className="site-main">
             <Header />
-
+            {loading&&<Simplebackdrop/>}
             <div className="site-main">
 
                 {/* PageHeader */}
@@ -78,10 +81,10 @@ const Job_list = () => {
                                                 <i className="ti ti-search"></i>
                                                 <input value={search} onChange={handleSearch} type="text" id="filter" placeholder="Project Title or Keywords" />
                                             </label>
-                                            <label>
+                                            {/* <label>
                                                 <i className="ti ti-location-pin"></i>
                                                 <input type="text" name="location" id="filterlocation" placeholder="location" />
-                                            </label>
+                                            </label> */}
                                             <button className="submit ttm-btn ttm-btn-size-md ttm-btn-shape-square ttm-btn-style-fill ttm-btn-color-skincolor" type="submit">Find Work</button>
                                         </form>
                                     </div>
@@ -180,7 +183,7 @@ const Job_list = () => {
                             </div>
                         <div className="col-lg-8 content-area">
                             <div className="row">
-                                {loading&&<CircularProgress/>}
+                                {/* {loading&&<Simplebackdrop/>} */}
                                 {(search!=='' && SearchInterns?.length==0)&&<h3>No interns found for {search}</h3>}
                                 {
                                     (search!=='' && SearchInterns)?

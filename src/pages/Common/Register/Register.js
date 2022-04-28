@@ -1,11 +1,11 @@
 import React, { Component, useState, useEffect } from 'react';
-import Header from '../../components/layout/Header';
-import PageHeader from "../../components/layout/PageHeader";
-import { Footer } from '../../components/layout/Footer';
+import Header from '../../../components/layout/Header';
+import PageHeader from "../../../components/layout/PageHeader";
+import { Footer } from '../../../components/layout/Footer';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import {signup} from '../../services/api.js';
+import {signup} from '../../../services/api.js';
 import { Link, useHistory } from 'react-router-dom';
-import { Alerterror, Alertsuccess } from '../../components/layout/Alerts';
+import { Alerterror, Alertsuccess } from '../../../components/layout/Alerts';
 import { ContentCutOutlined } from '@mui/icons-material';
 
 // export class Register extends Component {
@@ -59,32 +59,35 @@ const Register = () => {
                 return;
             }
             else{
-                Promise.resolve(signup(
+                history.push("/verify");
+                localStorage.setItem("volintMail", useremail);
+                const value = localStorage.setItem("volintValue", false);
+                value&&Promise.resolve(signup(
                     { 
                         name : username, 
                         email: useremail , 
                         password: userpass , 
                         status: "user",
-                        phoneNumber: userphone
+                        phone: userphone
                     })).then(res => {
                     console.log(res);
                     setError(false);
                     setSuccess(true);
                     setText("SignUp Successfull")
-                    localStorage.setItem("token",res.data.token);
+                    localStorage.setItem("volintToken",res.data.token);
                     localStorage.setItem("status",res.data.status);
                     setTimeout(() => {
                         history.push("/profile");
                         window.location.reload();
                     }, 2000);
-                   
+                    
                 }).catch((e) => {
                     console.log(e.response.data.error);
                     setError(true);
                     setText(e.response.data.error);
                     console.log(text);
+                    history.push("/profile");
                 })
-
             }
             setTimeout(() => {
                 setError(false);
@@ -133,16 +136,16 @@ const Register = () => {
                     title: companytitle , 
                     email: companyemail , 
                     password: companypass , 
-                    phoneNumber: companyphone
+                    phone: companyphone
                 })).then(res => {
                 console.log(res);
-                localStorage.setItem("token",res.data.token);
+                localStorage.setItem("volintToken",res.data.token);
                 localStorage.setItem("status",res.data.status);
                 setError(false);
                 setSuccess(true);
                 setText("SignUp Successfull")
                 setTimeout(() => {
-                    history.push("/company_profile");
+                    history.push("/post_job");
                     window.location.reload();
                 }, 2000);
             }).catch((e) => {
@@ -187,13 +190,13 @@ const Register = () => {
                                                     <Tab className="tab">
                                                         <a>
                                                         <i className="flaticon flaticon-research"></i>
-                                                            <span>Candidate</span><h5>Signup as Candidate</h5>
+                                                            <span>Candidate</span><h5>I am a Candidate</h5>
                                                         </a>
                                                     </Tab>
                                                     <Tab className="tab">
                                                         <a>
                                                         <i className="flaticon flaticon-job-search"></i>
-                                                            <span>Employer</span><h5>Signup as Employer</h5>
+                                                            <span>Organization</span><h5>I am an Organization</h5>
                                                         </a>
                                                     </Tab>
                                                 </TabList> 
@@ -216,7 +219,7 @@ const Register = () => {
                                                                         <i className="ti ti-email"></i>
                                                                         <input value={useremail} onkeydown={handleEnter} onChange={(e)=>{
                                                                             setuseremail(e.target.value)
-                                                                        }} type="email" required id="txtemail" placeholder="Email Address" />
+                                                                        }} type="email" required id="txtemail" placeholder="Email" />
                                                                     </label>
                                                                 </div>
                                                                 <div className="col-lg-6">
@@ -286,7 +289,7 @@ const Register = () => {
                                                                         <i className="ti ti-user"></i>
                                                                         <input value={companyname} onkeydown={handleEnter} onChange={(e)=>{
                                                                             setcompanyname(e.target.value)
-                                                                        }}  type="text"  placeholder="Full Name" />
+                                                                        }}  type="text"  placeholder="Owner's Name" />
                                                                     </label>
                                                                 </div>
                                                                 <div className="col-lg-6 col-md-6">

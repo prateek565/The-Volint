@@ -4,22 +4,26 @@ import PageHeader from "../../components/layout/PageHeader";
 import { Footer } from '../../components/layout/Footer';
 import { Link, useLocation } from 'react-router-dom';
 import { allInterns, getInternByCategory, getInternByIndustry } from '../../services/api';
-import { CircularProgress } from '@material-ui/core';
+import SimpleBackDrop from '../../components/Manual/BackDrop/SimpleBackdrop';
 
 const Job_list = () => {
 
     const [jobs, setjobs] = useState([])
+    const [loading, setloading] = useState(false);
     const location = useLocation();
     const industry = location.pathname.split('ind=')[1];
     const category = location.pathname.split('cat=')[1];
     useEffect(() => {
+        setloading(true)
         industry && Promise.resolve(getInternByIndustry(industry)).then((res) => {
             setjobs(res.data)
+            setloading(false)
         }).catch((e) => {
             console.log({ e });
         })
         category && Promise.resolve(getInternByCategory(category)).then((res) => {
             setjobs(res.data)
+            setloading(false)
         }).catch((e) => {
             console.log({ e });
         })
@@ -35,6 +39,7 @@ const Job_list = () => {
                     breadcrumb="Opportunities"
                     className="pb-65 pb-lg-0"
                 />
+                {loading&&<SimpleBackDrop/>}
                 <div className="form-section clearfix" >
                     <div className="container">
                         <div className="row">
@@ -47,10 +52,10 @@ const Job_list = () => {
                                                 <i className="ti ti-search"></i>
                                                 <input type="text" id="filter" placeholder="Project Title or Keywords" />
                                             </label>
-                                            <label>
+                                            {/* <label>
                                                 <i className="ti ti-location-pin"></i>
                                                 <input type="text" name="location" id="filterlocation" placeholder="location" />
-                                            </label>
+                                            </label> */}
                                             <button className="submit ttm-btn ttm-btn-size-md ttm-btn-shape-square ttm-btn-style-fill ttm-btn-color-skincolor" type="submit">Find Work</button>
                                         </form>
                                     </div>

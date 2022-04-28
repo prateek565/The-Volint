@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import Slider from 'react-slick';
 
-
-
 export class Banner extends Component {
     state = {
         show: false,
@@ -70,7 +68,7 @@ export class Banner extends Component {
                                             </p>
                                         </div>
                                         <br/><br/><br/><br/>
-                                        <h4 style={{color: '#7510b0'}} className="animated animate__fadeInDown ">For every 1 hour of Volunteering, The Volint will donate 100 unit of grains to the needy people !</h4>
+                                        <h4 style={{color: '#7510b0'}} className="animated animate__fadeInDown ">For every hour of Volunteering, The Volint will donate 100 unit of grains to the needy people !</h4>
                                     </div>
                                 </div>
                                 <div className="col-lg-6">

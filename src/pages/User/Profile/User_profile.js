@@ -10,6 +10,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import { Alerterror, Alertsuccess } from '../../../components/layout/Alerts';
 import { userInfo, acceptOffer, getResume, myProjects, myOffers, editUser, offerAccept } from '../../../services/api';
 import EditProfile from './Edit_profile';
+import SimpleBackDrop from '../../../components/Manual/BackDrop/SimpleBackdrop';
 
 
 function CircularProgressWithLabel(props) {
@@ -40,12 +41,17 @@ const User_profile = () => {
 
   const [user, setUser] = useState([]);
   const location = useLocation();
+  const [loading, setloading] = useState(false);
   const [accept, setAccept] = useState(null);
+
   useEffect(() => {
+    setloading(true);
     const id = location.pathname.substring(19,);
     Promise.resolve(userInfo(id)).then((res) => {
       console.log(res.data);
+      console.log(res.data.phone);
       setUser(res.data);
+      setloading(false);
     }).catch((e) => {
       console.log({ e });
     })
@@ -113,7 +119,7 @@ const User_profile = () => {
                 breadcrumb="p"
             /> */}
       {/* PageHeader end */}
-
+      {loading&&<SimpleBackDrop/>}
       <div className="site-main">
         <div className="ttm-row sidebar job-sidebar clearfix" >
           <div className="container">
@@ -134,9 +140,9 @@ const User_profile = () => {
                   />
                 </div>
                 <div className="col-2">
-                  <h5>{user.name}</h5>
-                  <p>{user.title}</p>
-                  <Rating name="read-only" value={user.rating} readOnly />
+                  <h5>{user?.name}</h5>
+                  <p>{user?.title}</p>
+                  {/* <Rating name="read-only" value={user?.rating} readOnly /> */}
                 </div>
                 <div className="col-6 col-lg-7"></div>
                 <div className="col-1">
@@ -150,8 +156,8 @@ const User_profile = () => {
                   <aside className="widget job-widget">
                     <div className="justify-center pt-1">
                       <ul>
-                        <li>{`Name: ${user.name}`}</li>
-                        <li>{`Email: ${user.email}`}</li>
+                        <li>{`Name: ${user.name?user.name:''}`}</li>
+                        <li>{`Email: ${user.email?user.email:''}`}</li>
                         <li>{`Phone: ${user.phone ? user.phone : ""}`}</li>
                         <li>{`Address: ${user.address ? user.address : ""}`}</li>
                       </ul>

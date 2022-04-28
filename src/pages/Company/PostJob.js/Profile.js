@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { TextField, Button, Container } from '@material-ui/core';
+import { TextField, Button, Container, FormControl, InputLabel, Select, MenuItem, RadioGroup, Radio, FormControlLabel, FormLabel } from '@material-ui/core';
 import { Card, CardHeader, CardContent } from '@material-ui/core';
 // import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 // import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
@@ -37,7 +37,7 @@ class Profile extends Component {
     return (
       <>
         <Grid item xs={12} lg={12}>
-          <h3>Job Details</h3>
+          <h3>Company Name</h3>
         </Grid>
         <CardContent>
           <div className={classes.margin}>
@@ -47,70 +47,43 @@ class Profile extends Component {
                   margin="dense"
                   variant="outlined"
                   name="company"
-                  label="Company"
                   style={{ width: '80%' }}
                   required
-                  value={values.company}
-                  onChange={this.props.handleChange}
+                  value={this.props.companyName}
                 />
               </Grid>
-              <Grid item md={6} sm={12} xs={12} lg={6}>
+            </Grid>
+          </div>
+        </CardContent>
+        <Grid item xs={12} lg={12}>
+          <h3>Title</h3>
+        </Grid>
+        <CardContent>
+          <div >
+            <Grid container spacing={2} lg={12}>
+            <Grid item md={6} sm={12} xs={12} lg={6}>
                 <TextField
                   margin="dense"
                   label="Project Title"
                   variant="outlined"
                   style={{ width: '80%' }}
-                  name="title" 
+                  name="title"
                   required
                   value={values.title}
                   onChange={this.props.handleChange}
                 />
               </Grid>
-              <Grid item md={5} sm={10} xs={10} lg={5} style={{marginRight: '92px'}}>
-                <DropDown
-                  array={['Volunteer Work', 'Internship']}
-                  type={'Category'}
-                  name="category"
-                  value={values.category}
-                  handleChange={this.props.handleChange}
-                />
-                {/* <TextField
-                  margin="dense"
-                  label="Category"
-                  variant="outlined"
-                  name="category"
-                  required
-                  style={{ alignItems: 'left', width: '80%' }}
-                  value={values.category}
-                  onChange={this.props.handleChange}
-                /> */}
-              </Grid>
-              <Grid item md={5} sm={10} xs={10} lg={5}>
-                <DropDown
-                  array={[
-                  'Development and IT',
-                  'Design and Creative',
-                  'Sales and Marketing',
-                  'Writing and Transalation',
-                  'Finance and Accounting',
-                  'Admin and Customer Support',    
-                  'Others']}
-                  type={'Industry'}
-                  name="industry"
-                  value={values.industry}
-                  handleChange={this.props.handleChange}
-                />
-                </Grid>
-              <Grid item md={5} sm={10} xs={10} lg={5} style={{marginRight: '92px'}}>
-                <DropDown
-                  array={['Part-time', 'Full-time']}
-                  type={'Job type'}
-                  name="type"
-                  value={values.type}
-                  handleChange={this.props.handleChange}
-                />
-                </Grid>
-              <Grid item lg={6} xs={12} sm={12} md={6}>
+            </Grid>
+          </div>
+        </CardContent>
+        <Grid item xs={12} lg={12}>
+          <h3>Details</h3>
+        </Grid>
+        <CardContent>
+          <div className={classes.margin}>
+            <Grid container spacing={2} alignItems="center" lg={12}>
+
+              {/* <Grid item lg={6} xs={12} sm={12} md={6}>
                 <TextField
                   margin="dense"
                   label="Experince Required"
@@ -121,7 +94,8 @@ class Profile extends Component {
                   value={values.experience}
                   onChange={this.props.handleChange}
                 />
-              </Grid>
+              </Grid> */}
+
               <Grid item md={6} sm={12} xs={12} lg={6}>
                 <TextField
                   margin="dense"
@@ -134,10 +108,21 @@ class Profile extends Component {
                   onChange={this.props.handleChange}
                 />
               </Grid>
+              <FormControl>
+                <FormLabel id="demo-row-radio-buttons-group-label">Job Type</FormLabel>
+                <RadioGroup
+                  row
+                  aria-labelledby="demo-row-radio-buttons-group-label"
+                  name="row-radio-buttons-group"
+                >
+                  <FormControlLabel value="parttime" control={<Radio />} label="Part-time" />
+                  <FormControlLabel value="fulltime" control={<Radio />} label="Full-time" />
+                </RadioGroup>
+              </FormControl>
               <Grid item md={6} sm={12} xs={12} lg={6}>
                 <TextField
                   margin="dense"
-                  label="Duration"
+                  label="Duration in hours"
                   variant="outlined"
                   name="duration"
                   required
@@ -146,7 +131,19 @@ class Profile extends Component {
                   onChange={this.props.handleChange}
                 />
               </Grid>
-              <Grid item md={6} sm={12} xs={12} lg={6}>
+
+              <FormControl>
+                <FormLabel id="demo-row-radio-buttons-group-label">Location</FormLabel>
+                <RadioGroup
+                  row
+                  aria-labelledby="demo-row-radio-buttons-group-label"
+                  name="row-radio-buttons-group"
+                >
+                  <FormControlLabel value="remote" control={<Radio />} label="Remote" />
+                  <FormControlLabel value="onsite" control={<Radio />} label="On Site" />
+                </RadioGroup>
+              </FormControl>
+              {/* <Grid item md={6} sm={12} xs={12} lg={6}>
                 <TextField
                   margin="dense"
                   label="Stipend"
@@ -156,21 +153,37 @@ class Profile extends Component {
                   value={values.stipend}
                   onChange={this.props.handleChange}
                 />
-              </Grid>
-              <Grid item md={6} sm={12} xs={12} lg={6}>
+              </Grid> */}
+              {/* <Grid item md={6} sm={12} xs={12} lg={6}>
                 <TextField
                   margin="dense"
                   label="Positions open"
                   variant="outlined"
                   name="position"
                   required
-                  style={{alignItems: 'left', width: '80%'}}
+                  style={{ alignItems: 'left', width: '80%' }}
                   value={values.position}
                   onChange={this.props.handleChange}
-                  
+                />
+              </Grid> */}
+              <Grid item md={5} sm={10} xs={10} lg={5}>
+                <DropDown
+                  array={[
+                    'Development and IT',
+                    'Design and Creative',
+                    'Sales and Marketing',
+                    'Writing and Transalation',
+                    'Finance and Accounting',
+                    'Admin and Customer Support',
+                    'Others']}
+                  type={'Category'}
+                  name="category"
+                  value={values.industry}
+                  handleChange={this.props.handleChange}
                 />
               </Grid>
             </Grid>
+
             {/* <Container className={classes.margin}>
               <Row>
                 <Col lg={4} xs={4} />
@@ -181,7 +194,7 @@ class Profile extends Component {
                     onClick={this.nextStep}
                     disabled
                     startIcon={<NavigateBeforeIcon />}
-                  >
+                    >
                     Back
                   </Button>
                 </Col>

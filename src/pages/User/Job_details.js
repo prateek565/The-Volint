@@ -7,6 +7,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { getIntern, getResume, jobApply } from '../../services/api';
 import { Box, List, ListItem, ListItemText, Menu, MenuItem, Modal, Typography } from '@material-ui/core';
 import { Alerterror, Alertsuccess } from '../../components/layout/Alerts'
+import SimpleBackDrop from '../../components/Manual/BackDrop/SimpleBackdrop';
 
 const Job_details = () => {
 
@@ -26,10 +27,13 @@ const Job_details = () => {
     const [text, setText] = useState("");
     const [success, setsuccess] = useState(false);
     const status = localStorage.getItem("status");
+    const [loading, setloading] = useState(false);
     useEffect(() => {
+        setloading(true)
         Promise.resolve(getIntern(internId)).then((res) => {
             setIntern(res.data)
             console.log(res.data);
+            setloading(false)
         }).catch((e) => {
             console.log({ e });
         })
@@ -112,7 +116,7 @@ const Job_details = () => {
                 />
                 {/* PageHeader end */}
 
-
+                {loading&&<SimpleBackDrop/>}
                 <div className="ttm-row sidebar job-sidebar clearfix">
                     <div className="container">
                         {/* row */}

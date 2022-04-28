@@ -8,6 +8,7 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import CountUp from 'react-countup';
 import { allInterns, getInternByCategory } from '../services/api';
 import Industry from './Common/Home/industry';
+import SimpleBackDrop from '../components/Manual/BackDrop/SimpleBackdrop';
 
 
 const Home3 = () => {
@@ -45,10 +46,14 @@ const Home3 = () => {
     const [volunteerWork, setvolunteerWork] = useState()
     const [internshipWork, setinternshipWork] = useState()
     const [allIntern, setallIntern] = useState()
+    const [loading, setloading] = useState(false);
+
     useEffect(() => {
+        setloading(true);
         Promise.resolve(allInterns()).then((res) => {
             setallIntern(res.data)
             console.log(res.data);
+            setloading(false);
         }).catch((e) => {
             console.log({ e });
         })
@@ -102,7 +107,7 @@ const Home3 = () => {
 
     return (
         <div className="site-main">
-
+            {loading&&<SimpleBackDrop/>}
             <Header />
 
             {/* Banner */}

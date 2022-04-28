@@ -52,10 +52,10 @@ const Applied_Jobs = () => {
                                                 <i className="ti ti-search"></i>
                                                 <input type="text" id="filter" placeholder="Project Title or Keywords" />
                                             </label>
-                                            <label>
+                                            {/* <label>
                                                 <i className="ti ti-location-pin"></i>
                                                 <input type="text" name="location" id="filterlocation" placeholder="location" />
-                                            </label>
+                                            </label> */}
                                             <button className="submit ttm-btn ttm-btn-size-md ttm-btn-shape-square ttm-btn-style-fill ttm-btn-color-skincolor" type="submit">Find Work</button>
                                         </form>
                                     </div>
