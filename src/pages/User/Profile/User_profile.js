@@ -215,23 +215,7 @@ const User_profile = () => {
                       </div>
                     </div>
                   ))}
-
-                  <Divider className="mt-2" />
-                  <Link exact to={"/edit_resume"}>
-                    <div className="col-lg-12 mt-3">
-                      <h6 id="resume">Resume</h6>
-                      <div className="featured-imagebox featured-imagebox-candidate" style={{ backgroundColor: 'rgb(236, 215, 255)' }}>
-
-                        <div className="text-size-2">
-                          <ul>
-                            {resume?.map((cv, index) => (<li>{cv}</li>
-                            ))}
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </Link>
-                  <Divider className="mt-2" />
+                  <Divider className="mt-10" />
                   <h6 id="offers">Offers</h6>
                   {offers.length === 0 && <p>No Offers</p>}
                   {offers?.map((offer) => (

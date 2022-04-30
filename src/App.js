@@ -35,6 +35,8 @@ import Home from './pages/Home';
 import Home2 from './pages/Home2';
 import UserProjects from './pages/User/Projects/UserProjects';
 import EmailVerification from './pages/Common/Register/emailVerification';
+import Signup from './pages/Common/Register';
+import ForgotPass from './pages/Common/forgotPassword';
 
 axios.defaults.baseURL = 'http://localhost:4000';
 // axios.defaults.baseURL = 'https://volunteerproject.herokuapp.com';
@@ -69,8 +71,9 @@ function App() {
         <Route path={`/candidate_list`} component={ Candidate_list } />
         <Route path={`/candidate_details`} component={ Candidate_details } />
         <Route exact path={ `/login`} component={ Login } />
-        <Route exact path={`/signup`} component={ Register } />
+        <Route exact path={`/signup`} component={ Signup } />
         <Route exact path={`/verify`} component={ EmailVerification } />
+        <Route exact path={`/otppass`} component={ ForgotPass } />
         <Route exact path={`/resume`} component={ Resume } />
         <Route exact path={`/company_interns`} component={ Company_interns } />
         <Route exact path={'/applied'} component={Applied_Jobs} />

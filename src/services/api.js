@@ -16,7 +16,11 @@ export const signup = async (data) => {
 }
 
 export const getCode = async (mail) => {
-    return await axios.get("/auth/verify", {mail});
+    return await axios.post("/auth/verify", {mail});
+}
+
+export const forgotPass = async (email, password, status) => {
+    return await axios.put("/auth/forgotpass", {email, password, status});
 }
 
 //****** user ******//
@@ -26,7 +30,7 @@ export const allUsers = async () => {
             headers: {
                 token: localStorage.getItem("volintToken")
             }
-        });
+        }); 
 }
 export const myAppliedJobs = async () => {
     return await axios.get(`/user/getappliedjobs`,
