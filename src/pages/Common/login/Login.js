@@ -140,17 +140,6 @@ const Login = () => {
     return (
 
         <div className="site-main">
-            <Header />
-
-            {/* PageHeader */}
-            {/*<PageHeader
-                title="Login"
-                breadcrumb="Login"
-            />*/}
-            {/* PageHeader end */}
-
-
-            {/* login */}
             <div className="ttm-row login-section clearfix">
                 <div className="container">
                     <div className="row">
@@ -199,57 +188,11 @@ const Login = () => {
                                                                     }} type="password" id="password" placeholder="Password" />
                                                                 </label>
                                                             </div>
-                                                            <div className="col-lg-12">
+                                                            <div className="">
                                                                 <label>
-                                                                    <div className="forgot-pwd text-center mt-5">
-                                                                        <p onClick={handleOpen}>Forgot Password</p>
-                                                                        <Modal
-                                                                            open={open}
-                                                                            onClose={handleClose}
-                                                                            aria-labelledby="modal-modal-title"
-                                                                            aria-describedby="modal-modal-description"
-                                                                        >
-                                                                            <Box sx={style}>
-                                                                                <Typography id="modal-modal-title" variant="h5" component="h2">
-                                                                                    Reset Password</Typography>
-                                                                                <TextField
-                                                                                    margin="dense"
-                                                                                    variant="outlined"
-                                                                                    name="email"
-                                                                                    label="Email"
-                                                                                    style={{ width: '80%', marginTop: '10%' }}
-                                                                                    required
-                                                                                // value={fields.email}
-                                                                                // onChange={handleFieldChange}
-                                                                                />
-                                                                                <TextField
-                                                                                    margin="dense"
-                                                                                    variant="outlined"
-                                                                                    name="pass"
-                                                                                    label="New Password"
-                                                                                    style={{ width: '80%' }}
-                                                                                    required
-                                                                                // value={fields.password}
-                                                                                // onChange={handleFieldChange}
-                                                                                />
-                                                                                <TextField
-                                                                                    margin="dense"
-                                                                                    variant="outlined"
-                                                                                    name="passcheck"
-                                                                                    label="Confirm Password"
-                                                                                    style={{ width: '80%' }}
-                                                                                    required
-                                                                                // value={fields.confirmPassword}
-                                                                                // onChange={handleFieldChange}
-                                                                                />
-                                                                                <div className="justify-center mt-2">
-                                                                                    <button className="submit ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-fill ttm-btn-color-skincolor" onClick={handleClose}>Submit</button>
-                                                                                </div>
-                                                                            </Box>
-                                                                        </Modal>
+                                                                    <div className=" text-center">
                                                                         <input className="w-auto mr-10" id="cookies-consent" name="cookies-consent" type="checkbox" value="yes" checked onClick={rememberPass} />
                                                                         <span>Remember Me</span>
-                                                                        <p className="mt-3">Don't have account? <Link to='/signup' className="text-theme-SkinColor" style={{ fontWeight: 'bold' }}>Sign Up here</Link></p>
                                                                     </div>
                                                                 </label>
                                                             </div>
@@ -257,6 +200,14 @@ const Login = () => {
                                                                 <label className="mb-0">
                                                                     <button className="submit w-100 ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-fill ttm-btn-color-skincolor" type="submit" onClick={CandidateLogin}>Login</button>
                                                                 </label>
+                                                            <div className="col-lg-12">
+                                                                <label>
+                                                                    <div className="forgot-pwd text-center mt-5">
+                                                                        <p className="mt-3">Don't have account? <Link to='/signup' className="text-theme-SkinColor" style={{ fontWeight: 'bold' }}>Sign Up here</Link></p>
+                                                                        <Link to={'/otppass'}>Forgot Password</Link>
+                                                                    </div>
+                                                                </label>
+                                                            </div>
                                                             </div>
                                                         </div>
                                                     </form>
@@ -283,54 +234,8 @@ const Login = () => {
                                                             <div className="col-lg-12">
                                                                 <label>
                                                                     <div className="forgot-pwd text-center mt-5">
-                                                                        <p onClick={handleOpen}>Forgot Password</p>
-                                                                        <Modal
-                                                                            open={open}
-                                                                            onClose={handleClose}
-                                                                            aria-labelledby="modal-modal-title"
-                                                                            aria-describedby="modal-modal-description"
-                                                                        >
-                                                                            <Box sx={style}>
-                                                                                <Typography id="modal-modal-title" variant="h5" component="h2">
-                                                                                    Reset Password</Typography>
-                                                                                <TextField
-                                                                                    margin="dense"
-                                                                                    variant="outlined"
-                                                                                    name="email"
-                                                                                    label="Email"
-                                                                                    style={{ width: '80%', marginTop: '10%' }}
-                                                                                    required
-                                                                                // value={fields.email}
-                                                                                // onChange={handleFieldChange}
-                                                                                />
-                                                                                <TextField
-                                                                                    margin="dense"
-                                                                                    variant="outlined"
-                                                                                    name="pass"
-                                                                                    label="New Password"
-                                                                                    style={{ width: '80%' }}
-                                                                                    required
-                                                                                // value={fields.password}
-                                                                                // onChange={handleFieldChange}
-                                                                                />
-                                                                                <TextField
-                                                                                    margin="dense"
-                                                                                    variant="outlined"
-                                                                                    name="passcheck"
-                                                                                    label="Confirm Password"
-                                                                                    style={{ width: '80%' }}
-                                                                                    required
-                                                                                // value={fields.confirmPassword}
-                                                                                // onChange={handleFieldChange}
-                                                                                />
-                                                                                <div className="justify-center mt-2">
-                                                                                    <button className="submit ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-fill ttm-btn-color-skincolor" onClick={handleClose}>Submit</button>
-                                                                                </div>
-                                                                            </Box>
-                                                                        </Modal>
                                                                         <input className="w-auto mr-10" id="cookies-consent" name="cookies-consent" type="checkbox" value="yes" checked onClick={rememberPass}/>
                                                                         <span>Remember Me</span>
-                                                                        <p className="mt-3">Don't have account? <Link to='/signup' className="text-theme-SkinColor " style={{ fontWeight: 'bold' }}>Sign Up here</Link></p>
                                                                     </div>
                                                                 </label>
                                                             </div>
@@ -340,24 +245,31 @@ const Login = () => {
                                                                         type="submit" onClick={EmployerLogin}>Login</button>
                                                                 </label>
                                                             </div>
+                                                            <div className="col-lg-12">
+                                                                <label>
+                                                                    <div className="forgot-pwd text-center mt-5">
+                                                                        <p className="mt-3">Don't have account? <Link to='/signup' className="text-theme-SkinColor " style={{ fontWeight: 'bold' }}>Sign Up here</Link></p>
+                                                                        <p onClick={handleOpen}>Forgot Password</p>
+                                                                    </div>
+                                                                </label>
+                                                            </div>
                                                         </div>
                                                     </form>
                                                 </TabPanel>
                                             </div>
                                         </Tabs>
                                     </div>
-                                    <br />
                                     <div className="login-social-buttons">
                                         <div className='d-flex justify-content-center'>
-                                            <p>
-                                                Or Login With
+                                            <p >
+                                                OR
                                             </p>
                                         </div>
                                         <hr />
                                     </div>
                                     <div className="login-social-buttons">
                                         <div className="row">
-                                            <div className="row">
+                                            <div className="row d-flex justify-content-center">
                                                 <div>
                                                     <LoginGoogle status={'user'} />
                                                     {/* <LoginFacebook status={'user'} /> */}
