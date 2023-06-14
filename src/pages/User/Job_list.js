@@ -4,7 +4,7 @@ import PageHeader from "../../components/layout/PageHeader";
 import { Footer } from '../../components/layout/Footer';
 import { Link } from 'react-router-dom';
 import { allInterns, searchIntern } from '../../services/api';
-import { CircularProgress } from '@material-ui/core';
+import { CircularProgress } from '@mui/material';
 import Simplebackdrop from '../../components/Manual/BackDrop/SimpleBackdrop'
 // export class Job_list extends Component {
 const Job_list = () => {

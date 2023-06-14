@@ -7,7 +7,7 @@ import { googleLogin, login } from '../../../services/api';
 import { Link, useHistory } from 'react-router-dom';
 import FacebookLogin from 'react-facebook-login';
 import { GoogleLogin } from 'react-google-login';
-import { Box, Button, Modal, TextField, Typography } from '@material-ui/core';
+import { Box, Button, Modal, TextField, Typography } from '@mui/material';
 import { useForm } from 'use-form-fields';
 import { Alerterror } from '../../../components/layout/Alerts';
 import { FcGoogle } from 'react-icons/fc';

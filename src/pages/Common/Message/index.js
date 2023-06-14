@@ -11,7 +11,7 @@ import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import SendIcon from '@mui/icons-material/Send';
 import { FaUserCircle } from 'react-icons/fa'
-import { Grid } from '@material-ui/core';
+import { Grid } from '@mui/material';
 import { TextField } from '@mui/material';
 
 export default function TemporaryDrawer({ name, id }) {

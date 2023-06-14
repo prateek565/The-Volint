@@ -4,7 +4,7 @@ import PageHeader from "../../../components/layout/PageHeader";
 import { Footer } from '../../../components/layout/Footer';
 import { Link } from 'react-router-dom';
 import { allApplicants, allInterns, myAppliedJobs, myOffers, offerIntern, userApplied, userInfo, userOnBoard } from '../../../services/api';
-import { CircularProgress, Divider, TextField } from '@material-ui/core';
+import { CircularProgress, Divider, TextField } from '@mui/material';
 
 import Card from './Card';
 

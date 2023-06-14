@@ -107,7 +107,8 @@ const Home3 = () => {
 
     return (
         <div className="site-main">
-            {loading&&<SimpleBackDrop/>}
+            {/* bad me karenge */}
+            {/* {loading&&<SimpleBackDrop/>} */}
             <Header />
 
             {/* Banner */}

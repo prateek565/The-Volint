@@ -4,7 +4,7 @@ import PageHeader from "../../components/layout/PageHeader";
 import { Footer } from '../../components/layout/Footer';
 import { Link } from 'react-router-dom';
 import { allApplicants, allInterns, myAppliedJobs } from '../../services/api';
-import { CircularProgress, Divider } from '@material-ui/core';
+import { CircularProgress, Divider } from '@mui/material';
 
 
 // export class Job_list extends Component {

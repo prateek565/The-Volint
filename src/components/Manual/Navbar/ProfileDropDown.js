@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
-import { Avatar, Divider, IconButton, ListItemIcon, MenuItem, Tooltip, Menu, Badge } from '@material-ui/core';
+import { Avatar, Divider, IconButton, ListItemIcon, MenuItem, Tooltip, Menu, Badge } from '@mui/material';
 import Logout from '@mui/icons-material/Logout';
 import { FaUserCircle } from 'react-icons/fa';
 import { styled, alpha } from '@mui/material/styles';

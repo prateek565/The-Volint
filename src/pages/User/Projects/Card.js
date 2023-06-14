@@ -4,7 +4,7 @@ import { FcCheckmark } from 'react-icons/fc';
 import { ImCross } from 'react-icons/im';
 import { BsExclamationLg } from 'react-icons/bs';
 import { getUserRequestByDate, saveHours, userInfo } from '../../../services/api';
-import { TextField } from '@material-ui/core';
+import { TextField } from '@mui/material';
 import { Alerterror, Alertsuccess } from '../../../components/layout/Alerts';
 
 const Card = ({ intern }) => {

@@ -1,4 +1,4 @@
-import { Card } from '@material-ui/core';
+import { Card } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { allApplicants, companyInterns } from '../../services/api';

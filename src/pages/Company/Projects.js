@@ -4,7 +4,7 @@ import PageHeader from "../../components/layout/PageHeader";
 import { Footer } from '../../components/layout/Footer';
 import { Link } from 'react-router-dom';
 import { allApplicants, allInterns, myAppliedJobs, offerIntern, userApplied, userOnBoard } from '../../services/api';
-import { CircularProgress, Divider } from '@material-ui/core';
+import { CircularProgress, Divider } from '@mui/material';
 
 const Projects = () => {
     const [step, setStep]= useState(null);
