@@ -1,19 +1,21 @@
 import React, { Component, useState } from 'react';
-import { TextField, Button, Container } from '@material-ui/core';
-import { Card, CardHeader, CardContent } from '@material-ui/core';
-import NavigateNextIcon from '@material-ui/icons/NavigateNext';
-import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
-import EmailIcon from '@material-ui/icons/Email';
-import PhoneIcon from '@material-ui/icons/Phone';
-import LanguageIcon from '@material-ui/icons/Language';
-import GitHubIcon from '@material-ui/icons/GitHub';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import TwitterIcon from '@material-ui/icons/Twitter';
-import FacebookIcon from '@material-ui/icons/Facebook';
-import InstagramIcon from '@material-ui/icons/Instagram';
-import InputAdornment from '@material-ui/core/InputAdornment';
+import { TextField, Button, Container } from '@mui/material';
+import { Card, CardHeader, CardContent } from '@mui/material';
+import NavigateNextIcon from '@mui/icons-material/NavigateNext';
+import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
+import EmailIcon from '@mui/icons-material/Email';
+import PhoneIcon from '@mui/icons-material/Phone';
+import LanguageIcon from '@mui/icons-material/Language';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import InputAdornment from '@mui/material/InputAdornment';
 import { Row, Col } from 'react-bootstrap';
-import { Paper, withStyles, Grid } from '@material-ui/core';
+import { Paper, Grid } from '@mui/material';
+
+import withStyles from '@mui/styles/withStyles';
 
 const styles = theme => ({
   margin: {

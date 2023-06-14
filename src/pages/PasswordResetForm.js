@@ -1,6 +1,6 @@
 // import React, {Component} from 'react';
 // import Userfront from "@userfront/core";
-// import { Tabs } from '@material-ui/core';
+// import { Tabs } from '@mui/material';
 
 // // Initialize Userfront Core JS
 // Userfront.init("demo1234");

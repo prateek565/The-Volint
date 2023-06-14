@@ -4,7 +4,7 @@ import PageHeader from "../../components/layout/PageHeader";
 import { Footer } from '../../components/layout/Footer';
 import { Link } from 'react-router-dom';
 import { allApplicants, allInterns, deleteAppliedJob, myAppliedJobs } from '../../services/api';
-import { CircularProgress, Divider } from '@material-ui/core';
+import { CircularProgress, Divider } from '@mui/material';
 import ApplicantsTabPanel from '../../components/Manual/TabPanel/UserAppliedJobs';
 
 // export class Job_list extends Component {

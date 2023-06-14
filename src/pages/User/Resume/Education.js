@@ -1,13 +1,14 @@
 import React, {Component} from 'react';
-import {TextField, Button, Container, Divider} from '@material-ui/core';
-import {Card, CardHeader, CardContent} from '@material-ui/core';
-import NavigateNextIcon from '@material-ui/icons/NavigateNext';
-import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
-import SchoolIcon from '@material-ui/icons/School';
-import DateRangeIcon from '@material-ui/icons/DateRange';
-import InputAdornment from '@material-ui/core/InputAdornment';
+import {TextField, Button, Container, Divider} from '@mui/material';
+import {Card, CardHeader, CardContent} from '@mui/material';
+import NavigateNextIcon from '@mui/icons-material/NavigateNext';
+import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
+import SchoolIcon from '@mui/icons-material/School';
+import DateRangeIcon from '@mui/icons-material/DateRange';
+import InputAdornment from '@mui/material/InputAdornment';
 import {Row, Col} from 'react-bootstrap';
-import {Paper, withStyles, Grid} from '@material-ui/core';
+import { Paper, Grid } from '@mui/material';
+import withStyles from '@mui/styles/withStyles';
 import 'date-fns';
 
 const styles = theme => ({

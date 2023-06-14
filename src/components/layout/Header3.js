@@ -5,7 +5,7 @@ import HeaderMenu from '../Manual/Navbar/HeaderMenu';
 import Mobile_menu from './Mobile_menu';
 import Logo from './Logo'
 import DropDown from '../Manual/dropdown/DropDown';
-import { Grid } from '@material-ui/core';
+import { Grid } from '@mui/material';
 
 const Header = () => {
   const [category, setcategory] = useState('Volunteer Work');

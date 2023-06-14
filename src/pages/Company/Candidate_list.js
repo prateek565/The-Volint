@@ -4,7 +4,7 @@ import PageHeader from "../../components/layout/PageHeader";
 import { Footer } from '../../components/layout/Footer';
 import { Link, useLocation, useParams } from 'react-router-dom';
 import { allApplicants, allUsers } from '../../services/api';
-import { CircularProgress } from '@material-ui/core';
+import { CircularProgress } from '@mui/material';
 import TemporaryDrawer from '../Common/Message';
 import SimpleBackDrop from '../../components/Manual/BackDrop/SimpleBackdrop';
 

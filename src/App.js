@@ -38,8 +38,8 @@ import EmailVerification from './pages/Common/Register/emailVerification';
 import Signup from './pages/Common/Register';
 import ForgotPass from './pages/Common/forgotPassword';
 
-// axios.defaults.baseURL = 'http://localhost:4000';
-axios.defaults.baseURL = 'https://prateek.onrender.com';
+axios.defaults.baseURL = 'http://localhost:4000';
+// axios.defaults.baseURL = 'https://prateek.onrender.com';
 axios.defaults.params = {};
 
 function App() {

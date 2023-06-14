@@ -38,6 +38,7 @@ const Company = ({ setverify, setemail, ifVerified, status, companyValues }) => 
         }
         else {
             setverify(true);
+            signup({ name:companyname, email:companyemail, password:companypass, status:'company', address:'', city:'', title:'' });
         }
     };
 

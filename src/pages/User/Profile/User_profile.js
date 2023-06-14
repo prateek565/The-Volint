@@ -2,7 +2,7 @@ import React, { Component, useState, useEffect } from 'react';
 import Header from '../../../components/layout/Header';
 import { Footer } from '../../../components/layout/Footer';
 import { Link, useHistory, useLocation, useParams } from 'react-router-dom';
-import { AppBar, Avatar, Box, Button, Card, CardContent, CardHeader, CircularProgress, Dialog, Divider, Grid, IconButton, InputAdornment, List, ListItem, ListItemText, Paper, Slide, TextField, Toolbar, Typography } from '@material-ui/core';
+import { AppBar, Avatar, Box, Button, Card, CardContent, CardHeader, CircularProgress, Dialog, Divider, Grid, IconButton, InputAdornment, List, ListItem, ListItemText, Paper, Slide, TextField, Toolbar, Typography } from '@mui/material';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { Rating } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';

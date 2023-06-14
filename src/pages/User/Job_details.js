@@ -5,7 +5,7 @@ import PageHeader from "../../components/layout/PageHeader";
 import { Footer } from '../../components/layout/Footer';
 import { Link, useLocation } from 'react-router-dom';
 import { getIntern, getResume, jobApply } from '../../services/api';
-import { Box, List, ListItem, ListItemText, Menu, MenuItem, Modal, Typography } from '@material-ui/core';
+import { Box, List, ListItem, ListItemText, Menu, MenuItem, Modal, Typography } from '@mui/material';
 import { Alerterror, Alertsuccess } from '../../components/layout/Alerts'
 import SimpleBackDrop from '../../components/Manual/BackDrop/SimpleBackdrop';
 
