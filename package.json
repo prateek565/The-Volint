@@ -19,7 +19,6 @@
     "dotenv": "^16.0.0",
     "file-saver": "^2.0.5",
     "mdbreact": "^5.0.2",
-    "node-sass": "^4.14.1",
     "react": "^17.0.2",
     "react-animated-progress-bar": "^1.0.4",
     "react-bootstrap": "^2.1.1",
