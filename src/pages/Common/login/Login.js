@@ -5,7 +5,7 @@ import { Footer } from '../../../components/layout/Footer';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import { googleLogin, login } from '../../../services/api';
 import { Link, useHistory } from 'react-router-dom';
-import FacebookLogin from 'react-facebook-login';
+// import FacebookLogin from 'react-facebook-login';
 import { GoogleLogin } from 'react-google-login';
 import { Box, Button, Modal, TextField, Typography } from '@mui/material';
 import { useForm } from 'use-form-fields';
@@ -13,8 +13,8 @@ import { Alerterror } from '../../../components/layout/Alerts';
 import { FcGoogle } from 'react-icons/fc';
 import { GrTwitter, GrFacebook, GrLinkedin, GrGithub } from 'react-icons/gr';
 import LoginGoogle from './googleLogin';
-import LoginFacebook from './facebookLogin';
-import ReactFacebookLogin from 'react-facebook-login';
+// import LoginFacebook from './facebookLogin';
+// import ReactFacebookLogin from 'react-facebook-login';
 // import GitHubLogin from 'github-login';
 
 const style = {
