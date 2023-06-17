@@ -53,11 +53,11 @@ const ProfileDetails = (props) => {
 
   const handleChange = (e) => {
     e.preventDefault();
-    const val = e.target.value;
-    const keys = e.target.name
-    // console.log(e.target.name, val);
-    setCompany([{ [e.target.name]: val, ...company }]);
-    setvalues({ p: val, ...values })
+  const val = e.target.value;
+  const keys = e.target.name;
+    setCompany({ ...company, [keys]: val });
+    setvalues({ ...values, p: val });
+    console.log(company);
   };
 
   const [success, setsuccess] = useState(false);
@@ -65,19 +65,19 @@ const ProfileDetails = (props) => {
   const [error, seterror] = useState(false);
 
   console.log('====================================');
-  console.log(values);
+  // console.log(values);
   console.log('====================================');
   const handleSubmit = (e) => {
     e.preventDefault();
-    Promise.resolve((editCompany(company, company?._id))).then((res) => {
+    Promise.resolve((editCompany(company, 1))).then((res) => {
       console.log(res);
       setsuccess(true);
       setText('Your profile has been edited successfully');
-      setTimeout(() => {
-        setsuccess(false);
-        setText('');
-        window.location.reload();
-      }, 3000);
+      // setTimeout(() => {
+      //   setsuccess(false);
+      //   setText('');
+      //   window.location.reload();
+      // }, 3000);
     }).catch((e) => {
       seterror(true);
       setText('Your profile cannot be updated');
@@ -206,7 +206,7 @@ const ProfileDetails = (props) => {
       <div className=" justify-center mt-10">
         <button
           variant="contained"
-          type="submit"
+          type="button"
           className="ttm-btn ttm-btn-style-fill ttm-btn-color-skincolor"
           onClick={handleSubmit}
         >

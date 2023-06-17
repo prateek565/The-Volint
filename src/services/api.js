@@ -203,7 +203,7 @@ export const offerIntern = async (id) => {
 }
 export const editCompany = async (data, id) => {
     console.log(data);
-    return await axios.put(`/company/editcompany/${id}`, { credentials: data },
+    return await axios.put(`/company/editcompany/`, { credentials: data },
         {
             headers: {
                 token: localStorage.getItem("volintToken")

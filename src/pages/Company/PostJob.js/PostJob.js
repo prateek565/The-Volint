@@ -169,7 +169,7 @@ const PostJob = () => {
           <div className=" justify-center mb-10" style={{ marginLeft: '47%' }}>
             <button
               variant="contained"
-              type="submit"
+              type="button"
               className="ttm-btn ttm-btn-style-fill ttm-btn-color-skincolor"
               onClick={handleSubmit}
             >

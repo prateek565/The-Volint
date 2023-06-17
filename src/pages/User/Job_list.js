@@ -55,8 +55,8 @@ const Job_list = () => {
     return (
 
         <div className="site-main">
-            <Header />
-            {loading&&<Simplebackdrop/>}
+            {/* <Header />
+            {loading&&<Simplebackdrop/>} */}
             <div className="site-main">
 
                 {/* PageHeader */}
