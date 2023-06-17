@@ -191,16 +191,16 @@ export class About_us extends Component {
                                 <div className="featured-media ttm-media-link">
                                     <div className="media-block">
                                         <ul className="social-icons list-inline">
-                                            <li><a href={process.env.PUBLIC_URL + '/'} rel="noopener" aria-label="facebook"><i className="ti ti-facebook"></i></a></li>
-                                            <li><a href={process.env.PUBLIC_URL + '/'} rel="noopener" aria-label="twitter"><i className="ti ti-twitter-alt"></i></a></li>
-                                            <li><a href={process.env.PUBLIC_URL + '/'} rel="noopener" aria-label="google"><i className="ti ti-google"></i></a></li>
-                                            <li><a href={process.env.PUBLIC_URL + '/'} rel="noopener" aria-label="linkedin"><i className="ti ti-linkedin"></i></a></li>
+                                            <li><a href={  '/'} rel="noopener" aria-label="facebook"><i className="ti ti-facebook"></i></a></li>
+                                            <li><a href={  '/'} rel="noopener" aria-label="twitter"><i className="ti ti-twitter-alt"></i></a></li>
+                                            <li><a href={  '/'} rel="noopener" aria-label="google"><i className="ti ti-google"></i></a></li>
+                                            <li><a href={  '/'} rel="noopener" aria-label="linkedin"><i className="ti ti-linkedin"></i></a></li>
                                         </ul>
                                     </div>
                                 </div>
                                 <div className="featured-content">
                                     <div className="featured-title">
-                                        <h3><a href={process.env.PUBLIC_URL + '/'}>Amelia Daniel</a></h3>
+                                        <h3><a href={  '/'}>Amelia Daniel</a></h3>
                                     </div>
                                     <div className="featured-desc">
                                         <p>Engineer</p>
@@ -218,16 +218,16 @@ export class About_us extends Component {
                                 <div className="featured-media ttm-media-link">
                                     <div className="media-block">
                                         <ul className="social-icons list-inline">
-                                            <li><a href={process.env.PUBLIC_URL + '/'} rel="noopener" aria-label="facebook"><i className="ti ti-facebook"></i></a></li>
-                                            <li><a href={process.env.PUBLIC_URL + '/'} rel="noopener" aria-label="twitter"><i className="ti ti-twitter-alt"></i></a></li>
-                                            <li><a href={process.env.PUBLIC_URL + '/'} rel="noopener" aria-label="google"><i className="ti ti-google"></i></a></li>
-                                            <li><a href={process.env.PUBLIC_URL + '/'} rel="noopener" aria-label="linkedin"><i className="ti ti-linkedin"></i></a></li>
+                                            <li><a href={  '/'} rel="noopener" aria-label="facebook"><i className="ti ti-facebook"></i></a></li>
+                                            <li><a href={  '/'} rel="noopener" aria-label="twitter"><i className="ti ti-twitter-alt"></i></a></li>
+                                            <li><a href={  '/'} rel="noopener" aria-label="google"><i className="ti ti-google"></i></a></li>
+                                            <li><a href={  '/'} rel="noopener" aria-label="linkedin"><i className="ti ti-linkedin"></i></a></li>
                                         </ul>
                                     </div>
                                 </div>
                                 <div className="featured-content">
                                     <div className="featured-title">
-                                        <h3><a href={process.env.PUBLIC_URL + '/'}>Jennifer Garcia</a></h3>
+                                        <h3><a href={  '/'}>Jennifer Garcia</a></h3>
                                     </div>
                                     <div className="featured-desc">
                                         <p>Engineer</p>
@@ -245,16 +245,16 @@ export class About_us extends Component {
                                 <div className="featured-media ttm-media-link">
                                     <div className="media-block">
                                         <ul className="social-icons list-inline">
-                                            <li><a href={process.env.PUBLIC_URL + '/'} rel="noopener" aria-label="facebook"><i className="ti ti-facebook"></i></a></li>
-                                            <li><a href={process.env.PUBLIC_URL + '/'} rel="noopener" aria-label="twitter"><i className="ti ti-twitter-alt"></i></a></li>
-                                            <li><a href={process.env.PUBLIC_URL + '/'} rel="noopener" aria-label="google"><i className="ti ti-google"></i></a></li>
-                                            <li><a href={process.env.PUBLIC_URL + '/'} rel="noopener" aria-label="linkedin"><i className="ti ti-linkedin"></i></a></li>
+                                            <li><a href={  '/'} rel="noopener" aria-label="facebook"><i className="ti ti-facebook"></i></a></li>
+                                            <li><a href={  '/'} rel="noopener" aria-label="twitter"><i className="ti ti-twitter-alt"></i></a></li>
+                                            <li><a href={  '/'} rel="noopener" aria-label="google"><i className="ti ti-google"></i></a></li>
+                                            <li><a href={  '/'} rel="noopener" aria-label="linkedin"><i className="ti ti-linkedin"></i></a></li>
                                         </ul>
                                     </div>
                                 </div>
                                 <div className="featured-content">
                                     <div className="featured-title">
-                                        <h3><a href={process.env.PUBLIC_URL + '/'}>Harly Rayan</a></h3>
+                                        <h3><a href={  '/'}>Harly Rayan</a></h3>
                                     </div>
                                     <div className="featured-desc">
                                         <p>Engineer</p>
@@ -272,16 +272,16 @@ export class About_us extends Component {
                                 <div className="featured-media ttm-media-link">
                                     <div className="media-block">
                                         <ul className="social-icons list-inline">
-                                            <li><a href={process.env.PUBLIC_URL + '/'} rel="noopener" aria-label="facebook"><i className="ti ti-facebook"></i></a></li>
-                                            <li><a href={process.env.PUBLIC_URL + '/'} rel="noopener" aria-label="twitter"><i className="ti ti-twitter-alt"></i></a></li>
-                                            <li><a href={process.env.PUBLIC_URL + '/'} rel="noopener" aria-label="google"><i className="ti ti-google"></i></a></li>
-                                            <li><a href={process.env.PUBLIC_URL + '/'} rel="noopener" aria-label="linkedin"><i className="ti ti-linkedin"></i></a></li>
+                                            <li><a href={  '/'} rel="noopener" aria-label="facebook"><i className="ti ti-facebook"></i></a></li>
+                                            <li><a href={  '/'} rel="noopener" aria-label="twitter"><i className="ti ti-twitter-alt"></i></a></li>
+                                            <li><a href={  '/'} rel="noopener" aria-label="google"><i className="ti ti-google"></i></a></li>
+                                            <li><a href={  '/'} rel="noopener" aria-label="linkedin"><i className="ti ti-linkedin"></i></a></li>
                                         </ul>
                                     </div>
                                 </div>
                                 <div className="featured-content">
                                     <div className="featured-title">
-                                        <h3><a href={process.env.PUBLIC_URL + '/'}>Melika Fonals</a></h3>
+                                        <h3><a href={  '/'}>Melika Fonals</a></h3>
                                     </div>
                                     <div className="featured-desc">
                                         <p>Engineer</p>
@@ -299,16 +299,16 @@ export class About_us extends Component {
                                 <div className="featured-media ttm-media-link">
                                     <div className="media-block">
                                         <ul className="social-icons list-inline">
-                                            <li><a href={process.env.PUBLIC_URL + '/'} rel="noopener" aria-label="facebook"><i className="ti ti-facebook"></i></a></li>
-                                            <li><a href={process.env.PUBLIC_URL + '/'} rel="noopener" aria-label="twitter"><i className="ti ti-twitter-alt"></i></a></li>
-                                            <li><a href={process.env.PUBLIC_URL + '/'} rel="noopener" aria-label="google"><i className="ti ti-google"></i></a></li>
-                                            <li><a href={process.env.PUBLIC_URL + '/'} rel="noopener" aria-label="linkedin"><i className="ti ti-linkedin"></i></a></li>
+                                            <li><a href={  '/'} rel="noopener" aria-label="facebook"><i className="ti ti-facebook"></i></a></li>
+                                            <li><a href={  '/'} rel="noopener" aria-label="twitter"><i className="ti ti-twitter-alt"></i></a></li>
+                                            <li><a href={  '/'} rel="noopener" aria-label="google"><i className="ti ti-google"></i></a></li>
+                                            <li><a href={  '/'} rel="noopener" aria-label="linkedin"><i className="ti ti-linkedin"></i></a></li>
                                         </ul>
                                     </div>
                                 </div>
                                 <div className="featured-content">
                                     <div className="featured-title">
-                                        <h3><a href={process.env.PUBLIC_URL + '/'}>Jennifer Garcia</a></h3>
+                                        <h3><a href={  '/'}>Jennifer Garcia</a></h3>
                                     </div>
                                     <div className="featured-desc">
                                         <p>Engineer</p>
@@ -326,16 +326,16 @@ export class About_us extends Component {
                                 <div className="featured-media ttm-media-link">
                                     <div className="media-block">
                                         <ul className="social-icons list-inline">
-                                            <li><a href={process.env.PUBLIC_URL + '/'} rel="noopener" aria-label="facebook"><i className="ti ti-facebook"></i></a></li>
-                                            <li><a href={process.env.PUBLIC_URL + '/'} rel="noopener" aria-label="twitter"><i className="ti ti-twitter-alt"></i></a></li>
-                                            <li><a href={process.env.PUBLIC_URL + '/'} rel="noopener" aria-label="google"><i className="ti ti-google"></i></a></li>
-                                            <li><a href={process.env.PUBLIC_URL + '/'} rel="noopener" aria-label="linkedin"><i className="ti ti-linkedin"></i></a></li>
+                                            <li><a href={  '/'} rel="noopener" aria-label="facebook"><i className="ti ti-facebook"></i></a></li>
+                                            <li><a href={  '/'} rel="noopener" aria-label="twitter"><i className="ti ti-twitter-alt"></i></a></li>
+                                            <li><a href={  '/'} rel="noopener" aria-label="google"><i className="ti ti-google"></i></a></li>
+                                            <li><a href={  '/'} rel="noopener" aria-label="linkedin"><i className="ti ti-linkedin"></i></a></li>
                                         </ul>
                                     </div>
                                 </div>
                                 <div className="featured-content">
                                     <div className="featured-title">
-                                        <h3><a href={process.env.PUBLIC_URL + '/'}>Melika Fonals</a></h3>
+                                        <h3><a href={  '/'}>Melika Fonals</a></h3>
                                     </div>
                                     <div className="featured-desc">
                                         <p>Engineer</p>
@@ -469,7 +469,7 @@ export class About_us extends Component {
                                         </div>
                                         <div className="timeline-body">
                                             <a className="ttm-btn btn-inline ttm-btn-size-md ttm-btn-color-darkgrey ttm-icon-btn-right" 
-                                            href={process.env.PUBLIC_URL + '/'}>Read More<i className="ti ti-angle-double-right"></i></a>
+                                            href={  '/'}>Read More<i className="ti ti-angle-double-right"></i></a>
                                         </div>
                                     </div>
                                 </div>{/* timeline end */}
@@ -519,7 +519,7 @@ export class About_us extends Component {
                                         </div>
                                     </div>
                                     <div className="pt-20 pb-90 pb-lg-0">
-                                        <p>We have won 27 more awards in our career. <a href={process.env.PUBLIC_URL + '/'}><b><u>View All Awards</u></b></a></p>
+                                        <p>We have won 27 more awards in our career. <a href={  '/'}><b><u>View All Awards</u></b></a></p>
                                     </div>
                                 </div>
                             </div>
@@ -815,7 +815,7 @@ export class About_us extends Component {
                                     </div>
                                 </div>{/* featured-icon-box end */}
                                 <a className="ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-border ttm-btn-color-white" 
-                                href={process.env.PUBLIC_URL + '/'}>Hiring Now!</a>
+                                href={  '/'}>Hiring Now!</a>
                             </div>
                         </div>
                     </div>

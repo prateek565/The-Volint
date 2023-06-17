@@ -50,24 +50,24 @@ function App() {
        <Switch> 
         <Route exact path={`/`} component={ Home3 } />
         <Route exact path={`/home3`} component={ Home } />
-        {/* <Route exact path={`${process.env.PUBLIC_URL + '/Home2'}`} component={ Home2 } /> 
-        <Route exact path={`${process.env.PUBLIC_URL + '/Home3'}`} component={ Home3 } />  */}
-        {/* <Route exact path={`${process.env.PUBLIC_URL + '/About_us'}`} component={ About_us } /> 
-        <Route exact path={`${process.env.PUBLIC_URL + '/Services'}`} component={ Services } />
-        <Route exact path={`${process.env.PUBLIC_URL + '/Services_details'}`} component={ Services_details } />
-        <Route exact path={`${process.env.PUBLIC_URL + '/Blog_classic'}`} component={ Blog_classic } />
-        <Route exact path={`${process.env.PUBLIC_URL + '/Blog_grid'}`} component={ Blog_grid } />
-        <Route exact path={`${process.env.PUBLIC_URL + '/Blog_details'}`} component={ Blog_details } />
-        <Route exact path={`${process.env.PUBLIC_URL + '/Contact_01'}`} component={ Contact_01 } />
-        <Route exact path={`${process.env.PUBLIC_URL + '/Contact_02'}`} component={ Contact_02 } /> */}
+        {/* <Route exact path={`${  '/Home2'}`} component={ Home2 } /> 
+        <Route exact path={`${  '/Home3'}`} component={ Home3 } />  */}
+        {/* <Route exact path={`${  '/About_us'}`} component={ About_us } /> 
+        <Route exact path={`${  '/Services'}`} component={ Services } />
+        <Route exact path={`${  '/Services_details'}`} component={ Services_details } />
+        <Route exact path={`${  '/Blog_classic'}`} component={ Blog_classic } />
+        <Route exact path={`${  '/Blog_grid'}`} component={ Blog_grid } />
+        <Route exact path={`${  '/Blog_details'}`} component={ Blog_details } />
+        <Route exact path={`${  '/Contact_01'}`} component={ Contact_01 } />
+        <Route exact path={`${  '/Contact_02'}`} component={ Contact_02 } /> */}
         <Route exact path={`/job_list`} component={ Job_list } />
         <Route path={`/job_details`} component={ Job_details } />
         <Route path={`/jobs_by_filter`} component={ Jobs_by_filter } />
-        {/* <Route exact path={`${process.env.PUBLIC_URL + '/Carrer_01'}`} component={ Carrer_01 } />
-        <Route exact path={`${process.env.PUBLIC_URL + '/Error_404'}`} component={ Error_404 } />
-        <Route exact path={`${process.env.PUBLIC_URL + '/Error_405'}`} component={ Error_405 } />
-        <Route exact path={`${process.env.PUBLIC_URL + '/Employers_list'}`} component={ Employers_list } />
-        <Route exact path={`${process.env.PUBLIC_URL + '/Employers_details'}`} component={ Employers_details } /> */}
+        {/* <Route exact path={`${  '/Carrer_01'}`} component={ Carrer_01 } />
+        <Route exact path={`${  '/Error_404'}`} component={ Error_404 } />
+        <Route exact path={`${  '/Error_405'}`} component={ Error_405 } />
+        <Route exact path={`${  '/Employers_list'}`} component={ Employers_list } />
+        <Route exact path={`${  '/Employers_details'}`} component={ Employers_details } /> */}
         <Route path={`/candidate_list`} component={ Candidate_list } />
         <Route path={`/candidate_details`} component={ Candidate_details } />
         <Route exact path={ `/login`} component={ Login } />

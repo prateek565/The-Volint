@@ -15,10 +15,12 @@ export const signup = async (data) => {
     return await axios.post("/auth/signup", data);
 }
 
-export const getCode = async (mail) => {
-    return await axios.post("/auth/verify", {mail});
+export const sendOTP = async (email) => {
+    return await axios.post("/auth/send-otp", {email});
 }
-
+export const verifyOTP = async ({ email, otp }) => {
+    return await axios.post("/auth/verify-otp", { email, otp });
+}
 export const forgotPass = async (email, password, status) => {
     return await axios.put("/auth/forgotpass", {email, password, status});
 }

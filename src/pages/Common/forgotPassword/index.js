@@ -1,7 +1,7 @@
 import React, { Component, useState } from 'react';
 import { Footer } from '../../../components/layout/Footer';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import { forgotPass, getCode, googleLogin, login } from '../../../services/api';
+import { forgotPass, sendOTP, googleLogin, login } from '../../../services/api';
 import { Link, useHistory } from 'react-router-dom';
 import { Alerterror, Alertsuccess } from '../../../components/layout/Alerts';
 // import GitHubLogin from 'github-login';
@@ -27,7 +27,7 @@ const ForgotPass = () => {
             return;
         }
         setverify(true);
-        Promise.resolve(getCode(email)).then((res) => {
+        Promise.resolve(sendOTP(email)).then((res) => {
             setcode(res.data.code);
             setsuccess(false)
         }).catch((e) => {

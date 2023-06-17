@@ -42,9 +42,9 @@ class Mobile_menu extends Component {
                       <a href={'/'}></a>Home
                       <MDBDropdownToggle nav caret>Home</MDBDropdownToggle>
                       <MDBDropdownMenu>
-                          <MDBDropdownItem href={process.env.PUBLIC_URL + '/'}>Homepage 1</MDBDropdownItem>
-                          <MDBDropdownItem href={process.env.PUBLIC_URL + '/Home2'}>Homepage 2</MDBDropdownItem>
-                          <MDBDropdownItem href={process.env.PUBLIC_URL + '/Home3'}>Homepage 3</MDBDropdownItem>
+                          <MDBDropdownItem href={  '/'}>Homepage 1</MDBDropdownItem>
+                          <MDBDropdownItem href={  '/Home2'}>Homepage 2</MDBDropdownItem>
+                          <MDBDropdownItem href={  '/Home3'}>Homepage 3</MDBDropdownItem>
                       </MDBDropdownMenu>
                     </MDBDropdown> */}
                 </MDBNavItem>
@@ -64,8 +64,8 @@ class Mobile_menu extends Component {
                     {/* <MDBDropdown>
                       <MDBDropdownToggle nav caret>Employers</MDBDropdownToggle>
                       <MDBDropdownMenu>
-                          <MDBDropdownItem href={process.env.PUBLIC_URL + '/employers_list'}>Employers List</MDBDropdownItem>
-                          <MDBDropdownItem href={process.env.PUBLIC_URL + '/employers_details'}>Employers Details</MDBDropdownItem>
+                          <MDBDropdownItem href={  '/employers_list'}>Employers List</MDBDropdownItem>
+                          <MDBDropdownItem href={  '/employers_details'}>Employers Details</MDBDropdownItem>
                       </MDBDropdownMenu>
                     </MDBDropdown> */}
                 </MDBNavItem>}
@@ -73,8 +73,8 @@ class Mobile_menu extends Component {
                     <MDBDropdown>
                       <MDBDropdownToggle nav caret>Candidates</MDBDropdownToggle>
                       <MDBDropdownMenu>
-                        <MDBDropdownItem href={process.env.PUBLIC_URL + '/candidate_list'}>Candidate List</MDBDropdownItem>
-                        <MDBDropdownItem href={process.env.PUBLIC_URL + '/candidate_details'}>Candidate Details</MDBDropdownItem>
+                        <MDBDropdownItem href={  '/candidate_list'}>Candidate List</MDBDropdownItem>
+                        <MDBDropdownItem href={  '/candidate_details'}>Candidate Details</MDBDropdownItem>
                     </MDBDropdownMenu>
                     </MDBDropdown>
                 </MDBNavItem>
@@ -82,9 +82,9 @@ class Mobile_menu extends Component {
                     <MDBDropdown>
                       <MDBDropdownToggle nav caret>Blog</MDBDropdownToggle>
                       <MDBDropdownMenu>
-                        <MDBDropdownItem href={process.env.PUBLIC_URL + '/blog_classic'}>Blog Classic</MDBDropdownItem>
-                        <MDBDropdownItem href={process.env.PUBLIC_URL + '/blog_grid'}>Blog Grid</MDBDropdownItem>
-                        <MDBDropdownItem href={process.env.PUBLIC_URL + '/blog_details'}>Blog Details</MDBDropdownItem>
+                        <MDBDropdownItem href={  '/blog_classic'}>Blog Classic</MDBDropdownItem>
+                        <MDBDropdownItem href={  '/blog_grid'}>Blog Grid</MDBDropdownItem>
+                        <MDBDropdownItem href={  '/blog_details'}>Blog Details</MDBDropdownItem>
                       </MDBDropdownMenu>
                     </MDBDropdown>
                 </MDBNavItem> */}

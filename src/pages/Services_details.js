@@ -145,12 +145,12 @@ export class Services_details extends Component {
                                 <div className="sidebar-right">
                                     <aside className="widget widget-nav-menu">
                                         <ul>
-                                            <li><a className="active" href={process.env.PUBLIC_URL + '/services_details'}>Manpower Supply</a></li>
-                                            <li><a href={process.env.PUBLIC_URL + '/services_details'}>Technical Services</a></li>
-                                            <li><a href={process.env.PUBLIC_URL + '/services_details'}>Executive Search</a></li>
-                                            <li><a href={process.env.PUBLIC_URL + '/services_details'}>Forte Acquisition</a></li>
-                                            <li><a href={process.env.PUBLIC_URL + '/services_details'}>Human Resource</a></li>
-                                            <li><a href={process.env.PUBLIC_URL + '/services_details'}>Retained search</a></li>
+                                            <li><a className="active" href={  '/services_details'}>Manpower Supply</a></li>
+                                            <li><a href={  '/services_details'}>Technical Services</a></li>
+                                            <li><a href={  '/services_details'}>Executive Search</a></li>
+                                            <li><a href={  '/services_details'}>Forte Acquisition</a></li>
+                                            <li><a href={  '/services_details'}>Human Resource</a></li>
+                                            <li><a href={  '/services_details'}>Retained search</a></li>
                                         </ul>
                                     </aside>
                                     <aside className="widget widget-download">
@@ -180,7 +180,7 @@ export class Services_details extends Component {
                                                     <li>info@yourmailexample.com</li>
                                                 </ul>
                                                 <a className="ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-fill 
-                                                ttm-btn-color-skincolor" href={process.env.PUBLIC_URL + '/contact_01'}>appoinments!</a>
+                                                ttm-btn-color-skincolor" href={  '/contact_01'}>appoinments!</a>
                                             </div>
                                         </div>
                                     </aside>       

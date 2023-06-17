@@ -192,7 +192,7 @@ const Home3 = () => {
                                 </div>
                                 <div className="featured-content">
                                     <div className="featured-title">
-                                        <h3><a href={process.env.PUBLIC_URL + '/'}>United States</a></h3>
+                                        <h3><a href={  '/'}>United States</a></h3>
                                     </div>
                                     <div className="featured-desc">
                                         <p>A millions of decision about who has a right to settle</p>
@@ -208,7 +208,7 @@ const Home3 = () => {
                                 </div>
                                 <div className="featured-content">
                                     <div className="featured-title">
-                                        <h3><a href={process.env.PUBLIC_URL + '/'}>Australia</a></h3>
+                                        <h3><a href={  '/'}>Australia</a></h3>
                                     </div>
                                     <div className="featured-desc">
                                         <p>Our head quarters is in Canberra, help throughout process</p>
@@ -271,7 +271,7 @@ const Home3 = () => {
                                     </div>
                                     <div className="featured-content">
                                         <div className="featured-title">
-                                            <h3><a href={process.env.PUBLIC_URL + '/Job_details'}><a href={process.env.PUBLIC_URL + '/Job_details'}>{intern.title}</a></a></h3>
+                                            <h3><a href={  '/Job_details'}><a href={  '/Job_details'}>{intern.title}</a></a></h3>
                                         </div>
                                         <div className="featured-desc">
                                             <p>Published 2Days Ago.</p>

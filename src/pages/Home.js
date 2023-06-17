@@ -95,7 +95,7 @@ export class Home extends Component {
                                         <p>85 Jobs<br></br>Financial Branch Manager</p>
                                     </div>
                                     <a className="ttm-btn btn-inline ttm-btn-size-md ttm-btn-color-dark" 
-                                    href={process.env.PUBLIC_URL + '/job_list'}>Apply Jobs!</a>
+                                    href={  '/job_list'}>Apply Jobs!</a>
                                 </div>
                             </div>{/* featured-icon-box end */}
                         </div>
@@ -122,7 +122,7 @@ export class Home extends Component {
                                         <p>110 Jobs<br></br>Software, Hardware, SEO</p>
                                     </div>
                                     <a className="ttm-btn btn-inline ttm-btn-size-md ttm-btn-color-dark" 
-                                    href={process.env.PUBLIC_URL + '/job_list'}>Apply Jobs!</a>
+                                    href={  '/job_list'}>Apply Jobs!</a>
                                 </div>
                             </div>{/* featured-icon-box end */}
                         </div>
@@ -149,7 +149,7 @@ export class Home extends Component {
                                         <p>100 Jobs<br></br>Agricultural Food Scientist</p>
                                     </div>
                                     <a className="ttm-btn btn-inline ttm-btn-size-md ttm-btn-color-dark" 
-                                    href={process.env.PUBLIC_URL + '/job_list'}>Apply Jobs!</a>
+                                    href={  '/job_list'}>Apply Jobs!</a>
                                 </div>
                             </div>{/* featured-icon-box end */}
                         </div>
@@ -176,7 +176,7 @@ export class Home extends Component {
                                         <p>120 Jobs<br></br>The Marketing Coordinator</p>
                                     </div>
                                     <a className="ttm-btn btn-inline ttm-btn-size-md ttm-btn-color-dark" 
-                                    href={process.env.PUBLIC_URL + '/job_list'}>Apply Jobs!</a>
+                                    href={  '/job_list'}>Apply Jobs!</a>
                                 </div>
                             </div>{/* featured-icon-box end */}
                         </div>
@@ -203,7 +203,7 @@ export class Home extends Component {
                                         <p>100 Jobs<br></br>Quality Control Inspector</p>
                                     </div>
                                     <a className="ttm-btn btn-inline ttm-btn-size-md ttm-btn-color-dark" 
-                                    href={process.env.PUBLIC_URL + '/job_list'}>Apply Jobs!</a>
+                                    href={  '/job_list'}>Apply Jobs!</a>
                                 </div>
                             </div>{/* featured-icon-box end */}
                         </div>                        
@@ -257,7 +257,7 @@ export class Home extends Component {
                                         <p>125 Jobs<br></br>Cargo and Freight Agents</p>
                                     </div>
                                     <a className="ttm-btn btn-inline ttm-btn-size-md ttm-btn-color-dark" 
-                                    href={process.env.PUBLIC_URL + '/job_list'}>Apply Jobs!</a>
+                                    href={  '/job_list'}>Apply Jobs!</a>
                                 </div>
                             </div>{/* featured-icon-box end */}
                         </div>
@@ -284,7 +284,7 @@ export class Home extends Component {
                                         <p>110 Jobs<br></br>Corporate Finance Officer</p>
                                     </div>
                                     <a className="ttm-btn btn-inline ttm-btn-size-md ttm-btn-color-dark" 
-                                    href={process.env.PUBLIC_URL + '/job_list'}>Apply Jobs!</a>
+                                    href={  '/job_list'}>Apply Jobs!</a>
                                 </div>
                             </div>{/* featured-icon-box end */}
                         </div>
@@ -330,7 +330,7 @@ export class Home extends Component {
                                         <p>We are quality personnel experts to the fields of expertise that needed for all kind of recruit projects</p>
                                     </div>
                                     <a className="ttm-btn btn-inline ttm-btn-size-md ttm-btn-color-darkgrey" 
-                                    href={process.env.PUBLIC_URL + '/services_details'}>read more!</a>
+                                    href={  '/services_details'}>read more!</a>
                                 </div>
                             </div>{/* featured-imagebox end */}
                         </div>
@@ -343,13 +343,13 @@ export class Home extends Component {
                                 </div>{/* featured-thumbnail end */}
                                 <div className="featured-content">
                                     <div className="featured-title">
-                                        <h3><a href={process.env.PUBLIC_URL + '/services_details'}>Forte Acquisition</a></h3>
+                                        <h3><a href={  '/services_details'}>Forte Acquisition</a></h3>
                                     </div>
                                     <div className="featured-desc">
                                         <p>HireCo tens to accelerate innovation current and future based solutions to support customers.</p>
                                     </div>
                                     <a className="ttm-btn btn-inline ttm-btn-size-md ttm-btn-color-darkgrey" 
-                                    href={process.env.PUBLIC_URL + '/services_details'}>read more!</a>
+                                    href={  '/services_details'}>read more!</a>
                                 </div>
                             </div>{/* featured-imagebox end */}
                         </div>
@@ -362,13 +362,13 @@ export class Home extends Component {
                                 </div>{/* featured-thumbnail end */}
                                 <div className="featured-content">
                                     <div className="featured-title">
-                                        <h3><a href={process.env.PUBLIC_URL + '/services_details'}>Technical Services</a></h3>
+                                        <h3><a href={  '/services_details'}>Technical Services</a></h3>
                                     </div>
                                     <div className="featured-desc">
                                         <p>HireCo supplies variety of technical service including fabrication, design,  and commissioning</p>
                                     </div>
                                     <a className="ttm-btn btn-inline ttm-btn-size-md ttm-btn-color-darkgrey" 
-                                    href={process.env.PUBLIC_URL + '/services_details'}>read more!</a>
+                                    href={  '/services_details'}>read more!</a>
                                 </div>
                             </div>{/* featured-imagebox end */}
                         </div>
@@ -381,13 +381,13 @@ export class Home extends Component {
                                 </div>{/* featured-thumbnail end */}
                                 <div className="featured-content">
                                     <div className="featured-title">
-                                        <h3><a href={process.env.PUBLIC_URL + '/services_details'}>Human Resource</a></h3>
+                                        <h3><a href={  '/services_details'}>Human Resource</a></h3>
                                     </div>
                                     <div className="featured-desc">
                                         <p>The most daunting task of  a Human Resource department, which must need to meet deadline.</p>
                                     </div>
                                     <a className="ttm-btn btn-inline ttm-btn-size-md ttm-btn-color-darkgrey"
-                                     href={process.env.PUBLIC_URL + '/services_details'}>read more!</a>
+                                     href={  '/services_details'}>read more!</a>
                                 </div>
                             </div>{/* featured-imagebox end */}
                         </div>
@@ -400,13 +400,13 @@ export class Home extends Component {
                                 </div>{/* featured-thumbnail end */}
                                 <div className="featured-content">
                                     <div className="featured-title">
-                                        <h3><a href={process.env.PUBLIC_URL + '/services_details'}>Executive Search</a></h3>
+                                        <h3><a href={  '/services_details'}>Executive Search</a></h3>
                                     </div>
                                     <div className="featured-desc">
                                         <p>- We, HireCo specializes in recruiting  executives and other personnel for their client company</p>
                                     </div>
                                     <a className="ttm-btn btn-inline ttm-btn-size-md ttm-btn-color-darkgrey" 
-                                    href={process.env.PUBLIC_URL + '/services_details'}>read more!</a>
+                                    href={  '/services_details'}>read more!</a>
                                 </div>
                             </div>{/* featured-imagebox end */}
                         </div>
@@ -419,13 +419,13 @@ export class Home extends Component {
                                 </div>{/* featured-thumbnail end */}
                                 <div className="featured-content">
                                     <div className="featured-title">
-                                        <h3><a href={process.env.PUBLIC_URL + '/services_details'}>Retained search</a></h3>
+                                        <h3><a href={  '/services_details'}>Retained search</a></h3>
                                     </div>
                                     <div className="featured-desc">
                                         <p>HireCo tens to accelerate innovation current and future based solutions to support customers.</p>
                                     </div>
                                     <a className="ttm-btn btn-inline ttm-btn-size-md ttm-btn-color-darkgrey" 
-                                    href={process.env.PUBLIC_URL + '/services_details'}>read more!</a>
+                                    href={  '/services_details'}>read more!</a>
                                 </div>
                             </div>{/* featured-imagebox end */}
                         </div>
@@ -460,7 +460,7 @@ export class Home extends Component {
                                         <li><i className="far fa-check-circle"></i><div className="ttm-list-li-content">Other questions & have already applied through the HireCo platform</div></li>
                                     </ul>
                                 </div>
-                                <a className="ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-border ttm-btn-color-dark" href={process.env.PUBLIC_URL + '/job_list'}>Find A Jobs!</a>
+                                <a className="ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-border ttm-btn-color-dark" href={  '/job_list'}>Find A Jobs!</a>
                             </div>
                         </div>
                         <div className="col-md-6">
@@ -762,7 +762,7 @@ export class Home extends Component {
                                 </div>
                             </div>{/* section title end */}
                             <a className="ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-border ttm-btn-color-white mt-15" 
-                            href={process.env.PUBLIC_URL + '/candidate_list'}>Hiring Now!</a>
+                            href={  '/candidate_list'}>Hiring Now!</a>
                         </div>
                         <div className="col-xl-3 col-lg-4 col-md-4 col-sm-5">
                             <div className="pt-lg-30">
@@ -905,12 +905,12 @@ export class Home extends Component {
                                         <span className="ttm-meta-line category-link">business</span>
                                     </div>
                                     <div className="featured-title">
-                                        <h3><a href={process.env.PUBLIC_URL + '/blog_details'}>Are  meetings falling to flat? Try these 10 tips</a></h3>
+                                        <h3><a href={  '/blog_details'}>Are  meetings falling to flat? Try these 10 tips</a></h3>
                                     </div>
                                     <div className="featured-desc">
                                         <p>Whatever you do in planning, facilitating. Goal should revolve support </p>
                                     </div>
-                                    <a className="ttm-btn btn-inline ttm-btn-size-md ttm-btn-color-darkgrey" href={process.env.PUBLIC_URL + '/blog_details'}>read more!</a>
+                                    <a className="ttm-btn btn-inline ttm-btn-size-md ttm-btn-color-darkgrey" href={  '/blog_details'}>read more!</a>
                                 </div>
                             </div>{/* featured-imagebox-post end */}
                         </div>
@@ -933,12 +933,12 @@ export class Home extends Component {
                                         <span className="ttm-meta-line category-link">business</span>
                                     </div>
                                     <div className="featured-title">
-                                        <h3><a href={process.env.PUBLIC_URL + '/blog_details'}>Are You Moving Businesses To Another State?</a></h3>
+                                        <h3><a href={  '/blog_details'}>Are You Moving Businesses To Another State?</a></h3>
                                     </div>
                                     <div className="featured-desc">
                                         <p>A business leader must consider issues beyond choosing a moving!</p>
                                     </div>
-                                    <a className="ttm-btn btn-inline ttm-btn-size-md ttm-btn-color-darkgrey" href={process.env.PUBLIC_URL + '/blog_details'}>read more!</a>
+                                    <a className="ttm-btn btn-inline ttm-btn-size-md ttm-btn-color-darkgrey" href={  '/blog_details'}>read more!</a>
                                 </div>
                             </div>{/* featured-imagebox-post end */}
                         </div>
@@ -961,12 +961,12 @@ export class Home extends Component {
                                         <span className="ttm-meta-line category-link">business</span>
                                     </div>
                                     <div className="featured-title">
-                                        <h3><a href={process.env.PUBLIC_URL + '/blog_details'}>Shame: Does It Fine to Fit In The Workplace?</a></h3>
+                                        <h3><a href={  '/blog_details'}>Shame: Does It Fine to Fit In The Workplace?</a></h3>
                                     </div>
                                     <div className="featured-desc">
                                         <p>This can be innate or external and results can be surprising performance</p>
                                     </div>
-                                    <a className="ttm-btn btn-inline ttm-btn-size-md ttm-btn-color-darkgrey" href={process.env.PUBLIC_URL + '/blog_details'}>read more!</a>
+                                    <a className="ttm-btn btn-inline ttm-btn-size-md ttm-btn-color-darkgrey" href={  '/blog_details'}>read more!</a>
                                 </div>
                             </div>{/* featured-imagebox-post end */}
                         </div>
@@ -989,12 +989,12 @@ export class Home extends Component {
                                         <span className="ttm-meta-line category-link">business</span>
                                     </div>
                                     <div className="featured-title">
-                                        <h3><a href={process.env.PUBLIC_URL + '/blog_details'}>How to Handle Negativity in Former People?</a></h3>
+                                        <h3><a href={  '/blog_details'}>How to Handle Negativity in Former People?</a></h3>
                                     </div>
                                     <div className="featured-desc">
                                         <p>Whatever you do in planning, facilitating. Goal should revolve support</p>
                                     </div>
-                                    <a className="ttm-btn btn-inline ttm-btn-size-md ttm-btn-color-darkgrey" href={process.env.PUBLIC_URL + '/blog_details'}>read more!</a>
+                                    <a className="ttm-btn btn-inline ttm-btn-size-md ttm-btn-color-darkgrey" href={  '/blog_details'}>read more!</a>
                                 </div>
                             </div>{/* featured-imagebox-post end */}
                         </div>
@@ -1028,7 +1028,7 @@ export class Home extends Component {
                                     </div>
                                 </div>{/* featured-icon-box end */}
                                 <a className="ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-border ttm-btn-color-white" 
-                                href={process.env.PUBLIC_URL + '/contact_02'}>Get Started</a>
+                                href={  '/contact_02'}>Get Started</a>
                             </div>
                         </div>
                     </div>

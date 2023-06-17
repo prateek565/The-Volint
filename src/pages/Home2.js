@@ -235,7 +235,7 @@ export class Home2 extends Component {
                                 </ul>
                             </div>
                             <a className="ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-border ttm-btn-color-dark" 
-                            href={process.env.PUBLIC_URL + '/'}>view more</a>
+                            href={  '/'}>view more</a>
                         </div>
                         <div className="col-lg-6 col-md-9 col-sm-10 col-12 mx-auto">
                             <div className="mr-40 ml-20 pb-60 pt-lg-50">
@@ -855,7 +855,7 @@ export class Home2 extends Component {
                                 {/* featured-thumbnail end */}
                                 {/* <div className="featured-content">
                                     <div className="featured-title">
-                                        <h3><a href={process.env.PUBLIC_URL + '/blog_details'}>Are meetings falling flat? Try these 10 tips</a></h3>
+                                        <h3><a href={  '/blog_details'}>Are meetings falling flat? Try these 10 tips</a></h3>
                                     </div>
                                     <div className="post-meta">
                                         <span className="ttm-meta-line byline">Admin</span>
@@ -865,7 +865,7 @@ export class Home2 extends Component {
                                         <p>Whatever you do in planning, facilitating. Goal should revolve support.</p>
                                     </div>
                                     <a className="ttm-btn btn-inline ttm-btn-size-md ttm-btn-color-darkgrey" 
-                                    href={process.env.PUBLIC_URL + '/blog_details'}>read more!</a>
+                                    href={  '/blog_details'}>read more!</a>
                                 </div> */}
                             {/* </div> */}
                             {/* featured-imagebox-post end */}
@@ -885,7 +885,7 @@ export class Home2 extends Component {
                                 {/* featured-thumbnail end */}
                                 {/* <div className="featured-content">
                                     <div className="featured-title">
-                                        <h3><a href={process.env.PUBLIC_URL + '/blog_details'}>Are You Moving Businesses To Another State?</a></h3>
+                                        <h3><a href={  '/blog_details'}>Are You Moving Businesses To Another State?</a></h3>
                                     </div>
                                     <div className="post-meta">
                                         <span className="ttm-meta-line byline">Admin</span>
@@ -895,7 +895,7 @@ export class Home2 extends Component {
                                         <p>A business leader must consider issues beyond choosing a moving!</p>
                                     </div>
                                     <a className="ttm-btn btn-inline ttm-btn-size-md ttm-btn-color-darkgrey" 
-                                    href={process.env.PUBLIC_URL + '/blog_details'}>read more!</a>
+                                    href={  '/blog_details'}>read more!</a>
                                 </div> */}
                             {/* </div> */}
                             {/* featured-imagebox-post end */}
@@ -915,7 +915,7 @@ export class Home2 extends Component {
                                 {/* featured-thumbnail end */}
                                 {/* <div className="featured-content">
                                     <div className="featured-title">
-                                        <h3><a href={process.env.PUBLIC_URL + '/blog_details'}>Shame: Does It Fit In The Workplace?</a></h3>
+                                        <h3><a href={  '/blog_details'}>Shame: Does It Fit In The Workplace?</a></h3>
                                     </div>
                                     <div className="post-meta">
                                         <span className="ttm-meta-line byline">Admin</span>
@@ -925,7 +925,7 @@ export class Home2 extends Component {
                                         <p>This can be innate or external, and the results can be surprising...</p>
                                     </div>
                                     <a className="ttm-btn btn-inline ttm-btn-size-md ttm-btn-color-darkgrey" 
-                                    href={process.env.PUBLIC_URL + '/blog_details'}>read more!</a>
+                                    href={  '/blog_details'}>read more!</a>
                                 </div>
                             </div> */}
                             {/* featured-imagebox-post end */}
@@ -945,7 +945,7 @@ export class Home2 extends Component {
                                 {/* featured-thumbnail end */}
                                 {/* <div className="featured-content">
                                     <div className="featured-title">
-                                        <h3><a href={process.env.PUBLIC_URL + '/blog_details'}>How to Handle Negativity in Former People?</a></h3>
+                                        <h3><a href={  '/blog_details'}>How to Handle Negativity in Former People?</a></h3>
                                     </div>
                                     <div className="post-meta">
                                         <span className="ttm-meta-line byline">Admin</span>
@@ -955,7 +955,7 @@ export class Home2 extends Component {
                                         <p>Whatever you do in planning, facilitating. Goal should revolve support.</p>
                                     </div>
                                     <a className="ttm-btn btn-inline ttm-btn-size-md ttm-btn-color-darkgrey" 
-                                    href={process.env.PUBLIC_URL + '/blog_details'}>read more!</a>
+                                    href={  '/blog_details'}>read more!</a>
                                 </div>
                             </div> */}
                             {/* featured-imagebox-post end */}

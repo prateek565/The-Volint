@@ -96,13 +96,13 @@ export class Services extends Component {
                                 </div>{/* featured-thumbnail end */}
                                 <div className="featured-content">
                                     <div className="featured-title">
-                                        <h3><a href={process.env.PUBLIC_URL + '/services_details'}>Manpower Supply</a></h3>
+                                        <h3><a href={  '/services_details'}>Manpower Supply</a></h3>
                                     </div>
                                     <div className="featured-desc">
                                         <p>We are quality personnel experts to the fields of expertise that needed for all kind of recruit projects</p>
                                     </div>
                                     <a className="ttm-btn btn-inline ttm-btn-size-md ttm-btn-color-darkgrey" 
-                                    href={process.env.PUBLIC_URL + '/services_details'}>read more!</a>
+                                    href={  '/services_details'}>read more!</a>
                                 </div>
                             </div>{/* featured-imagebox end */}
                         </div>
@@ -115,13 +115,13 @@ export class Services extends Component {
                                 </div>{/* featured-thumbnail end */}
                                 <div className="featured-content">
                                     <div className="featured-title">
-                                        <h3><a href={process.env.PUBLIC_URL + '/services_details'}>Forte Acquisition</a></h3>
+                                        <h3><a href={  '/services_details'}>Forte Acquisition</a></h3>
                                     </div>
                                     <div className="featured-desc">
                                         <p>HireCo tens to accelerand future based solutions to support customers.</p>
                                     </div>
                                     <a className="ttm-btn btn-inline ttm-btn-size-md ttm-btn-color-darkgrey" 
-                                    href={process.env.PUBLIC_URL + '/services_details'}>read more!</a>
+                                    href={  '/services_details'}>read more!</a>
                                 </div>
                             </div>{/* featured-imagebox end */}
                         </div>
@@ -134,13 +134,13 @@ export class Services extends Component {
                                 </div>{/* featured-thumbnail end */}
                                 <div className="featured-content">
                                     <div className="featured-title">
-                                        <h3><a href={process.env.PUBLIC_URL + '/services_details'}>Technical Services</a></h3>
+                                        <h3><a href={  '/services_details'}>Technical Services</a></h3>
                                     </div>
                                     <div className="featured-desc">
                                         <p>HireCo supplies variety of technical service including fabrication, design,  and commissioning</p>
                                     </div>
                                     <a className="ttm-btn btn-inline ttm-btn-size-md ttm-btn-color-darkgrey" 
-                                    href={process.env.PUBLIC_URL + '/services_details'}>read more!</a>
+                                    href={  '/services_details'}>read more!</a>
                                 </div>
                             </div>{/* featured-imagebox end */}
                         </div>
@@ -153,13 +153,13 @@ export class Services extends Component {
                                 </div>{/* featured-thumbnail end */}
                                 <div className="featured-content">
                                     <div className="featured-title">
-                                        <h3><a href={process.env.PUBLIC_URL + '/services_details'}>Human Resource</a></h3>
+                                        <h3><a href={  '/services_details'}>Human Resource</a></h3>
                                     </div>
                                     <div className="featured-desc">
                                         <p>The most daunting task of  a Human Resource department, which must need to meet deadline.</p>
                                     </div>
                                     <a className="ttm-btn btn-inline ttm-btn-size-md ttm-btn-color-darkgrey"
-                                     href={process.env.PUBLIC_URL + '/services_details'}>read more!</a>
+                                     href={  '/services_details'}>read more!</a>
                                 </div>
                             </div>{/* featured-imagebox end */}
                         </div>
@@ -172,13 +172,13 @@ export class Services extends Component {
                                 </div>{/* featured-thumbnail end */}
                                 <div className="featured-content">
                                     <div className="featured-title">
-                                        <h3><a href={process.env.PUBLIC_URL + '/services_details'}>Executive Search</a></h3>
+                                        <h3><a href={  '/services_details'}>Executive Search</a></h3>
                                     </div>
                                     <div className="featured-desc">
                                         <p>We, HireCo specializes in recruiting  executives and other personnel for their client company</p>
                                     </div>
                                     <a className="ttm-btn btn-inline ttm-btn-size-md ttm-btn-color-darkgrey" 
-                                    href={process.env.PUBLIC_URL + '/services_details'}>read more!</a>
+                                    href={  '/services_details'}>read more!</a>
                                 </div>
                             </div>{/* featured-imagebox end */}
                         </div>
@@ -191,13 +191,13 @@ export class Services extends Component {
                                 </div>{/* featured-thumbnail end */}
                                 <div className="featured-content">
                                     <div className="featured-title">
-                                        <h3><a href={process.env.PUBLIC_URL + '/services_details'}>Retained search</a></h3>
+                                        <h3><a href={  '/services_details'}>Retained search</a></h3>
                                     </div>
                                     <div className="featured-desc">
                                         <p>HireCo tens to accelerate innovation current and future based solutions to support customers.</p>
                                     </div>
                                     <a className="ttm-btn btn-inline ttm-btn-size-md ttm-btn-color-darkgrey" 
-                                    href={process.env.PUBLIC_URL + '/services_details'}>read more!</a>
+                                    href={  '/services_details'}>read more!</a>
                                 </div>
                             </div>{/* featured-imagebox end */}
                         </div>
@@ -224,7 +224,7 @@ export class Services extends Component {
                             </div>{/* section-title end */}
                             <div className="text-center pt-10">
                                 <a className="ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-border ttm-btn-color-white" 
-                                href={process.env.PUBLIC_URL + '/contact_01'}>contact us</a>
+                                href={  '/contact_01'}>contact us</a>
                             </div>
                         </div>
                     </div>{/* row end */}
@@ -269,12 +269,12 @@ export class Services extends Component {
                                         <span className="ttm-meta-line category-link">business</span>
                                     </div>
                                     <div className="featured-title">
-                                        <h3><a href={process.env.PUBLIC_URL + '/blog_details'}>Are  meetings falling to flat? Try these 10 tips</a></h3>
+                                        <h3><a href={  '/blog_details'}>Are  meetings falling to flat? Try these 10 tips</a></h3>
                                     </div>
                                     <div className="featured-desc">
                                         <p>Whatever you do in planning, facilitating. Goal should revolve support </p>
                                     </div>
-                                    <a className="ttm-btn btn-inline ttm-btn-size-md ttm-btn-color-darkgrey" href={process.env.PUBLIC_URL + '/blog_details'}>read more!</a>
+                                    <a className="ttm-btn btn-inline ttm-btn-size-md ttm-btn-color-darkgrey" href={  '/blog_details'}>read more!</a>
                                 </div>
                             </div>{/* featured-imagebox-post end */}
                         </div>
@@ -297,12 +297,12 @@ export class Services extends Component {
                                         <span className="ttm-meta-line category-link">business</span>
                                     </div>
                                     <div className="featured-title">
-                                        <h3><a href={process.env.PUBLIC_URL + '/blog_details'}>Are You Moving Businesses To Another State?</a></h3>
+                                        <h3><a href={  '/blog_details'}>Are You Moving Businesses To Another State?</a></h3>
                                     </div>
                                     <div className="featured-desc">
                                         <p>A business leader must consider issues beyond choosing a moving!</p>
                                     </div>
-                                    <a className="ttm-btn btn-inline ttm-btn-size-md ttm-btn-color-darkgrey" href={process.env.PUBLIC_URL + '/blog_details'}>read more!</a>
+                                    <a className="ttm-btn btn-inline ttm-btn-size-md ttm-btn-color-darkgrey" href={  '/blog_details'}>read more!</a>
                                 </div>
                             </div>{/* featured-imagebox-post end */}
                         </div>
@@ -325,12 +325,12 @@ export class Services extends Component {
                                         <span className="ttm-meta-line category-link">business</span>
                                     </div>
                                     <div className="featured-title">
-                                        <h3><a href={process.env.PUBLIC_URL + '/blog_details'}>Shame: Does It Fine to Fit In The Workplace?</a></h3>
+                                        <h3><a href={  '/blog_details'}>Shame: Does It Fine to Fit In The Workplace?</a></h3>
                                     </div>
                                     <div className="featured-desc">
                                         <p>This can be innate or external and results can be surprising performance</p>
                                     </div>
-                                    <a className="ttm-btn btn-inline ttm-btn-size-md ttm-btn-color-darkgrey" href={process.env.PUBLIC_URL + '/blog_details'}>read more!</a>
+                                    <a className="ttm-btn btn-inline ttm-btn-size-md ttm-btn-color-darkgrey" href={  '/blog_details'}>read more!</a>
                                 </div>
                             </div>{/* featured-imagebox-post end */}
                         </div>
@@ -353,12 +353,12 @@ export class Services extends Component {
                                         <span className="ttm-meta-line category-link">business</span>
                                     </div>
                                     <div className="featured-title">
-                                        <h3><a href={process.env.PUBLIC_URL + '/blog_details'}>How to Handle Negativity in Former People?</a></h3>
+                                        <h3><a href={  '/blog_details'}>How to Handle Negativity in Former People?</a></h3>
                                     </div>
                                     <div className="featured-desc">
                                         <p>Whatever you do in planning, facilitating. Goal should revolve support</p>
                                     </div>
-                                    <a className="ttm-btn btn-inline ttm-btn-size-md ttm-btn-color-darkgrey" href={process.env.PUBLIC_URL + '/blog_details'}>read more!</a>
+                                    <a className="ttm-btn btn-inline ttm-btn-size-md ttm-btn-color-darkgrey" href={  '/blog_details'}>read more!</a>
                                 </div>
                             </div>{/* featured-imagebox-post end */}
                         </div>
