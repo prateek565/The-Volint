@@ -62,7 +62,7 @@ export class Carrer_01 extends Component {
                                             <p>85 Jobs<br></br>Financial Branch Manager</p>
                                         </div>
                                         <a className="ttm-btn btn-inline ttm-btn-size-md ttm-btn-color-dark" 
-                                        href={process.env.PUBLIC_URL + '/job_list'}>Apply Jobs!</a>
+                                        href={  '/job_list'}>Apply Jobs!</a>
                                     </div>
                                 </div>{/* featured-icon-box end */}
                             </div>
@@ -89,7 +89,7 @@ export class Carrer_01 extends Component {
                                             <p>110 Jobs<br></br>Software, Hardware, SEO</p>
                                         </div>
                                         <a className="ttm-btn btn-inline ttm-btn-size-md ttm-btn-color-dark" 
-                                        href={process.env.PUBLIC_URL + '/job_list'}>Apply Jobs!</a>
+                                        href={  '/job_list'}>Apply Jobs!</a>
                                     </div>
                                 </div>{/* featured-icon-box end */}
                             </div>
@@ -116,7 +116,7 @@ export class Carrer_01 extends Component {
                                             <p>100 Jobs<br></br>Agricultural Food Scientist</p>
                                         </div>
                                         <a className="ttm-btn btn-inline ttm-btn-size-md ttm-btn-color-dark" 
-                                        href={process.env.PUBLIC_URL + '/job_list'}>Apply Jobs!</a>
+                                        href={  '/job_list'}>Apply Jobs!</a>
                                     </div>
                                 </div>{/* featured-icon-box end */}
                             </div>
@@ -143,7 +143,7 @@ export class Carrer_01 extends Component {
                                             <p>120 Jobs<br></br>The Marketing Coordinator</p>
                                         </div>
                                         <a className="ttm-btn btn-inline ttm-btn-size-md ttm-btn-color-dark" 
-                                        href={process.env.PUBLIC_URL + '/job_list'}>Apply Jobs!</a>
+                                        href={  '/job_list'}>Apply Jobs!</a>
                                     </div>
                                 </div>{/* featured-icon-box end */}
                             </div>
@@ -170,7 +170,7 @@ export class Carrer_01 extends Component {
                                             <p>100 Jobs<br></br>Quality Control Inspector</p>
                                         </div>
                                         <a className="ttm-btn btn-inline ttm-btn-size-md ttm-btn-color-dark" 
-                                        href={process.env.PUBLIC_URL + '/job_list'}>Apply Jobs!</a>
+                                        href={  '/job_list'}>Apply Jobs!</a>
                                     </div>
                                 </div>{/* featured-icon-box end */}
                             </div>                        
@@ -197,7 +197,7 @@ export class Carrer_01 extends Component {
                                             <p>90 Jobs<br></br>Assistant Plant Manager</p>
                                         </div>
                                         <a className="ttm-btn btn-inline ttm-btn-size-md ttm-btn-color-dark" 
-                                        href={process.env.PUBLIC_URL + '/job_list'}>Apply Jobs!</a>
+                                        href={  '/job_list'}>Apply Jobs!</a>
                                     </div>
                                 </div>{/* featured-icon-box end */}
                             </div>
@@ -224,7 +224,7 @@ export class Carrer_01 extends Component {
                                             <p>125 Jobs<br></br>Cargo and Freight Agents</p>
                                         </div>
                                         <a className="ttm-btn btn-inline ttm-btn-size-md ttm-btn-color-dark" 
-                                        href={process.env.PUBLIC_URL + '/job_list'}>Apply Jobs!</a>
+                                        href={  '/job_list'}>Apply Jobs!</a>
                                     </div>
                                 </div>{/* featured-icon-box end */}
                             </div>
@@ -251,7 +251,7 @@ export class Carrer_01 extends Component {
                                             <p>110 Jobs<br></br>Corporate Finance Officer</p>
                                         </div>
                                         <a className="ttm-btn btn-inline ttm-btn-size-md ttm-btn-color-dark" 
-                                        href={process.env.PUBLIC_URL + '/job_list'}>Apply Jobs!</a>
+                                        href={  '/job_list'}>Apply Jobs!</a>
                                     </div>
                                 </div>{/* featured-icon-box end */}
                             </div>
@@ -380,7 +380,7 @@ export class Carrer_01 extends Component {
                                     </div>
                                     <div className="featured-content">
                                         <div className="featured-title">
-                                            <h3><a href={process.env.PUBLIC_URL + '/'}>Gujarat</a></h3>
+                                            <h3><a href={  '/'}>Gujarat</a></h3>
                                         </div>
                                         <div className="featured-desc">
                                             <p>10 Open Positions</p>
@@ -401,7 +401,7 @@ export class Carrer_01 extends Component {
                                     </div>
                                     <div className="featured-content">
                                         <div className="featured-title">
-                                            <h3><a href={process.env.PUBLIC_URL + '/'}>Delhi</a></h3>
+                                            <h3><a href={  '/'}>Delhi</a></h3>
                                         </div>
                                         <div className="featured-desc">
                                             <p>10 Open Positions</p>
@@ -422,7 +422,7 @@ export class Carrer_01 extends Component {
                                     </div>
                                     <div className="featured-content">
                                         <div className="featured-title">
-                                            <h3><a href={process.env.PUBLIC_URL + '/'}>Maharshtra</a></h3>
+                                            <h3><a href={  '/'}>Maharshtra</a></h3>
                                         </div>
                                         <div className="featured-desc">
                                             <p>10 Open Positions</p>
@@ -443,7 +443,7 @@ export class Carrer_01 extends Component {
                                     </div>
                                     <div className="featured-content">
                                         <div className="featured-title">
-                                            <h3><a href={process.env.PUBLIC_URL + '/'}>Rajasthan</a></h3>
+                                            <h3><a href={  '/'}>Rajasthan</a></h3>
                                         </div>
                                         <div className="featured-desc">
                                             <p>10 Open Positions</p>
@@ -464,7 +464,7 @@ export class Carrer_01 extends Component {
                                     </div>
                                     <div className="featured-content">
                                         <div className="featured-title">
-                                            <h3><a href={process.env.PUBLIC_URL + '/'}>Karnataka</a></h3>
+                                            <h3><a href={  '/'}>Karnataka</a></h3>
                                         </div>
                                         <div className="featured-desc">
                                             <p>10 Open Positions</p>
@@ -485,7 +485,7 @@ export class Carrer_01 extends Component {
                                     </div>
                                     <div className="featured-content">
                                         <div className="featured-title">
-                                            <h3><a href={process.env.PUBLIC_URL + '/'}>Jammu Kashmir</a></h3>
+                                            <h3><a href={  '/'}>Jammu Kashmir</a></h3>
                                         </div>
                                         <div className="featured-desc">
                                             <p>10 Open Positions</p>
@@ -496,7 +496,7 @@ export class Carrer_01 extends Component {
                             <div className="col-lg-12">
                                 <div className="pt-30 m-auto text-center">
                                     <a className="ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-fill ttm-btn-color-skincolor" 
-                                    href={process.env.PUBLIC_URL + '/job_list'}>More Jobs By Region</a>
+                                    href={  '/job_list'}>More Jobs By Region</a>
                                 </div>
                             </div>
                         </div>
@@ -557,7 +557,7 @@ export class Carrer_01 extends Component {
                                     </div>
                                     <div className="featured-content">
                                         <div className="featured-title">
-                                            <h3><a href={process.env.PUBLIC_URL + '/Job_details'}>Vacancy For the Charted Account</a></h3>
+                                            <h3><a href={  '/Job_details'}>Vacancy For the Charted Account</a></h3>
                                         </div>
                                         <div className="featured-bottom">
                                             <div className="job-meta">
@@ -568,7 +568,7 @@ export class Carrer_01 extends Component {
                                     </div>
                                     <div  className="apply-block">
                                         <a className="ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-fill ttm-btn-color-dark"
-                                        href={process.env.PUBLIC_URL + '/login'}>Appply Now</a>
+                                        href={  '/login'}>Appply Now</a>
                                     </div>
                                 </div>{/* featured-imagebox end */}
                             </div>
@@ -580,7 +580,7 @@ export class Carrer_01 extends Component {
                                     </div>
                                     <div className="featured-content">
                                         <div className="featured-title">
-                                            <h3><a href={process.env.PUBLIC_URL + '/Job_details'}>Vacancy For the Business Analyst</a></h3>
+                                            <h3><a href={  '/Job_details'}>Vacancy For the Business Analyst</a></h3>
                                         </div>
                                         <div className="featured-bottom">
                                             <div className="job-meta">
@@ -591,7 +591,7 @@ export class Carrer_01 extends Component {
                                     </div>
                                     <div  className="apply-block">
                                         <a className="ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-fill ttm-btn-color-dark"
-                                        href={process.env.PUBLIC_URL + '/login'}>Appply Now</a>
+                                        href={  '/login'}>Appply Now</a>
                                     </div>
                                 </div>{/* featured-imagebox end */}
                             </div>
@@ -603,7 +603,7 @@ export class Carrer_01 extends Component {
                                     </div>
                                     <div className="featured-content">
                                         <div className="featured-title">
-                                            <h3><a href={process.env.PUBLIC_URL + '/Job_details'}><a href={process.env.PUBLIC_URL + '/Job_details'}>Opening For Social Media Manager</a></a></h3>
+                                            <h3><a href={  '/Job_details'}><a href={  '/Job_details'}>Opening For Social Media Manager</a></a></h3>
                                         </div>
                                         <div className="featured-bottom">
                                             <div className="job-meta">
@@ -614,7 +614,7 @@ export class Carrer_01 extends Component {
                                     </div>
                                     <div  className="apply-block">
                                         <a className="ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-fill ttm-btn-color-dark"
-                                        href={process.env.PUBLIC_URL + '/login'}>Appply Now</a>
+                                        href={  '/login'}>Appply Now</a>
                                     </div>
                                 </div>{/* featured-imagebox end */}
                             </div>                        
@@ -626,7 +626,7 @@ export class Carrer_01 extends Component {
                                     </div>
                                     <div className="featured-content">
                                         <div className="featured-title">
-                                            <h3><a href={process.env.PUBLIC_URL + '/Job_details'}><a href={process.env.PUBLIC_URL + '/Job_details'}>Opening For The Content Creator</a></a></h3>
+                                            <h3><a href={  '/Job_details'}><a href={  '/Job_details'}>Opening For The Content Creator</a></a></h3>
                                         </div>
                                         <div className="featured-bottom">
                                             <div className="job-meta">
@@ -637,7 +637,7 @@ export class Carrer_01 extends Component {
                                     </div>
                                     <div  className="apply-block">
                                         <a className="ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-fill ttm-btn-color-dark"
-                                        href={process.env.PUBLIC_URL + '/login'}>Appply Now</a>
+                                        href={  '/login'}>Appply Now</a>
                                     </div>
                                 </div>{/* featured-imagebox end */}
                             </div>
@@ -649,7 +649,7 @@ export class Carrer_01 extends Component {
                                     </div>
                                     <div className="featured-content">
                                         <div className="featured-title">
-                                            <h3><a href={process.env.PUBLIC_URL + '/Job_details'}>Job Vacancy For the Bank Manager</a></h3>
+                                            <h3><a href={  '/Job_details'}>Job Vacancy For the Bank Manager</a></h3>
                                         </div>
                                         <div className="featured-bottom">
                                             <div className="job-meta">
@@ -660,7 +660,7 @@ export class Carrer_01 extends Component {
                                     </div>
                                     <div  className="apply-block">
                                         <a className="ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-fill ttm-btn-color-dark"
-                                        href={process.env.PUBLIC_URL + '/login'}>Appply Now</a>
+                                        href={  '/login'}>Appply Now</a>
                                     </div>
                                 </div>{/* featured-imagebox end */}
                             </div>
@@ -693,7 +693,7 @@ export class Carrer_01 extends Component {
                                         </div>
                                     </div>{/* featured-icon-box end */}
                                     <a className="ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-border ttm-btn-color-white" 
-                                    href={process.env.PUBLIC_URL + '/'}>Hiring Now!</a>
+                                    href={  '/'}>Hiring Now!</a>
                                 </div>
                             </div>
                         </div>

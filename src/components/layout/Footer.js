@@ -33,7 +33,7 @@ export class Footer extends Component {
                                         </div>
                                     </div>
                                     {/* <a className="ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-border ttm-btn-color-white" 
-                                    href={process.env.PUBLIC_URL + '/contact_01'}>Request A Free Quotes</a> */}
+                                    href={  '/contact_01'}>Request A Free Quotes</a> */}
                                 </div>
                             </div>
                             {/* <div className="col-xs-12 col-sm-6 col-md-6 col-lg-4 widget-area">
@@ -42,20 +42,20 @@ export class Footer extends Component {
                                     <ul className="widget-post ttm-recent-post-list">
                                         <li>
                                             <div className="post-detail">
-                                                <div className="cat-link"><a href={process.env.PUBLIC_URL + '/blog_details'}>business</a></div>
-                                                <a href={process.env.PUBLIC_URL + '/blog_details'}>Are  meetings falling to flat? Try these 10 tips</a>
+                                                <div className="cat-link"><a href={  '/blog_details'}>business</a></div>
+                                                <a href={  '/blog_details'}>Are  meetings falling to flat? Try these 10 tips</a>
                                             </div>
                                         </li>
                                         <li>
                                             <div className="post-detail">
-                                                <div className="cat-link"><a href={process.env.PUBLIC_URL + '/blog_details'}>business</a></div>
-                                                <a href={process.env.PUBLIC_URL + '/blog_details'}>Are You Moving Businesses To Another State?</a>
+                                                <div className="cat-link"><a href={  '/blog_details'}>business</a></div>
+                                                <a href={  '/blog_details'}>Are You Moving Businesses To Another State?</a>
                                             </div>
                                         </li>
                                         <li>
                                             <div className="post-detail">
-                                                <div className="cat-link"><a href={process.env.PUBLIC_URL + '/blog_details'}>business</a></div>
-                                                <a href={process.env.PUBLIC_URL + '/blog_details'}>Shame: Does It Fine to Fit In The Workplace?</a>
+                                                <div className="cat-link"><a href={  '/blog_details'}>business</a></div>
+                                                <a href={  '/blog_details'}>Shame: Does It Fine to Fit In The Workplace?</a>
                                             </div>
                                         </li>
                                     </ul>

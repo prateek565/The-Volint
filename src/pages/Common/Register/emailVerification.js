@@ -1,6 +1,6 @@
 import React, { Component, useEffect, useState } from 'react';
 import { Tabs, TabPanel } from 'react-tabs';
-import { getCode, signup } from '../../../services/api';
+import { sendOTP, signup,verifyOTP } from '../../../services/api';
 import { Link, useHistory } from 'react-router-dom';
 import { Alerterror, Alertsuccess } from '../../../components/layout/Alerts';
 import { FaLongArrowAltLeft } from 'react-icons/fa';
@@ -9,6 +9,7 @@ const EmailVerification = ({ setifVerified, email, setverify, status, userValues
     
     const { companyname, companytitle, companyemail, companypass, companyphone} = companyValues
     const { username, useremail, userpass, userphone} = userValues 
+    const [verificationStatus, setVerificationStatus] = useState('');
 
     const [open, setOpen] = useState(false);
 
@@ -23,18 +24,30 @@ const EmailVerification = ({ setifVerified, email, setverify, status, userValues
     const [code, setcode] = useState()
 
     useEffect(() => {
-        email !== null && Promise.resolve(getCode(email)).then((res) => {
-            console.log(res.data.code);
-            setcode(res.data.code)
+        email !== null && Promise.resolve(sendOTP(email)).then((res) => {
+            console.log(res.data);
+        setVerificationStatus('OTP sent successfully!');
         }).catch((e) => {
             console.log({ e });
         })
     }, [])
 
-    const Verify = (e) => {
-        e.preventDefault();
-        if (otp === code) {
-            console.log(otp, code, status);
+    const handleVerifyOTP = () => {
+        verifyOTP({ email, otp }) 
+          .then((response) => {
+            console.log(response.data);
+            if (response.data.success) {
+              setVerificationStatus('OTP verified successfully!');
+              Verify();
+            } else {
+              setVerificationStatus('Invalid OTP. Please try again.');
+            }
+          })
+          .catch((error) => {
+            console.error('Error:', error);
+          });
+      };
+    const Verify = (e) => {       
             status === 'user' && Promise.resolve(signup(
                 {
                     name: username,
@@ -49,17 +62,17 @@ const EmailVerification = ({ setifVerified, email, setverify, status, userValues
                     setText("SignUp Successfull")
                     localStorage.setItem("volintToken", res.data.token);
                     localStorage.setItem("status", res.data.status);
-                    setTimeout(() => {
-                        history.push("/profile");
-                        window.location.reload();
-                    }, 2000);
+                   
+                        history.push("/");
+                        // window.location.reload();
+                   
 
                 }).catch((e) => {
                     console.log(e.response.data.error);
                     setError(true);
                     setText(e.response.data.error);
                     console.log(text);
-                    history.push("/profile");
+                    history.push("/");
                 })
             status === 'org' && Promise.resolve(signup(
                 {
@@ -76,10 +89,10 @@ const EmailVerification = ({ setifVerified, email, setverify, status, userValues
                     setError(false);
                     setSuccess(true);
                     setText("SignUp Successfull")
-                    setTimeout(() => {
-                        history.push("/post_job");
-                        window.location.reload();
-                    }, 2000);
+                    
+                        history.push("/");
+                        // window.location.reload();
+                    
                 }).catch((e) => {
                     console.log(e.response);
                     setError(true);
@@ -90,7 +103,7 @@ const EmailVerification = ({ setifVerified, email, setverify, status, userValues
                         history.push('/login');
                     }
                 })
-        }
+        
     }
 
     return (
@@ -122,9 +135,10 @@ const EmailVerification = ({ setifVerified, email, setverify, status, userValues
                                                             }} type="password" id="password" placeholder="Verification Code" />
                                                         </label>
                                                     </div>
+                                                    <p>{verificationStatus}</p>
                                                     <div className="col-lg-6 mx-auto">
                                                         <label className="mb-0">
-                                                            <button className="submit w-100 ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-fill ttm-btn-color-skincolor" type="submit" onClick={Verify}>Verify</button>
+                                                            <button className="submit w-100 ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-fill ttm-btn-color-skincolor" type="button" onClick={handleVerifyOTP}>Verify</button>
                                                         </label>
                                                     </div>
                                                 </div>

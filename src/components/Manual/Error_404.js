@@ -12,8 +12,8 @@ export class Error_404 extends Component {
                             <div className="col-lg-6 order-lg-1 order-2">
                                 <header className="page-header"><h1 className="page-title">Oops!</h1></header>
                                 <div className="page-content"><p>Page Not Found</p></div>
-                                <a className="ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-fill 
-                                ttm-btn-color-skincolor" href={process.env.PUBLIC_URL + '/'}>Go back Home page</a>
+                                {/* <a className="ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-fill 
+                                ttm-btn-color-skincolor" href={  '/'}>Go back Home page</a> */}
                             </div>
                             <div className="col-lg-6 order-lg-2 order-1">
                                 <div className="error-type row g-0">

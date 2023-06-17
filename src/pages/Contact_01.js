@@ -30,7 +30,7 @@ export class Contact_01 extends Component {
                                     </div>
                                     <div className="featured-content p-30">                                        
                                         <div className="featured-title">
-                                            <h3><a href={process.env.PUBLIC_URL + '/'}>United States</a></h3>
+                                            <h3><a href={  '/'}>United States</a></h3>
                                         </div>
                                         <div className="featured-desc">
                                             <ul className="ttm-list ttm-list-style-icon ttm-list-icon-color-skincolor">
@@ -60,7 +60,7 @@ export class Contact_01 extends Component {
                                     </div>
                                     <div className="featured-content p-30">                                        
                                         <div className="featured-title">
-                                            <h3><a href={process.env.PUBLIC_URL + '/'}>Australia</a></h3>
+                                            <h3><a href={  '/'}>Australia</a></h3>
                                         </div>
                                         <div className="featured-desc">
                                             <ul className="ttm-list ttm-list-style-icon ttm-list-icon-color-skincolor">
@@ -90,7 +90,7 @@ export class Contact_01 extends Component {
                                     </div>
                                     <div className="featured-content p-30">                                        
                                         <div className="featured-title">
-                                            <h3><a href={process.env.PUBLIC_URL + '/'}>Canada</a></h3>
+                                            <h3><a href={  '/'}>Canada</a></h3>
                                         </div>
                                         <div className="featured-desc">
                                             <ul className="ttm-list ttm-list-style-icon ttm-list-icon-color-skincolor">
@@ -203,7 +203,7 @@ export class Contact_01 extends Component {
                                         </div>
                                     </div>{/* featured-icon-box end */}
                                     <a className="ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-border ttm-btn-color-white" 
-                                    href={process.env.PUBLIC_URL + '/contact_01'}>Hiring Now!</a>
+                                    href={  '/contact_01'}>Hiring Now!</a>
                                 </div>
                             </div>
                         </div>

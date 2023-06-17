@@ -42,12 +42,12 @@ export class Blog_grid extends Component {
                                                     <span className="ttm-meta-line category-link">business</span>
                                                 </div>
                                                 <div className="featured-title">
-                                                    <h3><a href={process.env.PUBLIC_URL + '/blog_details'}>Are  meetings falling to flat? Try these 10 tips</a></h3>
+                                                    <h3><a href={  '/blog_details'}>Are  meetings falling to flat? Try these 10 tips</a></h3>
                                                 </div>
                                                 <div className="featured-desc">
                                                     <p>Whatever you do in planning, facilitating. Goal should revolve support </p>
                                                 </div>
-                                                <a className="ttm-btn btn-inline ttm-btn-size-md ttm-btn-color-darkgrey" href={process.env.PUBLIC_URL + '/blog_details'}>read more!</a>
+                                                <a className="ttm-btn btn-inline ttm-btn-size-md ttm-btn-color-darkgrey" href={  '/blog_details'}>read more!</a>
                                             </div>
                                         </div>{/* featured-imagebox-post end */}
                                     </div>
@@ -70,12 +70,12 @@ export class Blog_grid extends Component {
                                                     <span className="ttm-meta-line category-link">business</span>
                                                 </div>
                                                 <div className="featured-title">
-                                                    <h3><a href={process.env.PUBLIC_URL + '/blog_details'}>Are You Moving Businesses To Another State?</a></h3>
+                                                    <h3><a href={  '/blog_details'}>Are You Moving Businesses To Another State?</a></h3>
                                                 </div>
                                                 <div className="featured-desc">
                                                     <p>A business leader must consider issues beyond choosing a moving!</p>
                                                 </div>
-                                                <a className="ttm-btn btn-inline ttm-btn-size-md ttm-btn-color-darkgrey" href={process.env.PUBLIC_URL + '/blog_details'}>read more!</a>
+                                                <a className="ttm-btn btn-inline ttm-btn-size-md ttm-btn-color-darkgrey" href={  '/blog_details'}>read more!</a>
                                             </div>
                                         </div>{/* featured-imagebox-post end */}
                                     </div>
@@ -98,12 +98,12 @@ export class Blog_grid extends Component {
                                                     <span className="ttm-meta-line category-link">business</span>
                                                 </div>
                                                 <div className="featured-title">
-                                                    <h3><a href={process.env.PUBLIC_URL + '/blog_details'}>Shame: Does It Fine to Fit In The Workplace?</a></h3>
+                                                    <h3><a href={  '/blog_details'}>Shame: Does It Fine to Fit In The Workplace?</a></h3>
                                                 </div>
                                                 <div className="featured-desc">
                                                     <p>This can be innate or external and results can be surprising performance</p>
                                                 </div>
-                                                <a className="ttm-btn btn-inline ttm-btn-size-md ttm-btn-color-darkgrey" href={process.env.PUBLIC_URL + '/blog_details'}>read more!</a>
+                                                <a className="ttm-btn btn-inline ttm-btn-size-md ttm-btn-color-darkgrey" href={  '/blog_details'}>read more!</a>
                                             </div>
                                         </div>{/* featured-imagebox-post end */}
                                     </div>
@@ -126,12 +126,12 @@ export class Blog_grid extends Component {
                                                     <span className="ttm-meta-line category-link">business</span>
                                                 </div>
                                                 <div className="featured-title">
-                                                    <h3><a href={process.env.PUBLIC_URL + '/blog_details'}>How to Handle Negativity in Former People?</a></h3>
+                                                    <h3><a href={  '/blog_details'}>How to Handle Negativity in Former People?</a></h3>
                                                 </div>
                                                 <div className="featured-desc">
                                                     <p>Whatever you do in planning, facilitating. Goal should revolve support</p>
                                                 </div>
-                                                <a className="ttm-btn btn-inline ttm-btn-size-md ttm-btn-color-darkgrey" href={process.env.PUBLIC_URL + '/blog_details'}>read more!</a>
+                                                <a className="ttm-btn btn-inline ttm-btn-size-md ttm-btn-color-darkgrey" href={  '/blog_details'}>read more!</a>
                                             </div>
                                         </div>{/* featured-imagebox-post end */}
                                     </div>
@@ -154,12 +154,12 @@ export class Blog_grid extends Component {
                                                     <span className="ttm-meta-line category-link">business</span>
                                                 </div>
                                                 <div className="featured-title">
-                                                    <h3><a href={process.env.PUBLIC_URL + '/blog_details'}>Is Business Tech Accessible To All Employees?</a></h3>
+                                                    <h3><a href={  '/blog_details'}>Is Business Tech Accessible To All Employees?</a></h3>
                                                 </div>
                                                 <div className="featured-desc">
                                                     <p>Team members can work from anywhere with an internet connection only!</p>
                                                 </div>
-                                                <a className="ttm-btn btn-inline ttm-btn-size-md ttm-btn-color-darkgrey" href={process.env.PUBLIC_URL + '/blog_details'}>read more!</a>
+                                                <a className="ttm-btn btn-inline ttm-btn-size-md ttm-btn-color-darkgrey" href={  '/blog_details'}>read more!</a>
                                             </div>
                                         </div>{/* featured-imagebox-post end */}
                                     </div>
@@ -182,12 +182,12 @@ export class Blog_grid extends Component {
                                                     <span className="ttm-meta-line category-link">business</span>
                                                 </div>
                                                 <div className="featured-title">
-                                                    <h3><a href={process.env.PUBLIC_URL + '/blog_details'}>5 Management Challenges And Handle Them</a></h3>
+                                                    <h3><a href={  '/blog_details'}>5 Management Challenges And Handle Them</a></h3>
                                                 </div>
                                                 <div className="featured-desc">
                                                     <p>When you’re managing recruitment team, and it can feel like being pulled</p>
                                                 </div>
-                                                <a className="ttm-btn btn-inline ttm-btn-size-md ttm-btn-color-darkgrey" href={process.env.PUBLIC_URL + '/blog_details'}>read more!</a>
+                                                <a className="ttm-btn btn-inline ttm-btn-size-md ttm-btn-color-darkgrey" href={  '/blog_details'}>read more!</a>
                                             </div>
                                         </div>{/* featured-imagebox-post end */}
                                     </div>
@@ -214,41 +214,41 @@ export class Blog_grid extends Component {
                                     <aside className="widget widget-Categories with-title">
                                         <h3 className="widget-title">Categories</h3>
                                         <ul>
-                                            <li><a href={process.env.PUBLIC_URL + '/blog_grid'}>Digital Marketing</a></li>
-                                            <li><a href={process.env.PUBLIC_URL + '/blog_grid'}>Search Engine Optimization</a></li>
-                                            <li><a href={process.env.PUBLIC_URL + '/blog_grid'}>UI/UX Design Task</a></li>
-                                            <li><a href={process.env.PUBLIC_URL + '/blog_grid'}>Web development</a></li>
-                                            <li><a href={process.env.PUBLIC_URL + '/blog_grid'}>Digital Marketing</a></li>
-                                            <li><a href={process.env.PUBLIC_URL + '/blog_grid'}>Investment</a></li>
+                                            <li><a href={  '/blog_grid'}>Digital Marketing</a></li>
+                                            <li><a href={  '/blog_grid'}>Search Engine Optimization</a></li>
+                                            <li><a href={  '/blog_grid'}>UI/UX Design Task</a></li>
+                                            <li><a href={  '/blog_grid'}>Web development</a></li>
+                                            <li><a href={  '/blog_grid'}>Digital Marketing</a></li>
+                                            <li><a href={  '/blog_grid'}>Investment</a></li>
                                         </ul>
                                     </aside>
                                     <aside className="widget widget-recent-post with-title">
                                         <h3 className="widget-title">Recent Posts</h3>
                                         <ul>
                                             <li>
-                                                <a href={process.env.PUBLIC_URL + '/blog_details'}>
+                                                <a href={  '/blog_details'}>
                                                     <img className="img-fluid" src="https://via.placeholder.com/150x150?text=150x150+b_thumbb-01.jpg" alt="post-img"/>
                                                 </a>
                                                 <div className="post-detail">
-                                                    <a href={process.env.PUBLIC_URL + '/blog_details'}>How Sources Utilize Sleuth Skill Beyond Work</a>
+                                                    <a href={  '/blog_details'}>How Sources Utilize Sleuth Skill Beyond Work</a>
                                                     <span className="post-date">October 10, 2020</span>
                                                 </div>
                                             </li>
                                             <li>
-                                                <a href={process.env.PUBLIC_URL + '/blog_details'}>
+                                                <a href={  '/blog_details'}>
                                                     <img className="img-fluid" src="https://via.placeholder.com/150x150?text=150x150+b_thumbb-02.jpg" alt="post-img"/>
                                                 </a>
                                                 <div className="post-detail">
-                                                    <a href={process.env.PUBLIC_URL + '/blog_details'}>Let's Create Your Own Competitive News Feeder For Free</a>
+                                                    <a href={  '/blog_details'}>Let's Create Your Own Competitive News Feeder For Free</a>
                                                     <span className="post-date">October 10, 2020</span>
                                                 </div>
                                             </li>
                                             <li>
-                                                <a href={process.env.PUBLIC_URL + '/blog_details'}>
+                                                <a href={  '/blog_details'}>
                                                     <img className="img-fluid" src="https://via.placeholder.com/150x150?text=150x150+b_thumbb-03.jpg" alt="post-img"/>
                                                 </a>
                                                 <div className="post-detail">
-                                                    <a href={process.env.PUBLIC_URL + '/blog_details'}>Remote Hiring Trends Report 2021: Review Hire Process</a>
+                                                    <a href={  '/blog_details'}>Remote Hiring Trends Report 2021: Review Hire Process</a>
                                                     <span className="post-date">October 10, 2020</span>
                                                 </div>
                                             </li>
@@ -268,21 +268,21 @@ export class Blog_grid extends Component {
                                                     <li>+1 800 556 77 894</li>
                                                     <li>info@yourmailexample.com</li>
                                                 </ul>
-                                                <a className="ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-fill ttm-btn-color-skincolor" href={process.env.PUBLIC_URL + '/'}>appoinments!</a>
+                                                <a className="ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-fill ttm-btn-color-skincolor" href={  '/'}>appoinments!</a>
                                             </div>
                                         </div>
                                     </aside>
                                     <aside className="widget tagcloud-widget with-title">
                                         <h3 className="widget-title">Popular Tags</h3>
                                         <div className="tagcloud">
-                                            <a href={process.env.PUBLIC_URL + '/blog_grid'} className="tag-cloud-link">Agency</a>
-                                            <a href={process.env.PUBLIC_URL + '/blog_grid'} className="tag-cloud-link">Business</a>
-                                            <a href={process.env.PUBLIC_URL + '/blog_grid'} className="tag-cloud-link">Corporate</a>
-                                            <a href={process.env.PUBLIC_URL + '/blog_grid'} className="tag-cloud-link">Creative</a>
-                                            <a href={process.env.PUBLIC_URL + '/blog_grid'} className="tag-cloud-link">Design</a>
-                                            <a href={process.env.PUBLIC_URL + '/blog_grid'} className="tag-cloud-link">inspiration</a>
-                                            <a href={process.env.PUBLIC_URL + '/blog_grid'} className="tag-cloud-link">Marketing</a>
-                                            <a href={process.env.PUBLIC_URL + '/blog_grid'} className="tag-cloud-link">Startup</a>
+                                            <a href={  '/blog_grid'} className="tag-cloud-link">Agency</a>
+                                            <a href={  '/blog_grid'} className="tag-cloud-link">Business</a>
+                                            <a href={  '/blog_grid'} className="tag-cloud-link">Corporate</a>
+                                            <a href={  '/blog_grid'} className="tag-cloud-link">Creative</a>
+                                            <a href={  '/blog_grid'} className="tag-cloud-link">Design</a>
+                                            <a href={  '/blog_grid'} className="tag-cloud-link">inspiration</a>
+                                            <a href={  '/blog_grid'} className="tag-cloud-link">Marketing</a>
+                                            <a href={  '/blog_grid'} className="tag-cloud-link">Startup</a>
                                         </div>
                                     </aside>
                                 </div>

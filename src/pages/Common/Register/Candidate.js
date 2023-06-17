@@ -50,7 +50,7 @@ const Candidate = ({ ifVerified, setverify, setemail, status, userValues }) => {
         }
         else {
             setverify(true);
-            signup({ name:username, email:useremail, password:userpass, status:'user', address:'', city:'', title:'' });
+            // signup({ name:username, email:useremail, password:userpass, status:'user', address:'', city:'', title:'' });
         }
         setTimeout(() => {
             setError(false);
