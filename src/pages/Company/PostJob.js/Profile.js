@@ -51,6 +51,7 @@ class Profile extends Component {
                   style={{ width: '80%' }}
                   required
                   value={this.props.companyName}
+                  onChange={this.props.handleChange}
                 />
               </Grid>
             </Grid>
