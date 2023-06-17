@@ -41,8 +41,11 @@ const PostJob = () => {
   useEffect(() => {
     Promise.resolve(companyInfo()).then((res)=>{
       setcompanyName(res.data.title)
+      console.log(res.data.title);
+      // values.company=companyName;
+    
     })
-  }, [])
+  })
   
 
   const handleChange = (e) => {
@@ -56,9 +59,12 @@ const PostJob = () => {
   };
   const handleSubmit = (e) => {
     console.log(e);
+    values.company=companyName;
     console.log(values);
     setSuccess(true);
     setText('Job has been posted Successfully!')
+ 
+  
     Promise.resolve(postJob(values)).then((res)=>{
       console.log(res);
     }).catch((e)=>{
