@@ -177,7 +177,7 @@ const Resume = () => {
               />
             </div>
           </div>
-          {/* <div className="App mt-3">
+          <div className="App mt-3">
             <div className="col-lg-10 mx-auto">
               <Profile
                 handleChange={handleChange}
@@ -216,7 +216,7 @@ const Resume = () => {
                 values={values}
               />
             </div>
-          </div> */}
+          </div>
         </div>
         <div className="App mt-3 mb-5">
           <div className="col-lg-10 mx-auto">
@@ -228,7 +228,7 @@ const Resume = () => {
       <div className=" justify-center mb-10" style={{ marginLeft: '45%' }}>
         <button
           variant="contained"
-          type="submit"
+          type="button"
           className="ttm-btn ttm-btn-style-fill ttm-btn-color-skincolor"
           onClick={handleSubmit}
         >

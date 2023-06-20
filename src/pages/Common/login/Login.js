@@ -145,7 +145,7 @@ const Login = () => {
                     <div className="row">
                         <div className="col-lg-2"></div>
                         <div className="col-lg-8">
-                            <div style={{ backgroundColor: 'rgb(245, 185, 107)k' }} className="bg-theme-GreyColor ttm-col-bgcolor-yes ttm-bg rounded p-50 p-lg-20">
+                            <div style={{ backgroundColor: 'rgb(247 157 234)' }} className="bg-theme-GreyColor ttm-col-bgcolor-yes ttm-bg rounded p-50 p-lg-20">
                                 <div className="ttm-col-wrapper-bg-layer ttm-bg-layer"></div>
                                 <div className="layer-content">
                                     <div className="text-center mb-20">

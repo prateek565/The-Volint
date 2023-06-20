@@ -111,7 +111,7 @@ const EmailVerification = ({ setifVerified, email, setverify, status, userValues
             <div className="row ">
                 <div className="col-lg-2"></div>
                 <div className="col-lg-8 d-flex align-items-center justify-content-center">
-                    <div style={{ backgroundColor: 'orange' }} className="bg-theme- ttm-col-bgcolor-yes ttm-bg rounded p-50 p-lg-20">
+                    <div style={{ backgroundColor: 'rgb(247 157 234)' }} className="bg-theme- ttm-col-bgcolor-yes ttm-bg rounded p-50 p-lg-20">
                         <div className="ttm-col-wrapper-bg-layer ttm-bg-layer"></div>
                         <div className="layer-content">
                             <div className="text-center mb-20">

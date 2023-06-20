@@ -30,14 +30,14 @@ const Register = ({ setverify, setemail, ifVerified, userValues, companyValues, 
 
 
     return (
-
+        // backgroundColor: '#7f96fd'
         <div className="site-main">
             <div className="ttm-row register-section clearfix">
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-2"></div>
                         <div className="col-lg-8">
-                            <div style={{ backgroundColor: '#7f96fd' }} className="bg-theme-GreyColor ttm-col-bgcolor-yes ttm-bg rounded p-50 p-lg-20">
+                            <div style={{ backgroundColor: 'rgb(247 157 234)' }} className="bg-theme-GreyColor ttm-col-bgcolor-yes ttm-bg rounded p-50 p-lg-20">
                                 <div className="ttm-col-wrapper-bg-layer ttm-bg-layer"></div>
                                 <div className="layer-content">
                                     <div className="text-center mb-20">
