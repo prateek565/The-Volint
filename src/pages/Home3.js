@@ -227,10 +227,10 @@ const Home3 = () => {
                         <h4>Opportunities by category</h4>
                     </div>
                     <div style={{ display: 'flex', justifyContent: 'space-evenly', }} className='mb-20'>
-                        {/* <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                             <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjHkH6tWKgs9QpdCCrEq1VceSUXi7Qi0bi5g&usqp=CAU' alt='image' style={{ height: '3rem', width: '3rem' }} />
                             <a href={'/jobs_by_filter/cat=Volunteer Work'} style={{ width: '10rem' }}>Volunteer Work<span style={{ color: 'black', fontSize: 'medium' }}> ({volunteerWork?.length})</span></a>
-                        </div> */}
+                        </div>
                         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                             <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQK8M92gA0KnFI37zC74yq5R38q-J6Wc8epWw&usqp=CAU' alt='image' style={{ height: '3rem', width: '3rem'}} className='rounded-circle'/>
                             <a href={`/jobs_by_filter/cat=Internship`} style={{ width: '10rem' }}>Internship Work<span style={{ color: 'black', fontSize: 'medium' }}> ({internshipWork?.length})</span></a>
