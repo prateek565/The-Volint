@@ -227,10 +227,10 @@ const Home3 = () => {
                         <h4>Opportunities by category</h4>
                     </div>
                     <div style={{ display: 'flex', justifyContent: 'space-evenly', }} className='mb-20'>
-                        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                        {/* <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                             <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjHkH6tWKgs9QpdCCrEq1VceSUXi7Qi0bi5g&usqp=CAU' alt='image' style={{ height: '3rem', width: '3rem' }} />
                             <a href={'/jobs_by_filter/cat=Volunteer Work'} style={{ width: '10rem' }}>Volunteer Work<span style={{ color: 'black', fontSize: 'medium' }}> ({volunteerWork?.length})</span></a>
-                        </div>
+                        </div> */}
                         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                             <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQK8M92gA0KnFI37zC74yq5R38q-J6Wc8epWw&usqp=CAU' alt='image' style={{ height: '3rem', width: '3rem'}} className='rounded-circle'/>
                             <a href={`/jobs_by_filter/cat=Internship`} style={{ width: '10rem' }}>Internship Work<span style={{ color: 'black', fontSize: 'medium' }}> ({internshipWork?.length})</span></a>
@@ -254,7 +254,7 @@ const Home3 = () => {
                                     <h2 className="title">Recent Opportunities Listing</h2>
                                 </div>
                                 <div className="title-desc">
-                                    <p>We have several jobs in active right now. Check out <span className="text-theme-SkinColor">recent jobs </span>
+                                    <p className='text' style= {{fontSize:'1.5vw'}} >We have several jobs in active right now. Check out <span className="text-theme-SkinColor">recent jobs </span>
                                         according to your excelllence. Our experts will guide you accordingly. </p>
                                 </div>
                             </div>{/* section title end */}
@@ -274,7 +274,7 @@ const Home3 = () => {
                                             <h3><a href={  '/Job_details'}><a href={  '/Job_details'}>{intern.title}</a></a></h3>
                                         </div>
                                         <div className="featured-desc">
-                                            <p>Published 2Days Ago.</p>
+                                            <p>Published on {intern.createdAt?.substr(0, 10)}.</p>
                                         </div>
                                         <div className="featured-bottom">
                                             <div className="job-meta">

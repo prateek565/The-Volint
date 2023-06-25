@@ -27,6 +27,9 @@ class Mobile_menu extends Component {
   
 
   render() {
+    
+   let statu = localStorage.getItem("status");
+   let token = localStorage.getItem("volintToken");
 
     return (
 
@@ -36,58 +39,38 @@ class Mobile_menu extends Component {
           <MDBHamburgerToggler id="hamburger1" onClick={()=> this.toggleSingleCollapse('collapse1')} />
             <MDBCollapse isOpen={this.state.collapse1} navbar>
               <MDBNavbarNav left className="ml-10 pl-0.5 mb-0.5">
-                <MDBNavItem className="pl-0.5 mb-3 mt-3">
+                <MDBNavItem className="pl-0.5 mt-2">
                   <Link className="ml-10 pl-0.5 pb-0.5" exact to={'/'}>Home</Link>
-                    {/* <MDBDropdown>
-                      <a href={'/'}></a>Home
-                      <MDBDropdownToggle nav caret>Home</MDBDropdownToggle>
-                      <MDBDropdownMenu>
-                          <MDBDropdownItem href={  '/'}>Homepage 1</MDBDropdownItem>
-                          <MDBDropdownItem href={  '/Home2'}>Homepage 2</MDBDropdownItem>
-                          <MDBDropdownItem href={  '/Home3'}>Homepage 3</MDBDropdownItem>
-                      </MDBDropdownMenu>
-                    </MDBDropdown> */}
                 </MDBNavItem>
-                <MDBNavItem className="mb-3">
-                      <Link className="ml-10 pl-0.5 pb-0.5" exact to={'/login'}>Login</Link><span> / </span><a className="ml-10 pl-0.5 pb-0.5" href={'/signup'}>Signin</a>
-                      
+                {token&&statu === "user" &&
+                <MDBNavItem className="pl-0.5 mt-2">
+                  <Link className="ml-10 pl-0.5 pb-0.5" exact to={'/applied_jobs'}  >Applications</Link>
+                </MDBNavItem>}
+                {token&&statu === "user" &&
+                <MDBNavItem className="pl-0.5 mt-2">
+                  <Link className="ml-10 pl-0.5 pb-0.5" exact to={'/edit_resume'}  >My Resumes</Link>
+                </MDBNavItem>}
+                {token&&statu === "user" &&
+                <MDBNavItem className="pl-0.5 mt-2">
+                  <Link className="ml-10 pl-0.5 pb-0.5" exact to={'/user/projects'}  >Projects</Link>
+                </MDBNavItem>}
 
-                </MDBNavItem> 
-                {this.status==="user" && <MDBNavItem className="mb-3">
+                {statu!=='user' && 
+                <MDBNavItem className="pl-0.5 mt-2">
+                  <Link className="ml-10 pl-0.5 pb-0.5" exact to={token?'/post_job':'/login'}>Post Job</Link>
+                </MDBNavItem>}
+                {!statu &&
+                <MDBNavItem className="mt-2">
+                      <Link className="ml-10 pl-0.5 pb-0.5" exact to={'/login'}>Login</Link><span> / </span><a className="ml-10 pl-0.5 pb-0.5" href={'/signup'}>Signin</a>
+                </MDBNavItem> }
+                {this.status==="user" && <MDBNavItem className="mt-2 mb-2">
                   <MDBDropdown exact to={'/jobs_list'}>
                    <Link className="ml-10 pl-0.5 pb-1" exact to={'/job_list'}>Opportunities</Link>
-                     
                   </MDBDropdown>
                 </MDBNavItem>}
-                { this.status === "company" && <MDBNavItem className="mb-4">
+                { this.status === "company" && <MDBNavItem className="mt-2">
                 <Link className="ml-10 pl-0.5 pb-1 mb-4" exact to={'/candidate_list'}>Volunteer/Intern</Link>
-                    {/* <MDBDropdown>
-                      <MDBDropdownToggle nav caret>Employers</MDBDropdownToggle>
-                      <MDBDropdownMenu>
-                          <MDBDropdownItem href={  '/employers_list'}>Employers List</MDBDropdownItem>
-                          <MDBDropdownItem href={  '/employers_details'}>Employers Details</MDBDropdownItem>
-                      </MDBDropdownMenu>
-                    </MDBDropdown> */}
                 </MDBNavItem>}
-                {/* <MDBNavItem>
-                    <MDBDropdown>
-                      <MDBDropdownToggle nav caret>Candidates</MDBDropdownToggle>
-                      <MDBDropdownMenu>
-                        <MDBDropdownItem href={  '/candidate_list'}>Candidate List</MDBDropdownItem>
-                        <MDBDropdownItem href={  '/candidate_details'}>Candidate Details</MDBDropdownItem>
-                    </MDBDropdownMenu>
-                    </MDBDropdown>
-                </MDBNavItem>
-                <MDBNavItem>
-                    <MDBDropdown>
-                      <MDBDropdownToggle nav caret>Blog</MDBDropdownToggle>
-                      <MDBDropdownMenu>
-                        <MDBDropdownItem href={  '/blog_classic'}>Blog Classic</MDBDropdownItem>
-                        <MDBDropdownItem href={  '/blog_grid'}>Blog Grid</MDBDropdownItem>
-                        <MDBDropdownItem href={  '/blog_details'}>Blog Details</MDBDropdownItem>
-                      </MDBDropdownMenu>
-                    </MDBDropdown>
-                </MDBNavItem> */}
               </MDBNavbarNav>
             </MDBCollapse>
         </MDBNavbar>
