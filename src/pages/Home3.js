@@ -261,9 +261,10 @@ const Home3 = () => {
                         </div>
                     </div>{/* row end */}
                     {/* Slider */}
-                    <Slider className="row slick_slider mb_10 pt-20 slick-arrows-style2" {...slick_slider} slidesToShow={2}
+                    <Slider className="row slick_slider mb_10 pt-20 slick-arrows-style2" {...slick_slider} slidesToShow={1}
                         rows={3} arrows={true} responsive={[{ breakpoint: 992, settings: { slidesToShow: 1, slidesToScroll: 1 } }]}>
-                        {allIntern?.map((intern) => (
+                        {
+                        allIntern?.map((intern) => (
                             <div className="col-lg-6 col-md-12">
                                 <div className="featured-imagebox featured-imagebox-job">
                                     <div className="featured-thumbnail">
