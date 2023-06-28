@@ -255,7 +255,7 @@ const Home3 = () => {
                                 </div>
                                 <div className="title-desc">
                                     <p className='text' style= {{fontSize:'1.5vw'}} >We have several jobs in active right now. Check out <span className="text-theme-SkinColor">recent jobs </span>
-                                        according to your excelllence. Our experts will guide you accordingly. </p>
+                                        according to your excellence. Our experts will guide you accordingly. </p>
                                 </div>
                             </div>{/* section title end */}
                         </div>
