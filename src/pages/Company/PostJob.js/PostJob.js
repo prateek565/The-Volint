@@ -45,7 +45,7 @@ const PostJob = () => {
       // values.company=companyName;
     
     })
-  })
+  },[])
   
 
   const handleChange = (e) => {
