@@ -22,7 +22,7 @@ const Resume = () => {
             <Header />
             <PageHeader
                 title="My Resume"
-                breadcrumb="my resume"
+                breadcrumb="My Resume"
             />
             {allResumesData?.map((data, i) => (
                 <>
