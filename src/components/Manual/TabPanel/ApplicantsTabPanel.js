@@ -104,6 +104,7 @@ export default function ApplicantsTabPanelTabPanel() {
             <TabPanel value={value} index={0}>
                 {allcandidates.length === 0 && <h4>No Applicants</h4>}
                 {allcandidates.map((user, index) => (
+                    // {usr=eb.user}
                     <div className="col-lg-12">
                         <div className="featured-imagebox featured-imagebox-candidate" style={{ backgroundColor: 'rgb(236, 215, 255)' }}>
                             <div className="featured-thumbnail">
