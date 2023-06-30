@@ -28,7 +28,7 @@ const Posted_Jobs = () => {
             <Header />
             <PageHeader
                 title="Posted Fields"
-                breadcrumb="posts"
+                breadcrumb="Posts"
             />
             <Card>
                 <div className="row m-4">

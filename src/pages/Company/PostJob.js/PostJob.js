@@ -130,7 +130,7 @@ const PostJob = () => {
            <Header />
            <PageHeader
             title="Post an Opportunity"
-            breadcrumb="post opportunity"
+            breadcrumb="Post Opportunity"
            />
           <div>
           <div className="App mt-3">

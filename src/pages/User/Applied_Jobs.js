@@ -33,7 +33,7 @@ const Applied_Jobs = () => {
                 {/* PageHeader */}
                 <PageHeader
                     title="Applications"
-                    breadcrumb="applications"
+                    breadcrumb="Applications"
                     className="pb-40 pb-lg-0"
                 />
                 {/* PageHeader end */}
