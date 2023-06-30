@@ -1,5 +1,5 @@
 import React, { Component, useEffect, useState } from 'react';
-import Header from '../../components/layout/Header';
+import Header from '../components/layout/Header3';
 import PageHeader from "../../components/layout/PageHeader";
 import { Footer } from '../../components/layout/Footer';
 import { Link } from 'react-router-dom';
@@ -55,6 +55,7 @@ const Job_list = () => {
     return (
 
         <div className="site-main">
+            <Header />
             {/* <Header />
             {loading&&<Simplebackdrop/>} */}
             <div className="site-main">
